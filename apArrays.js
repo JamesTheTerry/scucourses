@@ -103,3 +103,15 @@ function CTW(){
 	var Spring3 = core[2];
 	return;
 }
+
+function addCI(){
+	if(Winter1 == "CORE" && Spring1 == "CORE"){
+		Winter1 = "C&I 1";
+		Spring1 = "C&I 2";
+	}else if (Fall2 == "CORE" && Winter2 == "CORE"){
+		Fall2 = "C&I 1";
+		Winter2 = "C&I 2";
+	}else if (Spring1 == "CORE" && Winter2 == "CORE"){
+		Winter2 = "C&I 1";
+		Spring1 = "C&I 2";
+	}
