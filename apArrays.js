@@ -16,10 +16,9 @@ function CalcAB( ABScore, CRE ){
 			start = 0;
 		}
 	}
-	for(var i = start; i < (start+3); i++){
-			writeln(math[i]);
-	
-	}
+	Fall0 = math[start];
+	Winter0 = math[start+1];
+	Spring0 = math[start=2];
 }
 
 function CalcBC( BCScore, CRE ){
@@ -37,9 +36,9 @@ function CalcBC( BCScore, CRE ){
 			start = 0;
 		}
 	}
-	for(var i = start; i < (start+3); i++){
-			writeln(math[i]);
-	
+	Fall0 = math[start];
+	Winter0 = math[start+1];
+	Spring0 = math[start=2];
 	}
 
 }
@@ -53,23 +52,22 @@ function APcalc( ABScore, BCScore, CRE ){
 	}
 }
 
-function Chem(APScore, IBScore){
+function SciCred(APScore, IBScore, CScore){
 	if(APScore > 2 || IBScore > 5){
-		sci[0] = replace;
+		Fall2 = replace;
 	}
-	for(var i = 0; i < 3; i++){
-			writeln(sci[i]);
+	else{
+		Fall2 = sci[0];
 	}
+	if(CScore > 3){
+		Winter2 = replace;
+	}
+	else{
+		Winter2 = sci[1];
+	}
+	Spring2 = sci[2];
 }
 
-function Phys(CScore){
-	if(CScore > 3){
-		sci[1] = replace;
-	}
-	for(var i = 0; i < 3; i++){
-			writeln(sci[i]);
-	}
-}
 
 function COEN(){
 	//these will be the input variables
