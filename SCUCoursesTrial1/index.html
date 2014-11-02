@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SCUCourses.fish</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script type='text/javascript' src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body id="theBody">
+
+<div>You are a COEN student now.  Forever and always.</div>
+
+<form action="">
+<input type="checkbox" name="testcheck" value="APyes">I took some APs<br>
+<input type="checkbox" name="testcheck" value="IByes">I took some IBs<br>
+</form>
+
+<div>Well aren't you pleased as punch.  Which one's did you take.</div>
+
+<form action="">
+<input type="checkbox" name="aplist" value="calcab">I took Calc AB<br>
+<input type="checkbox" name="aplist" value="calcbc">I took Calc BC<br>
+<input type="checkbox" name="aplist" value="chemap">I took Chem<br>
+<input type="checkbox" name="aplist" value="compsciap">I took CompSci A<br>
+<input type="checkbox" name="aplist" value="physics">I took Physics C: Mechanics<br>
+</form>
+
+<form action="">
+<input type="checkbox" name="iblist" value="chemib">I took Chem IB<br>
+<input type="checkbox" name="iblist" value="compsciab">I took CompSci IB<br>
+</form>
+
+<div>[insert test] score is?</div>
+<form action="">
+<input type="radio" name"radio1" value="1">1
+<input type="radio" name"radio1" value="2">2
+<input type="radio" name"radio1" value="3">3
+<input type="radio" name"radio1" value="2">4
+<input type="radio" name"radio1" value="2">5
+</form>
+
+
+<table border="4" style="width:100%">
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>		
+    <td>50</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>		
+    <td>80</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td id="a"></td>
+    <td id="b"></td>		
+    <td id="c"></td>
+    <td id="d"></td>
+  </tr>
+</table>
+<script>
+
+var w = "omega";
+var x = 5;
+var y = 6;
+var z = "alpha";
+document.getElementById("a").innerHTML = w;
+document.getElementById("b").innerHTML = x;
+document.getElementById("c").innerHTML = y;
+document.getElementById("d").innerHTML = z;
+</script>
+
+</body>
+</html>
