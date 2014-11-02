@@ -2,5 +2,9 @@
 // NOOCH!!!!
 
 $("#hide").click(function(){
-	$("YOUR DIV HERE")
+	$("YOUR DIV HERE").hide();
 }
+
+$("#show").click(function()){
+	$("YOUR DIV HERE").show();
+});
