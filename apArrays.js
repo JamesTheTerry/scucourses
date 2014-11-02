@@ -70,3 +70,38 @@ function Phys(CScore){
 			writeln(sci[i]);
 	}
 }
+
+function COEN(){
+	//these will be the input variables
+	//set these it be the test scores
+	var APCompSci ;
+	var IBCompSci ;
+	
+	//these will be the output variables, these are the classes that go in the matrix
+	var Fall1;
+	var Winter1;
+	var Spring1;
+	
+	if (APCompSci < 3 || IBCompSci < 6 ||(APCompSci == NA && IBCompSci == NA )){
+		//no credit follow the suggested plan
+		Fall1 = coen[0];
+		Winter1 = coen[1];
+		Spring1 = coen[2];
+	}else if (APCompSci == 3){
+		Fall1 = coen[1];
+		Winter1 = coen[2];
+		Spring1 = coen[3];
+	} else if (APCompSci >= 4 || IBCompSci >= 6){
+		Fall1 = coen[2];
+		Winter1 = coen[3];
+		Spring1 = coen[4];
+	}
+	return;
+}
+
+function CTW(){
+	var Fall3 = core[0];
+	var Winter3 = core[1];
+	var Spring3 = core[2];
+	return;
+}
