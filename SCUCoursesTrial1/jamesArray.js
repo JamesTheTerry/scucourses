@@ -75,18 +75,18 @@ function COEN(){
 	var APCompSci;
 	var IBCompSci;
 	
-	if (document.getElementsByName('radio40').checked) {
-		APCompSci = document.getElementByName('radio40').value;
-  	} else if (document.getElementsByName('radio41').checked) {
-	  	APCompSci = document.getElementsByName('radio41').value;
-  	} else if (document.getElementsByName('radio42').checked) {
-	  	APCompSci = document.getElementsByName('radio42').value;
-  	} else if (document.getElementsByName('radio43').checked) {
-	  	APCompSci = document.getElementsByName('radio43').value;
-  	} else if (document.getElementsByName('radio44').checked) {
-	  	APCompSci = document.getElementsByName('radio44').value;
-  	} else if (document.getElementsByName('radio45').checked) {
-	  	APCompSci = document.getElementsByName('radio45').value;
+	if (document.getElementById('radio40').checked) {
+		APCompSci = document.getElementById('radio40').value;
+  	} else if (document.getElementById('radio41').checked) {
+	  	APCompSci = document.getElementById('radio41').value;
+  	} else if (document.getElementById('radio42').checked) {
+	  	APCompSci = document.getElementById('radio42').value;
+  	} else if (document.getElementById('radio43').checked) {
+	  	APCompSci = document.getElementById('radio43').value;
+  	} else if (document.getElementById('radio44').checked) {
+	  	APCompSci = document.getElementById('radio44').value;
+  	} else if (document.getElementById('radio45').checked) {
+	  	APCompSci = document.getElementById('radio45').value;
   	} else {
 	  	APCompSci = 0;
   	}
@@ -111,7 +111,7 @@ function COEN(){
 		Winter1 = coen[3];
 		Spring1 = coen[4];
 	}
-	return;
+	
 }
 
 function CTW(){
