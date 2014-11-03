@@ -10,7 +10,6 @@
 <body id="theBody">
 
 <div>You are a COEN student now.  Forever and always.</div>
-<div id="tester2"></div>
 
 <form action="">
 <input type="checkbox" name="testcheck" value="APyes">I took some APs<br>
@@ -65,6 +64,8 @@
 <input type="radio" name="radio4" id="radio44" value="4" onchange="COEN()">4
 <input type="radio" name="radio4" id="radio45" value="5" onchange="COEN()">5
 </form>
+<div id="tester2"></div>
+<br>
 
 <div>Did you take AP Physics C: Mechanics? What score did you get on it?</div>
 <form action="">
@@ -109,41 +110,40 @@
 
 <table border="4" style="width:100%">
   <tr>
-    <td>Jill</td>
-    <td>Smith</td>		
-    <td>50</td>
-    <td></td>
+    <td id="a1"></td>
+    <td id="a2"></td>		
+    <td id="a3"></td>
   </tr>
   <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-    <td></td>
+    <td id="b1"></td>
+    <td id="b2"></td>
+    <td id="b3"></td>
   </tr>
   <tr>
-    <td>John</td>
-    <td>Doe</td>		
-    <td>80</td>
-    <td></td>
+    <td id="c1"></td>
+    <td id="c2"></td>		
+    <td id="c3"></td>
   </tr>
   <tr>
-    <td id="a"></td>
-    <td id="b"></td>		
-    <td id="c"></td>
-    <td id="d"></td>
+    <td id="d1"></td>
+    <td id="d2"></td>		
+    <td id="d3"></td>
   </tr>
 </table>
+
+<!--
 <script>
 
 var w = "omega";
 var x = 5;
 var y = 6;
 var z = "alpha";
-document.getElementById("a").innerHTML = w;
-document.getElementById("b").innerHTML = x;
-document.getElementById("c").innerHTML = y;
-document.getElementById("d").innerHTML = z;
+document.getElementById("d1").innerHTML = w;
+document.getElementById("d2").innerHTML = x;
+document.getElementById("d3").innerHTML = y;
+document.getElementById("d4").innerHTML = z;
 </script>
+-->
 
 </body>
 </html>

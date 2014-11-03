@@ -44,15 +44,16 @@ function COEN(){
   	} else {
 	  	APCompSci = 0;
   	}
-	document.getElementById("tester2").innerHTML="It worked: " + APCompSci;
+	document.getElementById("tester2").innerHTML="And you scored: " + APCompSci;
 	
-	/*
+	
 	//these will be the output variables, these are the classes that go in the matrix
 	var Fall1;
 	var Winter1;
 	var Spring1;
 	
-	if (APCompSci < 3 || IBCompSci < 6 ||(APCompSci == NA && IBCompSci == NA )){
+	//if (APCompSci < 3 || IBCompSci < 6 ||(APCompSci == NA && IBCompSci == NA ))
+	if (APCompSci < 3 || IBCompSci < 6){
 		//no credit follow the suggested plan
 		Fall1 = coen[0];
 		Winter1 = coen[1];
@@ -66,5 +67,8 @@ function COEN(){
 		Winter1 = coen[3];
 		Spring1 = coen[4];
 	}
-	*/	
+	
+	document.getElementById("b1").innerHTML = Fall1;
+	document.getElementById("b2").innerHTML = Winter1;
+	document.getElementById("b3").innerHTML = Spring1;
 }
