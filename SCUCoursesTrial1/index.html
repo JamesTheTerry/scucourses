@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <script type='text/javascript' src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="jamesOnly.js"></script>
+<script type="text/javascript" src="jamesArray.js"></script>
 </head>
 
 <body id="theBody">
@@ -22,14 +23,15 @@
 -->
 
 <div id="apSection">
+<div>Oh you took some APs? How delightful...</div>
 <div>Did you take AP Calc AB? What score did you get on it?</div>
 <form action="">
-<input type="radio" name="radio1" onchange="msc()" value="0">N/A
-<input type="radio" name="radio1" value="1">1
-<input type="radio" name="radio1" value="2">2
-<input type="radio" name="radio1" value="3">3
-<input type="radio" name="radio1" value="4">4
-<input type="radio" name="radio1" value="5">5
+<input type="radio" name="radio1" value="0" onchange="msc(this.value)">N/A
+<input type="radio" name="radio1" value="1" onchange="???(this.value)">1
+<input type="radio" name="radio1" value="2" onchange="???(this.value)">2
+<input type="radio" name="radio1" value="3" onchange="???(this.value)">3
+<input type="radio" name="radio1" value="4" onchange="???(this.value)">4
+<input type="radio" name="radio1" value="5" onchange="???(this.value)">5
 </form>
 
 <div id="test"></div>
@@ -56,12 +58,12 @@
 
 <div>Did you take AP CompSci A? What score did you get on it?</div>
 <form action="">
-<input type="radio" name="radio4" value="0">N/A
-<input type="radio" name="radio4" value="1">1
-<input type="radio" name="radio4" value="2">2
-<input type="radio" name="radio4" value="3">3
-<input type="radio" name="radio4" value="4">4
-<input type="radio" name="radio4" value="5">5
+<input type="radio" name="radio4" value="0" onchange="COEN(this.value)">N/A
+<input type="radio" name="radio4" value="1" onchange="COEN(this.value)">1
+<input type="radio" name="radio4" value="2" onchange="COEN(this.value)">2
+<input type="radio" name="radio4" value="3" onchange="COEN(this.value)">3
+<input type="radio" name="radio4" value="4" onchange="COEN(this.value)">4
+<input type="radio" name="radio4" value="5" onchange="COEN(this.value)">5
 </form>
 
 <div>Did you take AP Physics C: Mechanics? What score did you get on it?</div>
@@ -76,6 +78,7 @@
 </div>
 
 <div id="ibSection">
+<div>You're one of those people who took IBs? Well aren't you pleased as punch?</div>
 <div>Did you take Chem IB? What score did you get on it?</div>
 <form action="">
 <input type="radio" name="radio6" value="0">N/A

@@ -22,6 +22,6 @@ $(document).ready(function(){
 	*/
 });
 
-function msc(){
-	document.getElementById("test").innerHTML="Oh you didn't take that one";
+function msc(bID){
+	document.getElementById("test").innerHTML="Oh you didn't take that" + bID;
 }
