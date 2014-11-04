@@ -21,7 +21,7 @@ $(document).ready(function(){
 });
 
 var math = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 106", "CORE", "CORE", "CORE"];
-var coen = ["COEN 10", "COEN 11", "COEN 12", "CORE", "CORE"];
+var coen = ["COEN 10", "COEN 11", "COEN 12", "CORE", "CORE", "CORE"];
 var sci = [ "CHEM 11", "PHYS 31", "PHYS 32"];
 var core = ["CTW 1", "CTW 2", "COEN 19"];
 var replace = "CORE";
@@ -234,7 +234,11 @@ function COEN(){
 	var Winter1;
 	var Spring1;
 	
-	if (APCompSci < 3 && IBCompSci < 6){
+	if(APCompSci == 6){
+		Fall1 = coen[3];
+		Winter1 = coen[4];
+		Spring1 = coen[5];
+	} else if (APCompSci < 3 && IBCompSci < 6){
 		//no credit follow the suggested plan
 		Fall1 = coen[0];
 		Winter1 = coen[1];
