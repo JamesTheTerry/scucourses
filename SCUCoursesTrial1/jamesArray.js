@@ -4,6 +4,8 @@ var sci = [ "CHEM 11", "PHYS 31", "PHYS 32"];
 var core = ["CTW 1", "CTW 2", "COEN 19"];
 var replace = "CORE";
 
+//done, commented out for show
+/*
 function CalcAB( ABScore, CRE ){
 	if(ABScore > 3){
 		var start = 2;
@@ -20,6 +22,7 @@ function CalcAB( ABScore, CRE ){
 	Winter0 = math[start+1];
 	Spring0 = math[start=2];
 }
+*/
 
 function CalcBC( BCScore, CRE ){
 	if(BCScore > 3){
@@ -68,7 +71,8 @@ function SciCred(APScore, IBScore, CScore){
 	Spring2 = sci[2];
 }
 
-
+//done, commented out for show
+/*
 function COEN(){
 	//these will be the input variables
 	//set these it be the test scores
@@ -113,13 +117,17 @@ function COEN(){
 	}
 	
 }
+*/
 
+//done, commented out for show
+/*
 function CTW(){
 	var Fall3 = core[0];
 	var Winter3 = core[1];
 	var Spring3 = core[2];
 	return;
 }
+*/
 
 function addCI(){
 	if(Winter1 == "CORE" && Spring1 == "CORE"){
@@ -132,3 +140,4 @@ function addCI(){
 		Winter2 = "C&I 1";
 		Spring1 = "C&I 2";
 	}
+}
