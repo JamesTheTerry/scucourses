@@ -282,24 +282,38 @@ function CTW(){
 }
 
 function addCI(){
-	var Winter1 = document.getElementById("b2").innerHTML;
-	var Spring1 = document.getElementById("b3").innerHTML;
-	var Fall2 = document.getElementById("c1").innerHTML;
-	var Winter2 = document.getElementById("c2").innerHTML;
+	var Fall = document.getElementById("").innerHTML;//set Fall to be the Fall array
+	var Winter = document.getElementById("").innerHTML;
+	var Spring = document.getElementById("").innerHTML;
+
+	var flag = 9;
+	var i;
 	
-	if(Winter1 == "CORE" && Spring1 == "CORE"){
-		Winter1 = "C&I 1";
-		Spring1 = "C&I 2";
-	}else if (Fall2 == "CORE" && Winter2 == "CORE"){
-		Fall2 = "C&I 1";
-		Winter2 = "C&I 2";
-	}else if (Spring1 == "CORE" && Winter2 == "CORE"){
-		Winter2 = "C&I 1";
-		Spring1 = "C&I 2";
+	for (i=0;i<4;i++){
+		if (Winter[i] == "CORE"){
+			flag = i;
+		}
+	}	
+	
+	//this means that there is no core in the winter
+	//and you will not add C&I
+	if (flag == 9){
+		return;
 	}
 	
-	document.getElementById("b2").innerHTML = Winter1;
-	document.getElementById("b3").innerHTML = Spring1;
-	document.getElementById("c1").innerHTML = Fall2;
-	document.getElementById("c2").innerHTML = Winter2;
+	for (i=0;i<4;i++){
+		if (Fall[i] == "CORE"){
+			Fall[i]= "C&I1";//this needs to change the class in the matrix
+			Winter[flag] = "C&I2";//this needs to change the class in the matrix
+			return;			
+		}
+	}	
+	for (i=0;i<4;i++){
+		if (Spring[i] == "CORE"){
+			Spring[i]= "C&I2";//this needs to change the class in the matrix
+			Winter[flag] = "C&I1";//this needs to change the class in the matrix
+			return;			
+		}
+	}	
+
 }
