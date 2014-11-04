@@ -156,6 +156,8 @@ function SciCred(){
 	  	IBChem = 0;
   	}
   	
+  	Transfer32 = 0;
+  	
 	
 	//logic
 	if(APChem > 2 || IBChem > 5){
@@ -169,7 +171,11 @@ function SciCred(){
 	} else{
 		Winter2 = sci[1];
 	}
-	Spring2 = sci[2];
+	if(Transfer32){
+		Spring2 = replace;
+	} else{
+		Spring2 = sci[2];
+	}
 	
 	document.getElementById("c1").innerHTML = Fall2;
 	document.getElementById("c2").innerHTML = Winter2;
