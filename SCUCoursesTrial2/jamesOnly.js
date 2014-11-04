@@ -261,9 +261,20 @@ function COEN(){
 }
 
 function CTW(){
-	var Fall3 = core[0];
-	var Winter3 = core[1];
-	var Spring3 = core[2];
+	transferCTW = 0; //have they transfered out of CTW
+	transfer19 = 0; // have they trnasfered out of COEN19
+	if(transferCTW){
+		var Fall3 = replace;
+		var Winter3 = replace;
+	} else{
+		var Fall3 = core[0];
+		var Winter3 = core[1];
+	}
+	if(transfer19){
+		var Spring3 = replace;
+	} else{
+		var Spring3 = core[2];
+	}
 	
 	document.getElementById("d1").innerHTML = Fall3;
 	document.getElementById("d2").innerHTML = Winter3;
