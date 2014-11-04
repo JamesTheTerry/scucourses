@@ -5,6 +5,7 @@ var core = ["CTW 1", "CTW 2", "COEN 19"];
 var replace = "CORE";
 
 //done, commented out for show
+//I combined the two sections
 /*
 function CalcAB( ABScore, CRE ){
 	if(ABScore > 3){
@@ -22,7 +23,6 @@ function CalcAB( ABScore, CRE ){
 	Winter0 = math[start+1];
 	Spring0 = math[start=2];
 }
-*/
 
 function CalcBC( BCScore, CRE ){
 	if(BCScore > 3){
@@ -54,6 +54,7 @@ function APcalc( ABScore, BCScore, CRE ){
 		CalcAB( ABScore, CRE );
 	}
 }
+*/
 
 function SciCred(APScore, IBScore, CScore){
 	if(APScore > 2 || IBScore > 5){
@@ -70,6 +71,7 @@ function SciCred(APScore, IBScore, CScore){
 	}
 	Spring2 = sci[2];
 }
+
 
 //done, commented out for show
 /*

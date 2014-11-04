@@ -33,8 +33,6 @@
 <input type="radio" name="radio1" id="radio15" value="5" onchange="CalcFull()">5
 </form>
 
-<div id="test"></div>
-
 <div>Did you take AP Calc BC? What score did you get on it?</div>
 <form action="">
 <input type="radio" name="radio2" id="radio20" value="0" onchange="CalcFull()">N/A
@@ -47,12 +45,12 @@
 
 <div>Did you take AP Chem? What score did you get on it?</div>
 <form action="">
-<input type="radio" name="radio3" value="0">N/A
-<input type="radio" name="radio3" value="1">1
-<input type="radio" name="radio3" value="2">2
-<input type="radio" name="radio3" value="3">3
-<input type="radio" name="radio3" value="4">4
-<input type="radio" name="radio3" value="5">5
+<input type="radio" name="radio3" id="radio30" value="0" onchange="SciCred()">N/A
+<input type="radio" name="radio3" id="radio31" value="1" onchange="SciCred()">1
+<input type="radio" name="radio3" id="radio32" value="2" onchange="SciCred()">2
+<input type="radio" name="radio3" id="radio33" value="3" onchange="SciCred()">3
+<input type="radio" name="radio3" id="radio34" value="4" onchange="SciCred()">4
+<input type="radio" name="radio3" id="radio35" value="5" onchange="SciCred()">5
 </form>
 
 <div>Did you take AP CompSci A? What score did you get on it?</div>
@@ -64,49 +62,48 @@
 <input type="radio" name="radio4" id="radio44" value="4" onchange="COEN()">4
 <input type="radio" name="radio4" id="radio45" value="5" onchange="COEN()">5
 </form>
-<div id="tester2"></div>
-<br>
 
 <div>Did you take AP Physics C: Mechanics? What score did you get on it?</div>
 <form action="">
-<input type="radio" name="radio5" value="0">N/A
-<input type="radio" name="radio5" value="1">1
-<input type="radio" name="radio5" value="2">2
-<input type="radio" name="radio5" value="3">3
-<input type="radio" name="radio5" value="4">4
-<input type="radio" name="radio5" value="5">5
+<input type="radio" name="radio5" id="radio50" value="0" onchange="SciCred()">N/A
+<input type="radio" name="radio5" id="radio51" value="1" onchange="SciCred()">1
+<input type="radio" name="radio5" id="radio52" value="2" onchange="SciCred()">2
+<input type="radio" name="radio5" id="radio53" value="3" onchange="SciCred()">3
+<input type="radio" name="radio5" id="radio54" value="4" onchange="SciCred()">4
+<input type="radio" name="radio5" id="radio55" value="5" onchange="SciCred()">5
 </form>
+<br>
 </div>
 
 <div id="ibSection">
 <div>You're one of those people who took IBs? Well aren't you pleased as punch?</div>
 <div>Did you take Chem IB? What score did you get on it?</div>
 <form action="">
-<input type="radio" name="radio6" value="0">N/A
-<input type="radio" name="radio6" value="1">1
-<input type="radio" name="radio6" value="2">2
-<input type="radio" name="radio6" value="3">3
-<input type="radio" name="radio6" value="4">4
-<input type="radio" name="radio6" value="5">5
-<input type="radio" name="radio6" value="6">6
-<input type="radio" name="radio6" value="7">7
+<input type="radio" name="radio6" id="radio60" value="0" onchange="SciCred()">N/A
+<input type="radio" name="radio6" id="radio61" value="1" onchange="SciCred()">1
+<input type="radio" name="radio6" id="radio62" value="2" onchange="SciCred()">2
+<input type="radio" name="radio6" id="radio63" value="3" onchange="SciCred()">3
+<input type="radio" name="radio6" id="radio64" value="4" onchange="SciCred()">4
+<input type="radio" name="radio6" id="radio65" value="5" onchange="SciCred()">5
+<input type="radio" name="radio6" id="radio66" value="6" onchange="SciCred()">6
+<input type="radio" name="radio6" id="radio67" value="7" onchange="SciCred()">7
 </form>
 
 <div>Did you take CompSci IB? What score did you get on it?</div>
 <form action="">
-<input type="radio" name="radio7" value="0">N/A
-<input type="radio" name="radio7" value="1">1
-<input type="radio" name="radio7" value="2">2
-<input type="radio" name="radio7" value="3">3
-<input type="radio" name="radio7" value="4">4
-<input type="radio" name="radio7" value="5">5
-<input type="radio" name="radio7" value="6">6
-<input type="radio" name="radio7" value="7">7
+<input type="radio" name="radio7" id="radio70" value="0" onchange="COEN()">N/A
+<input type="radio" name="radio7" id="radio71" value="1" onchange="COEN()">1
+<input type="radio" name="radio7" id="radio72" value="2" onchange="COEN()">2
+<input type="radio" name="radio7" id="radio73" value="3" onchange="COEN()">3
+<input type="radio" name="radio7" id="radio74" value="4" onchange="COEN()">4
+<input type="radio" name="radio7" id="radio75" value="5" onchange="COEN()">5
+<input type="radio" name="radio7" id="radio76" value="6" onchange="COEN()">6
+<input type="radio" name="radio7" id="radio77" value="7" onchange="COEN()">7
 </form>
 </div>
 
 <div>How'd you do on the Calculus Readiness Exam?</div>
-<input type="number" min="0" max="33" step="1" value="0" name="calcReadExam">
+<input type="number" id="creNumber" min="0" max="33" step="1" value="0" name="calcReadExam" onchange="CalcFull()">
 
 <table border="4" style="width:100%">
   <tr>
