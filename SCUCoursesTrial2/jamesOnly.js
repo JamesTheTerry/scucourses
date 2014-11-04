@@ -13,12 +13,10 @@ $(document).ready(function(){
 	});
 	
 	//I must create the default schedule by running the algorithms on load
-	
+	CTW();
+	COEN();
 	CalcFull();
 	SciCred()
-	COEN();
-	
-	CTW();
 	addCI();
 });
 
@@ -266,14 +264,15 @@ function addCI(){
 	if(Winter1 == "CORE" && Spring1 == "CORE"){
 		Winter1 = "C&I 1";
 		Spring1 = "C&I 2";
-	} else if (Fall2 == "CORE" && Winter2 == "CORE"){
-			Fall2 = "C&I 1";
-			Winter2 = "C&I 2";
-	} else if (Spring1 == "CORE" && Winter2 == "CORE"){
+	}else if (Fall2 == "CORE" && Winter2 == "CORE"){
+		Fall2 = "C&I 1";
+		Winter2 = "C&I 2";
+	}else if (Spring1 == "CORE" && Winter2 == "CORE"){
 		Winter2 = "C&I 1";
 		Spring1 = "C&I 2";
 	}
-	document.getElementById("b2").innerHTML = Winter[1];
+	
+	document.getElementById("b2").innerHTML = Winter1;
 	document.getElementById("b3").innerHTML = Spring1;
 	document.getElementById("c1").innerHTML = Fall2;
 	document.getElementById("c2").innerHTML = Winter2;
