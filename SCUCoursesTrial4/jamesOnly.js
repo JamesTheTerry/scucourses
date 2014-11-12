@@ -156,13 +156,9 @@ function CalcFull(){
 		start = 0;
 	}
 	
-	if(APChem > 3){
+	if(APChem > 3 || APEnvSci > 3){
 		natSci = 1;
 	}
-	
-	if(APEnvSci > 3){
-		natSci = 1;
-	} 
 	
 	if(natSci){
 		var Fall0 = math2[start];
