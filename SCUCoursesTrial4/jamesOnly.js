@@ -469,27 +469,15 @@ function COEN(){
 }
 
 function CTW(){
-	var transferCTW = 0; //have they transfered out of CTW
 	var transfer19 = 0; // have they trnasfered out of COEN19
 	
 	//checkboxes...
-	var coen19 = document.getElementById("check8").checked;
-	var ctw = document.getElementById("check14").checked;
-	
+	var coen19 = document.getElementById("check8").checked;	
 	if (coen19 == true){
 		transfer19 = 1;
 	}
-	if (ctw == true){
-		transferCTW = 1;
-	}
-	
-	
-	if(transferCTW){
-		var Fall3 = replace;
-		var Winter3 = replace;
-	} else{
-		var Fall3 = core[0];
-		var Winter3 = core[1];
+	var Fall3 = core[0];
+	var Winter3 = core[1];
 	}
 	if(transfer19){
 		var Spring3 = replace;
@@ -602,13 +590,7 @@ function addCI(){
 
 function engr1()
 {
-	//make sure it is checked
-	var x = document.getElementById("check4").checked;
 	
-	if (x == true){
-		document.getElementById("e2").innerHTML = "";
-	} else{
-		document.getElementById("e2").innerHTML = "ENGR 1";
-	}
+	document.getElementById("e2").innerHTML = "ENGR 1";
 
 }
