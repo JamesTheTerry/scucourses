@@ -1,0 +1,155 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SCUCourses.fish</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script type='text/javascript' src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="jamesOnly.js"></script>
+</head>
+
+<body id="theBody">
+
+<div>You are a COEN student now.  Forever and always.</div>
+
+<form action="">
+<input type="checkbox" name="testcheck" value="APyes">I took some APs<br>
+<input type="checkbox" name="testcheck" value="IByes">I took some IBs<br>
+</form>
+
+<div id="apSection">
+<div>Oh you took some APs? How delightful...</div>
+<div>Did you take AP Calc AB? What score did you get on it?</div>
+<form action="">
+<input type="radio" name="radio1" id="radio10" value="0" onchange="CalcFull()">N/A
+<input type="radio" name="radio1" id="radio11" value="1" onchange="CalcFull()">1
+<input type="radio" name="radio1" id="radio12" value="2" onchange="CalcFull()">2
+<input type="radio" name="radio1" id="radio13" value="3" onchange="CalcFull()">3
+<input type="radio" name="radio1" id="radio14" value="4" onchange="CalcFull()">4
+<input type="radio" name="radio1" id="radio15" value="5" onchange="CalcFull()">5
+</form>
+
+<div>Did you take AP Calc BC? What score did you get on it?</div>
+<form action="">
+<input type="radio" name="radio2" id="radio20" value="0" onchange="CalcFull()">N/A
+<input type="radio" name="radio2" id="radio21" value="1" onchange="CalcFull()">1
+<input type="radio" name="radio2" id="radio22" value="2" onchange="CalcFull()">2
+<input type="radio" name="radio2" id="radio23" value="3" onchange="CalcFull()">3
+<input type="radio" name="radio2" id="radio24" value="4" onchange="CalcFull()">4
+<input type="radio" name="radio2" id="radio25" value="5" onchange="CalcFull()">5
+</form>
+
+<div>Did you take AP Chem? What score did you get on it?</div>
+<form action="">
+<input type="radio" name="radio3" id="radio30" value="0" onchange="MathSci()">N/A
+<input type="radio" name="radio3" id="radio31" value="1" onchange="MathSci()">1
+<input type="radio" name="radio3" id="radio32" value="2" onchange="MathSci()">2
+<input type="radio" name="radio3" id="radio33" value="3" onchange="MathSci()">3
+<input type="radio" name="radio3" id="radio34" value="4" onchange="MathSci()">4
+<input type="radio" name="radio3" id="radio35" value="5" onchange="MathSci()">5
+</form>
+
+<div>Did you take AP CompSci A? What score did you get on it?</div>
+<form action="">
+<input type="radio" name="radio4" id="radio40" value="0" onchange="COEN()">N/A
+<input type="radio" name="radio4" id="radio41" value="1" onchange="COEN()">1
+<input type="radio" name="radio4" id="radio42" value="2" onchange="COEN()">2
+<input type="radio" name="radio4" id="radio43" value="3" onchange="COEN()">3
+<input type="radio" name="radio4" id="radio44" value="4" onchange="COEN()">4
+<input type="radio" name="radio4" id="radio45" value="5" onchange="COEN()">5
+</form>
+
+<div>Did you take AP Physics C: Mechanics? What score did you get on it?</div>
+<form action="">
+<input type="radio" name="radio5" id="radio50" value="0" onchange="SciCred()">N/A
+<input type="radio" name="radio5" id="radio51" value="1" onchange="SciCred()">1
+<input type="radio" name="radio5" id="radio52" value="2" onchange="SciCred()">2
+<input type="radio" name="radio5" id="radio53" value="3" onchange="SciCred()">3
+<input type="radio" name="radio5" id="radio54" value="4" onchange="SciCred()">4
+<input type="radio" name="radio5" id="radio55" value="5" onchange="SciCred()">5
+</form>
+<br>
+</div>
+
+<div id="ibSection">
+<div>You're one of those people who took IBs? Well aren't you pleased as punch?</div>
+<div>Did you take Chem IB? What score did you get on it?</div>
+<form action="">
+<input type="radio" name="radio6" id="radio60" value="0" onchange="SciCred()">N/A
+<input type="radio" name="radio6" id="radio61" value="1" onchange="SciCred()">1
+<input type="radio" name="radio6" id="radio62" value="2" onchange="SciCred()">2
+<input type="radio" name="radio6" id="radio63" value="3" onchange="SciCred()">3
+<input type="radio" name="radio6" id="radio64" value="4" onchange="SciCred()">4
+<input type="radio" name="radio6" id="radio65" value="5" onchange="SciCred()">5
+<input type="radio" name="radio6" id="radio66" value="6" onchange="SciCred()">6
+<input type="radio" name="radio6" id="radio67" value="7" onchange="SciCred()">7
+</form>
+
+<div>Did you take CompSci IB? What score did you get on it?</div>
+<form action="">
+<input type="radio" name="radio7" id="radio70" value="0" onchange="COEN()">N/A
+<input type="radio" name="radio7" id="radio71" value="1" onchange="COEN()">1
+<input type="radio" name="radio7" id="radio72" value="2" onchange="COEN()">2
+<input type="radio" name="radio7" id="radio73" value="3" onchange="COEN()">3
+<input type="radio" name="radio7" id="radio74" value="4" onchange="COEN()">4
+<input type="radio" name="radio7" id="radio75" value="5" onchange="COEN()">5
+<input type="radio" name="radio7" id="radio76" value="6" onchange="COEN()">6
+<input type="radio" name="radio7" id="radio77" value="7" onchange="COEN()">7
+</form>
+</div>
+
+<div>How'd you do on the Calculus Readiness Exam?</div>
+<input type="number" id="creNumber" min="0" max="33" step="1" value="0" name="calcReadExam" onchange="CalcFull()">
+
+
+
+<table border="4" style="width:100%">
+  <tr>
+    <td id="a1"></td>
+    <td id="a2"></td>		
+    <td id="a3"></td>
+  </tr>
+  <tr>
+    <td id="b1"></td>
+    <td id="b2"></td>
+    <td id="b3"></td>
+  </tr>
+  <tr>
+    <td id="c1"></td>
+    <td id="c2"></td>		
+    <td id="c3"></td>
+  </tr>
+  <tr>
+    <td id="d1"></td>
+    <td id="d2"></td>		
+    <td id="d3"></td>
+  </tr>
+  <tr>
+  	<td id="e1"></td>
+    <td id="e2"></td>		
+    <td id="e3"></td>
+  </tr>
+</table>
+
+<div>
+Right so did you test out of any of these?
+<form action="">
+<div id="ch1"><input type="checkbox" name="courselist" id="check1" onclick="SciCred()">CHEM 11</div>
+<div id="ch2"><input type="checkbox" name="courselist" id="check2" onclick="SciCred()">PHYS 31</div>
+<div id="ch3"><input type="checkbox" name="courselist" id="check3" onclick="SciCred()">PHYS 32</div>
+<div id="ch4"><input type="checkbox" name="courselist" id="check4" onclick="engr1()">ENGR 1</div>
+<div id="ch5"><input type="checkbox" name="courselist" id="check5" onclick="COEN()">COEN 10 or Prior Coding Experience</div>
+<div id="ch6"><input type="checkbox" name="courselist" id="check6" onclick="COEN()">COEN 11</div>
+<div id="ch7"><input type="checkbox" name="courselist" id="check7" onclick="COEN()">COEN 12</div>
+<div id="ch8"><input type="checkbox" name="courselist" id="check8" onclick="CTW()">COEN 19</div>
+<div id="ch9"><input type="checkbox" name="courselist" id="check9" onclick="CalcFull()">MATH 11</div>
+<div id="ch10"><input type="checkbox" name="courselist" id="check10" onclick="CalcFull()">MATH 12</div>
+<div id="ch11"><input type="checkbox" name="courselist" id="check11" onclick="CalcFull()">MATH 13</div>
+<div id="ch12"><input type="checkbox" name="courselist" id="check12" onclick="CalcFull()">MATH 14</div>
+<div id="ch13"><input type="checkbox" name="courselist" id="check13" onclick="CalcFull()">AMTH 106</div>
+<div id="ch14"><input type="checkbox" name="courselist" id="check14" onclick="CTW()">CTW</div>
+<div id="ch15"><input type="checkbox" name="courselist" id="check15" onclick="addCI()">C&I</div>
+</form>
+<div id="tester"></div>
+</div>
+</body>
+</html>
