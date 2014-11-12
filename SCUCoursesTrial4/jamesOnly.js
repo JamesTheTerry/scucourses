@@ -42,6 +42,7 @@ function CalcFull(){
 	var start;
 	var natSci=0;
 	var APChem;
+	var APEnvSci;
 	
 	//set APCalcScoreAB
 	if(document.getElementById('radio10').checked) {
@@ -93,6 +94,24 @@ function CalcFull(){
   	} else {
 	  	APChem = 0;
   	}
+  	
+  	//get the APEnvSci value
+	if (document.getElementById('radio30').checked) {
+		APEnvSci = document.getElementById('radio60').value;
+  	} else if (document.getElementById('radio61').checked) {
+	  	APEnvSci = document.getElementById('radio61').value;
+  	} else if (document.getElementById('radio62').checked) {
+	  	APEnvSci = document.getElementById('radio62').value;
+  	} else if (document.getElementById('radio63').checked) {
+	  	APEnvSci = document.getElementById('radio63').value;
+  	} else if (document.getElementById('radio64').checked) {
+	  	APEnvSci = document.getElementById('radio64').value;
+  	} else if (document.getElementById('radio65').checked) {
+	  	APEnvSci = document.getElementById('radio65').value;
+  	} else {
+	  	APEnvSci = 0;
+  	}
+
 	
 	//checkbox settings stuff
 	var math11 = document.getElementById("check9").checked;
@@ -138,6 +157,10 @@ function CalcFull(){
 	}
 	
 	if(APChem > 3){
+		natSci = 1;
+	}
+	
+	if(APEnvSci > 3){
 		natSci = 1;
 	} 
 	
