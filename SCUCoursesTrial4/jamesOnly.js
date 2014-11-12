@@ -29,9 +29,54 @@ var sci = [ "CHEM 11", "PHYS 31", "PHYS 32"];
 var core = ["CTW1", "CTW2", "COEN 19"];
 var replace = "CORE";
 
+
+function removeCI(){
+	var Fall = [];
+	var Winter = [];
+	var Spring = [];
+	Fall[0] = document.getElementById("a1").innerHTML;
+	Fall[1] = document.getElementById("b1").innerHTML;
+	Fall[2] = document.getElementById("c1").innerHTML;
+	Fall[3] = document.getElementById("d1").innerHTML;
+	Winter[0] = document.getElementById("a2").innerHTML;
+	Winter[1] = document.getElementById("b2").innerHTML;
+	Winter[2] = document.getElementById("c2").innerHTML;
+	Winter[3] = document.getElementById("d2").innerHTML;
+	Spring[0] = document.getElementById("a3").innerHTML;
+	Spring[1] = document.getElementById("b3").innerHTML;
+	Spring[2] = document.getElementById("c3").innerHTML;
+	Spring[3] = document.getElementById("d3").innerHTML;
+	
+	for (i=0; i<4; i++){
+		if (Fall[i] == "CI1" || Fall[i] == "CI2"){
+			Fall[i] = "CORE";
+		}
+		if (Winter[i] == "CI1" || Winter[i] == "CI2"){
+			Winter[i] = "CORE";
+		}
+		if (Spring[i] == "CI1" || Spring[i] == "CI2"){
+			Spring[i] = "CORE";
+		}
+	}
+	document.getElementById("a1").innerHTML = Fall[0];
+	document.getElementById("b1").innerHTML = Fall[1];
+	document.getElementById("c1").innerHTML = Fall[2];
+	document.getElementById("d1").innerHTML = Fall[3];
+	document.getElementById("a2").innerHTML = Winter[0];
+	document.getElementById("b2").innerHTML = Winter[1];
+	document.getElementById("c2").innerHTML = Winter[2];
+	document.getElementById("d2").innerHTML = Winter[3];
+	document.getElementById("a3").innerHTML = Spring[0];
+	document.getElementById("b3").innerHTML = Spring[1];
+	document.getElementById("c3").innerHTML = Spring[2];
+	document.getElementById("d3").innerHTML = Spring[3];
+}
+
+
 function MathSci(){
 	CalcFull();
 	SciCred();
+	COEN()
 	
 }
 
@@ -280,7 +325,7 @@ function SciCred(){
 }
 
 function MoveCoen(){
-	
+
 	removeCI();
 	
 	//find what classes are currently in the schedule
@@ -310,6 +355,7 @@ function MoveCoen(){
 		} else if(Winter[i] == "CTW1" || Winter[i] == "CTW2" ){
 			flagW++;
 		}
+
 	}
 	
 	if( flagW > 2){
@@ -456,48 +502,6 @@ function CTW(){
 	document.getElementById("d3").innerHTML = Spring3;
 	
 	addCI();
-}
-
-function removeCI(){
-	var Fall = [];
-	var Winter = [];
-	var Spring = [];
-	Fall[0] = document.getElementById("a1").innerHTML;
-	Fall[1] = document.getElementById("b1").innerHTML;
-	Fall[2] = document.getElementById("c1").innerHTML;
-	Fall[3] = document.getElementById("d1").innerHTML;
-	Winter[0] = document.getElementById("a2").innerHTML;
-	Winter[1] = document.getElementById("b2").innerHTML;
-	Winter[2] = document.getElementById("c2").innerHTML;
-	Winter[3] = document.getElementById("d2").innerHTML;
-	Spring[0] = document.getElementById("a3").innerHTML;
-	Spring[1] = document.getElementById("b3").innerHTML;
-	Spring[2] = document.getElementById("c3").innerHTML;
-	Spring[3] = document.getElementById("d3").innerHTML;
-	
-	for (i=0; i<4; i++){
-		if (Fall[i] == "CI1" || Fall[i] == "CI2"){
-			Fall[i] = "CORE";
-		}
-		if (Winter[i] == "CI1" || Winter[i] == "CI2"){
-			Winter[i] = "CORE";
-		}
-		if (Spring[i] == "CI1" || Spring[i] == "CI2"){
-			Spring[i] = "CORE";
-		}
-	}
-	document.getElementById("a1").innerHTML = Fall[0];
-	document.getElementById("b1").innerHTML = Fall[1];
-	document.getElementById("c1").innerHTML = Fall[2];
-	document.getElementById("d1").innerHTML = Fall[3];
-	document.getElementById("a2").innerHTML = Winter[0];
-	document.getElementById("b2").innerHTML = Winter[1];
-	document.getElementById("c2").innerHTML = Winter[2];
-	document.getElementById("d2").innerHTML = Winter[3];
-	document.getElementById("a3").innerHTML = Spring[0];
-	document.getElementById("b3").innerHTML = Spring[1];
-	document.getElementById("c3").innerHTML = Spring[2];
-	document.getElementById("d3").innerHTML = Spring[3];
 }
 
 function addCI(){
