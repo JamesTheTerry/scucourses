@@ -23,9 +23,10 @@ $(document).ready(function(){
 
 var math1 = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 106", "AMTH 108", "MATH 53", "CORE"];
 var math2 = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 108", "MATH 53", "CORE"];
-var coen = ["COEN 10", "COEN 11", "COEN 12", "CORE", "CORE", "CORE"];
+var coen1 = ["COEN 10", "COEN 11", "CORE", "CORE"];
+var coen2 = "COEN 12";
 var sci = [ "CHEM 11", "PHYS 31", "PHYS 32"];
-var core = ["CTW 1", "CTW 2", "COEN 19"];
+var core = ["CTW1", "CTW2", "COEN 19"];
 var replace = "CORE";
 
 function MathSci(){
@@ -278,6 +279,49 @@ function SciCred(){
 	addCI();
 }
 
+function MoveCoen(){
+	
+	removeCI();
+	
+	//find what classes are currently in the schedule
+	var Fall = [];
+	var Winter = [];
+	var Spring = [];
+	Fall[0] = document.getElementById("a1").innerHTML;
+	Fall[1] = document.getElementById("b1").innerHTML;
+	Fall[2] = document.getElementById("c1").innerHTML;
+	Fall[3] = document.getElementById("d1").innerHTML;
+	Winter[0] = document.getElementById("a2").innerHTML;
+	Winter[1] = document.getElementById("b2").innerHTML;
+	Winter[2] = document.getElementById("c2").innerHTML;
+	Winter[3] = document.getElementById("d2").innerHTML;
+	Spring[0] = document.getElementById("a3").innerHTML;
+	Spring[1] = document.getElementById("b3").innerHTML;
+	Spring[2] = document.getElementById("c3").innerHTML;
+	Spring[3] = document.getElementById("d3").innerHTML;
+	
+	var i;
+	var flagW = 0;
+	var flagF = 0;
+	
+	for (i=0;i<4;i++){
+		if (Winter[i] == "CORE"){
+			flagW++;
+		} else if(Winter[i] == "CTW1" || Winter[i] == "CTW2" ){
+			flagW++;
+		}
+	}
+	
+	if( flagW > 2){
+		//move COEN 12 the winter if more than 2 CORE is Winter
+		document.getElementById("b2").innerHTML = coen2;
+		document.getElementById("b3").innerHTML = replace;
+		return;
+	}
+
+	
+}
+
 
 function COEN(){
 	//these will be the input variables
@@ -345,27 +389,35 @@ function COEN(){
 	var Spring1;
 	
 	if(APCompSci == 6){
-		Fall1 = coen[3];
-		Winter1 = coen[4];
-		Spring1 = coen[5];
+		//no COEN 12
+		Fall1 = coen1[2];
+		Winter1 = coen1[3];
+		Spring1 = replace;
 	} else if (APCompSci < 3 && IBCompSci < 6){
 		//no credit follow the suggested plan
-		Fall1 = coen[0];
-		Winter1 = coen[1];
-		Spring1 = coen[2];
+		Fall1 = coen1[0];
+		Winter1 = coen1[1];
+		Spring1 = coen2;
 	} else if (APCompSci >= 4 || IBCompSci >= 6){
-		Fall1 = coen[2];
-		Winter1 = coen[3];
-		Spring1 = coen[4];
+		//no COEN 11
+		Fall1 = coen1[2];
+		Winter1 = coen1[3];
+		Spring1 = coen2;
 	} else if (APCompSci == 3){
-		Fall1 = coen[1];
-		Winter1 = coen[2];
-		Spring1 = coen[3];
+		//no COEN 10
+		Fall1 = coen1[1];
+		Winter1 = coen1[2];
+		Spring1 = coen2;
 	}
 	
 	document.getElementById("b1").innerHTML = Fall1;
 	document.getElementById("b2").innerHTML = Winter1;
 	document.getElementById("b3").innerHTML = Spring1;
+	
+	if(APCompSci < 6){
+		//Move COEN12 to a different quarter
+		MoveCoen();
+	}
 	
 	addCI();
 }
@@ -449,13 +501,6 @@ function removeCI(){
 }
 
 function addCI(){
-	//first let's see if you place out of C&I
-	var ciCheck = document.getElementById("check15").checked;
-	
-	if (ciCheck == true) {
-		removeCI();
-		return;
-	}
 	
 	removeCI();
 	
