@@ -476,9 +476,10 @@ function CTW(){
 	if (coen19 == true){
 		transfer19 = 1;
 	}
+	
 	var Fall3 = core[0];
 	var Winter3 = core[1];
-	}
+	
 	if(transfer19){
 		var Spring3 = replace;
 	} else{
@@ -590,7 +591,15 @@ function addCI(){
 
 function engr1()
 {
+	//make sure it is checked
+	var x = document.getElementById("check4").checked;
 	
-	document.getElementById("e2").innerHTML = "ENGR 1";
+	if (x == true){
+		document.getElementById("e2").innerHTML = "ENGR 1";
+		document.getElementById("e1").innerHTML = "";
+	} else{
+		document.getElementById("e1").innerHTML = "ENGR 1";
+		document.getElementById("e2").innerHTML = "";
+	}
 
 }
