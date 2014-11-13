@@ -340,10 +340,6 @@ function MoveCoen(){
 	Winter[1] = document.getElementById("b2").innerHTML;
 	Winter[2] = document.getElementById("c2").innerHTML;
 	Winter[3] = document.getElementById("d2").innerHTML;
-	Spring[0] = document.getElementById("a3").innerHTML;
-	Spring[1] = document.getElementById("b3").innerHTML;
-	Spring[2] = document.getElementById("c3").innerHTML;
-	Spring[3] = document.getElementById("d3").innerHTML;
 	
 	var i;
 	var flagW = 0;
@@ -364,6 +360,22 @@ function MoveCoen(){
 		document.getElementById("b3").innerHTML = replace;
 		return;
 	}
+	
+	for (i=0;i<4;i++){
+		if (Fall[i] == "CORE"){
+			flagF++;
+		} else if(Fall[i] == "CTW1" || Fall[i] == "CTW2" ){
+			flagF++;
+		}
+
+	}
+	
+	if( flagF > 2){
+		//move COEN 12 the winter if more than 2 CORE is Winter
+		document.getElementById("b1").innerHTML = coen2;
+		document.getElementById("b3").innerHTML = replace;
+	}
+
 
 	
 }
