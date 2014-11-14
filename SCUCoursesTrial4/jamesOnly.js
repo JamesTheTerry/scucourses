@@ -223,6 +223,40 @@ function CalcFull(){
 	addCI();
 }
 
+function AddPhys(){
+
+	removeCI();
+	
+	var Transfer33 = 0;
+	var phys33 = document.getElementById("check14").checked;
+	
+	var SciExemp = [];
+	SciExemp[0] = document.getElementById("c1").innerHTML;
+	SciExemp[1] = document.getElementById("c2").innerHTML;
+	SciExemp[2] = document.getElementById("c3").innerHTML;
+	
+	var i;
+	var flag = 0;
+	
+	if (phys33 == true){
+		Transfer33 = 1;
+	}  	  	  
+	
+	for (i=0;i<3;i++){
+		if (SciExemp[i] == "CORE"){
+			flag++;
+		}
+	}
+	if(flag == 3){
+		if(Transfer33 == 1){
+			document.getElementById("c1").innerHTML = replace;
+		} else{
+			document.getElementById("c1").innerHTML = "PHYS 33";
+		}
+	}
+}
+
+
 function SciCred(){
 	var APChem;
 	var APphysics;
@@ -297,7 +331,8 @@ function SciCred(){
 	}
 	if (phys32 == true){
 		Transfer32 = 1;
-	}  	  	
+	}
+		  	
 	
 	//logic
 	if(APChem > 2 || IBChem > 5){
@@ -321,6 +356,7 @@ function SciCred(){
 	document.getElementById("c2").innerHTML = Winter2;
 	document.getElementById("c3").innerHTML = Spring2;
 	
+	AddPhys();//adds Phys 33 if appropriate
 	addCI();
 }
 
