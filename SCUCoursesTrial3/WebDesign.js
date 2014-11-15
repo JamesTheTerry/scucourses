@@ -26,7 +26,7 @@ var coen2 = "COEN 12";
 var sci = [ "CHEM 11", "COMM 2"];
 var CI = [ "CI1", "CI2"];
 var core = ["CTW1", "CTW2", "CORE"];
-var coreS = ["RTC1", "SocSci", "RTC2", "Diversity", "RTC3", "CI3", "ELSJ", "Ethics","SeeAdvisor"];
+var coreS = ["RTC1", "SocSci", "RTC2", "Diversity", "RTC3", "ELSJ", "Ethics", "CI3","SeeAdvisor"];
 var replace = "CORE";
 
 function MathSci(){
