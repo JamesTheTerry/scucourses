@@ -79,7 +79,7 @@ function removeCI(){
 function MathSci(){
 	CalcFull();
 	SciCred();
-	COEN()
+	COEN();
 	
 }
 

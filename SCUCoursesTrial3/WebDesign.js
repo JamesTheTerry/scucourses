@@ -16,16 +16,25 @@ $(document).ready(function(){
 	CTW();
 	COEN();
 	CalcFull();
-	SciCred()
-	addCI();
+	SciCred();
 	engr1();
 });
 
-var math = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 108", "CORE", "CORE", "CORE"];
-var coen = ["COEN 10", "COEN 11", "COEN 12", "CORE", "CORE", "CORE"];
-var sci = [ "Nat Sci", "COMM 2", "C&I 1", "C&I 2"];
-var core = ["CTW 1", "CTW 2", "COEN 19"];
+var math = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 108", "CORE", "CORE"];
+var coen1 = ["COEN 10", "COEN 11", "CORE", "CORE"];
+var coen2 = "COEN 12";
+var sci = [ "CHEM 11", "COMM 2"];
+var CI = [ "CI1", "CI2"];
+var core = ["CTW1", "CTW2", "CORE"];
+var coreS = ["RTC1", "SocSci", "RTC2", "Diversity", "RTC3", "CI3", "ELSJ", "Ethics","SeeAdvisor"];
 var replace = "CORE";
+
+function MathSci(){
+	CalcFull();
+	SciCred();
+	COEN();
+	
+}
 
 function CalcFull(){
 	//define the variables
@@ -73,7 +82,6 @@ function CalcFull(){
 	var math12 = document.getElementById("check10").checked;
 	var math13 = document.getElementById("check11").checked;
 	var math14 = document.getElementById("check12").checked;
-	var amth108 = document.getElementById("check1X").checked;
 	
 	if (math11 == true && APCalcScoreBC < 3){
 		APCalcScoreBC = 3;
@@ -87,14 +95,9 @@ function CalcFull(){
 	if (math14 == true){
 		APCalcScoreBC = 7;
 	}
-	if (amth108 == true){
-		APCalcScoreBC = 8;
-	}
 	
 	//BC score of 3+ overides any AB score.  CRE is below all them
-	if(APCalcScoreBC == 8){
-		start = 6;
-	} else if(APCalcScoreBC == 7){
+	if(APCalcScoreBC == 7){
 		start = 5;
 	} else if(APCalcScoreBC == 6){
 		start = 4;
@@ -119,33 +122,17 @@ function CalcFull(){
 	document.getElementById("a2").innerHTML = Winter0;
 	document.getElementById("a3").innerHTML = Spring0;
 	
-	addCI();
 }
 
 function SciCred(){
 	var APChem;
-	var APEnv;
 	var APphysics;
 	var IBChem;
-	var IBphysics;
+	var APEnvSci;
 	var Transfer32 = 0;
+	var start = 0;
 	
-	//get the APEnv value
-	if (document.getElementById('radio3a').checked) {
-		APEnv = document.getElementById('radio3a').value;
-  	} else if (document.getElementById('radio3b').checked) {
-	  	APEnv = document.getElementById('radio3b').value;
-  	} else if (document.getElementById('radio3c').checked) {
-	  	APEnv = document.getElementById('radio3c').value;
-  	} else if (document.getElementById('radio3d').checked) {
-	  	APEnv = document.getElementById('radio3d').value;
-  	} else if (document.getElementById('radio3e').checked) {
-	  	APEnv = document.getElementById('radio3e').value;
-  	} else if (document.getElementById('radio3f').checked) {
-	  	APEnv = document.getElementById('radio3f').value;
-  	} else {
-	  	APEnv = 0;
-  	}
+	
 	
 	//get the APChem value
 	if (document.getElementById('radio30').checked) {
@@ -180,27 +167,6 @@ function SciCred(){
   	} else {
 	  	APphysics = 0;
   	}
-  	
-	//get the IBphysics value
-  	if (document.getElementById('radio6a').checked) {
-		IBphysics = document.getElementById('radio6a').value;
-  	} else if (document.getElementById('radio6b').checked) {
-	  	IBphysics = document.getElementById('radio6b').value;
-  	} else if (document.getElementById('radio6c').checked) {
-	  	IBphysics = document.getElementById('radio6c').value;
-  	} else if (document.getElementById('radio6d').checked) {
-	  	IBphysics = document.getElementById('radio6d').value;
-  	} else if (document.getElementById('radio6e').checked) {
-	  	IBphysics = document.getElementById('radio6e').value;
-  	} else if (document.getElementById('radio6f').checked) {
-	  	IBphysics = document.getElementById('radio6f').value;
-  	} else if (document.getElementById('radio6g').checked) {
-	  	IBphysics = document.getElementById('radio6g').value;
-  	} else if (document.getElementById('radio6h').checked) {
-	  	IBphysics = document.getElementById('radio6h').value;
-  	} else {
-	  	IBphysics = 0;
-  	}
 	
   	//get the IBChem value
   	if (document.getElementById('radio60').checked) {
@@ -223,6 +189,24 @@ function SciCred(){
 	  	IBChem = 0;
   	}
   	
+  	//get the APEnvSci value
+	if (document.getElementById('radio80').checked) {
+		APEnvSci = document.getElementById('radio80').value;
+  	} else if (document.getElementById('radio81').checked) {
+	  	APEnvSci = document.getElementById('radio81').value;
+  	} else if (document.getElementById('radio82').checked) {
+	  	APEnvSci = document.getElementById('radio82').value;
+  	} else if (document.getElementById('radio83').checked) {
+	  	APEnvSci = document.getElementById('radio83').value;
+  	} else if (document.getElementById('radio84').checked) {
+	  	APEnvSci = document.getElementById('radio84').value;
+  	} else if (document.getElementById('radio85').checked) {
+	  	APEnvSci = document.getElementById('radio85').value;
+  	} else {
+	  	APEnvSci = 0;
+  	}
+  	
+  	
   	//Let's set up some checkboxes bro!
   	var chem11 = document.getElementById("check1").checked;
 	var phys31 = document.getElementById("check2").checked;
@@ -240,27 +224,82 @@ function SciCred(){
 	
 	//logic
 	if(APChem > 2 || IBChem > 5){
-		Fall2 = replace;
-	} else{
-		Fall2 = sci[0];
+		start = 1;
+	}else if(APphysics > 3){
+		start = 1;
+	}else if(Transfer32 == 1){
+		start = 1;
+	} else if(APEnvSci > 3){
+		start = 1;
 	}
 	
-	if(APphysics > 3){
-		Winter2 = replace;
-	} else{
-		Winter2 = sci[1];
-	}
-	if(Transfer32 == 1){
-		Spring2 = replace;
-	} else{
-		Spring2 = sci[2];
-	}
+	
+	Fall2 = sci[start];
+	Winter2 = CI[0];
+	Spring2 = CI[1];
 	
 	document.getElementById("c1").innerHTML = Fall2;
 	document.getElementById("c2").innerHTML = Winter2;
 	document.getElementById("c3").innerHTML = Spring2;
+}
+
+
+function MoveCoen(){
+
+	removeCORE();
 	
-	addCI();
+	//find what classes are currently in the schedule
+	var Fall = [];
+	var Winter = [];
+	var Spring = [];
+	Fall[0] = document.getElementById("a1").innerHTML;
+	Fall[1] = document.getElementById("b1").innerHTML;
+	Fall[2] = document.getElementById("c1").innerHTML;
+	Fall[3] = document.getElementById("d1").innerHTML;
+	Winter[0] = document.getElementById("a2").innerHTML;
+	Winter[1] = document.getElementById("b2").innerHTML;
+	Winter[2] = document.getElementById("c2").innerHTML;
+	Winter[3] = document.getElementById("d2").innerHTML;
+	
+	var i;
+	var flagW = 0;
+	var flagF = 0;
+	
+	for (i=0;i<4;i++){
+		if (Winter[i] == "CORE"){
+			flagW++;
+		} else if(Winter[i] == "CTW1" || Winter[i] == "CTW2" ){
+			flagW++;
+		} else if(Winter[i] == "CI1" || Winter[i] == "CI2" ){
+			flagW++;
+		}
+
+	}
+	
+	if( flagW > 2){
+		//move COEN 12 the winter if more than 2 CORE is Winter
+		document.getElementById("b2").innerHTML = coen2;
+		document.getElementById("b3").innerHTML = replace;
+		return;
+	}
+	
+	for (i=0;i<4;i++){
+		if (Fall[i] == "CORE"){
+			flagF++;
+		} else if(Fall[i] == "CTW1" || Fall[i] == "CTW2" ){
+			flagF++;
+		}
+
+	}
+	
+	if( flagF > 2){
+		//move COEN 12 the winter if more than 2 CORE is Winter
+		document.getElementById("b1").innerHTML = coen2;
+		document.getElementById("b3").innerHTML = replace;
+	}
+
+
+	
 }
 
 
@@ -330,68 +369,64 @@ function COEN(){
 	var Spring1;
 	
 	if(APCompSci == 6){
-		Fall1 = coen[3];
-		Winter1 = coen[4];
-		Spring1 = coen[5];
+		//no COEN 12
+		Fall1 = coen1[2];
+		Winter1 = coen1[3];
+		Spring1 = replace;
 	} else if (APCompSci < 3 && IBCompSci < 6){
 		//no credit follow the suggested plan
-		Fall1 = coen[0];
-		Winter1 = coen[1];
-		Spring1 = coen[2];
+		Fall1 = coen1[0];
+		Winter1 = coen1[1];
+		Spring1 = coen2;
 	} else if (APCompSci >= 4 || IBCompSci >= 6){
-		Fall1 = coen[2];
-		Winter1 = coen[3];
-		Spring1 = coen[4];
+		//no COEN 11
+		Fall1 = coen1[2];
+		Winter1 = coen1[3];
+		Spring1 = coen2;
 	} else if (APCompSci == 3){
-		Fall1 = coen[1];
-		Winter1 = coen[2];
-		Spring1 = coen[3];
+		//no COEN 10
+		Fall1 = coen1[1];
+		Winter1 = coen1[2];
+		Spring1 = coen2;
 	}
 	
 	document.getElementById("b1").innerHTML = Fall1;
 	document.getElementById("b2").innerHTML = Winter1;
 	document.getElementById("b3").innerHTML = Spring1;
 	
-	addCI();
+	if(APCompSci < 6){
+		//Move COEN12 to a different quarter
+		MoveCoen();
+	}
+	
+	suggest();
 }
 
 function CTW(){
-	var transferCTW = 0; //have they transferred out of CTW
-	var transfer19 = 0; // have they transferred out of COEN19
+	document.getElementById("d1").innerHTML = core[0];
+	document.getElementById("d2").innerHTML = core[1];
+	document.getElementById("d3").innerHTML = core[2];
 	
-	//checkboxes...
-	var coen19 = document.getElementById("check8").checked;
-	var ctw = document.getElementById("check14").checked;
-	
-	if (coen19 == true){
-		transfer19 = 1;
-	}
-	if (ctw == true){
-		transferCTW = 1;
-	}
-	
-	
-	if(transferCTW){
-		var Fall3 = replace;
-		var Winter3 = replace;
-	} else{
-		var Fall3 = core[0];
-		var Winter3 = core[1];
-	}
-	if(transfer19){
-		var Spring3 = replace;
-	} else{
-		var Spring3 = core[2];
-	}
-	
-	document.getElementById("d1").innerHTML = Fall3;
-	document.getElementById("d2").innerHTML = Winter3;
-	document.getElementById("d3").innerHTML = Spring3;
-	
-	addCI();
 }
 
-function removeCI(){
+
+
+function engr1()
+{
+	//make sure it is checked
+	var x = document.getElementById("check4").checked;
+	
+	if (x == true){
+		document.getElementById("e2").innerHTML = "ENGR 1";
+		document.getElementById("e1").innerHTML = "";
+	} else{
+		document.getElementById("e1").innerHTML = "ENGR 1";
+		document.getElementById("e2").innerHTML = "";
+	}
+
+}
+
+function removeCORE(){
 	var Fall = [];
 	var Winter = [];
 	var Spring = [];
@@ -409,14 +444,16 @@ function removeCI(){
 	Spring[3] = document.getElementById("d3").innerHTML;
 	
 	for (i=0; i<4; i++){
-		if (Fall[i] == "CI1" || Fall[i] == "CI2"){
-			Fall[i] = "CORE";
-		}
-		if (Winter[i] == "CI1" || Winter[i] == "CI2"){
-			Winter[i] = "CORE";
-		}
-		if (Spring[i] == "CI1" || Spring[i] == "CI2"){
-			Spring[i] = "CORE";
+		for(j=0; j<11; j++){
+			if (Fall[i] == coreS[j]){
+				Fall[i] = "CORE";
+			}
+			if (Winter[i] == coreS[j]){
+				Winter[i] = "CORE";
+			}
+			if (Spring[i] == coreS[j]){
+				Spring[i] = "CORE";
+			}
 		}
 	}
 	document.getElementById("a1").innerHTML = Fall[0];
@@ -433,16 +470,20 @@ function removeCI(){
 	document.getElementById("d3").innerHTML = Spring[3];
 }
 
-function addCI(){
-	//first let's see if you place out of C&I
-	var ciCheck = document.getElementById("check15").checked;
+
+function suggest(){
+
+	removeCORE();
+
+	var coreCred = [];
+	var coreCount = 0;
+	var i;
 	
-	if (ciCheck == true) {
-		removeCI();
-		return;
-	}
-	
-	removeCI();
+	var GovAP = 0;
+	var MacroAP = 0;
+	var MicroAP = 0;
+	var PsychAP = 0;
+	var EconIB = 0;
 	
 	var Fall = [];
 	var Winter = [];
@@ -459,92 +500,74 @@ function addCI(){
 	Spring[1] = document.getElementById("b3").innerHTML;
 	Spring[2] = document.getElementById("c3").innerHTML;
 	Spring[3] = document.getElementById("d3").innerHTML;
+	
+	//get the APEnvSci value
+	if (document.getElementById('radio90').checked) {
+		GovAP = document.getElementById('radio90').value;
+  	} else if (document.getElementById('radio91').checked) {
+	  	GovAP = document.getElementById('radio91').value;
+  	} else if (document.getElementById('radio92').checked) {
+	  	GovAP = document.getElementById('radio92').value;
+  	} else if (document.getElementById('radio93').checked) {
+	  	GovAP = document.getElementById('radio93').value;
+  	} else if (document.getElementById('radio94').checked) {
+	  	GovAP = document.getElementById('radio94').value;
+  	} else if (document.getElementById('radio95').checked) {
+	  	GovAP = document.getElementById('radio95').value;
+  	} else {
+	  	GovAP = 0;
+  	}
 
-	var flag = 9;
-	var i;
 	
-	for (i=0;i<4;i++){
-		if (Winter[i] == "CORE"){
-			flag = i;
-		}
-		if (Winter[i] == "CI2" || Winter[i] == "CI1"){
-			return;
-		}
+	for(i=0; i<11; i++){
+		coreCred[i] = 0;
 	}
 	
-	//this means that there is no core in the winter
-	//and you will not add C&I
-	if (flag == 9){
-		return;
-	}
-	
-	for (i=0;i<4;i++){
-		if (Fall[i] == "CORE"){
-			Fall[i]= "CI1";//this needs to change the class in the matrix
-			Winter[flag] = "CI2";//this needs to change the class in the matrix
-			
-			if (flag == 0){
-				document.getElementById("a2").innerHTML = "CI2";
-			} else if (flag == 1) {
-				document.getElementById("b2").innerHTML = "CI2";
-			} else if (flag == 2) {
-				document.getElementById("c2").innerHTML = "CI2";
-			} else if (flag == 3) {
-				document.getElementById("d2").innerHTML = "CI2";
-			}
-			
-			if (i == 0){
-				document.getElementById("a1").innerHTML = "CI1";
-			} else if (i == 1) {
-				document.getElementById("b1").innerHTML = "CI1";
-			} else if (i == 2) {
-				document.getElementById("c1").innerHTML = "CI1";
-			} else if (i == 3) {
-				document.getElementById("d1").innerHTML = "CI1";
-			}
-			
-			return;			
-		}
-	}	
-	for (i=0;i<4;i++){
-		if (Spring[i] == "CORE"){
-			Spring[i]= "CI2";//this needs to change the class in the matrix
-			Winter[flag] = "CI1";//this needs to change the class in the matrix
-			
-			if (flag == 0){
-				document.getElementById("a2").innerHTML = "CI1";
-			} else if (flag == 1) {
-				document.getElementById("b2").innerHTML = "CI1";
-			} else if (flag == 2) {
-				document.getElementById("c2").innerHTML = "CI1";
-			} else if (flag == 3) {
-				document.getElementById("d2").innerHTML = "CI1";
-			}
-			
-			if (i == 0){
-				document.getElementById("a3").innerHTML = "CI2";
-			} else if (i == 1) {
-				document.getElementById("b3").innerHTML = "CI2";
-			} else if (i == 2) {
-				document.getElementById("c3").innerHTML = "CI2";
-			} else if (i == 3) {
-				document.getElementById("d3").innerHTML = "CI2";
-			}
-			
-			return;			
-		}
-	}
-}
-
-function engr1()
-{
-	//make sure it is checked
-	var x = document.getElementById("check4").checked;
-	
-	if (x == true){
-		document.getElementById("e2").innerHTML = "";
+	if(GovAP > 3 || MacroAP > 3 || MicroAP > 3 || PsychAP > 3 || EconIB > 5){
+		coreCred[1] = 1;
 	} else{
-		document.getElementById("e2").innerHTML = "ENGR 1";
+		coreCred[1] = 0;
+	}
+	
+	for (i=0; i<4; i++){
+		if(coreCred[coreCount]){
+			coreCount++;
+		}
+		if (Fall[i] == "CORE"){
+			Fall[i] = coreS[coreCount];
+			coreCount++;
+		}
+	}
+	for (i=0; i<4; i++){
+		if(coreCred[coreCount]){
+			coreCount++;
+		}
+		if (Winter[i] == "CORE"){
+			Winter[i] = coreS[coreCount];
+			coreCount++;
+		}
+	}
+	for (i=0; i<4; i++){
+		if(coreCred[coreCount]){
+			coreCount++;
+		}
+		if (Spring[i] == "CORE"){
+			Spring[i] = coreS[coreCount];
+			coreCount++;
+		}
 	}
 
+	document.getElementById("a1").innerHTML = Fall[0];
+	document.getElementById("b1").innerHTML = Fall[1];
+	document.getElementById("c1").innerHTML = Fall[2];
+	document.getElementById("d1").innerHTML = Fall[3];
+	document.getElementById("a2").innerHTML = Winter[0];
+	document.getElementById("b2").innerHTML = Winter[1];
+	document.getElementById("c2").innerHTML = Winter[2];
+	document.getElementById("d2").innerHTML = Winter[3];
+	document.getElementById("a3").innerHTML = Spring[0];
+	document.getElementById("b3").innerHTML = Spring[1];
+	document.getElementById("c3").innerHTML = Spring[2];
+	document.getElementById("d3").innerHTML = Spring[3];	
 }
+
