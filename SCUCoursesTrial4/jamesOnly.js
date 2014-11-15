@@ -27,6 +27,7 @@ var coen1 = ["COEN 10", "COEN 11", "CORE", "CORE"];
 var coen2 = "COEN 12";
 var sci = [ "CHEM 11", "PHYS 31", "PHYS 32"];
 var core = ["CTW1", "CTW2", "COEN 19"];
+var coreS = ["RTC1", "SocSci", "RTC2", "Diversity", "RTC3", "CI3", "ELSJ", "Ethics","SeeAdvisor", "CI1", "CI2"];
 var replace = "CORE";
 
 
@@ -48,14 +49,16 @@ function removeCI(){
 	Spring[3] = document.getElementById("d3").innerHTML;
 	
 	for (i=0; i<4; i++){
-		if (Fall[i] == "CI1" || Fall[i] == "CI2"){
-			Fall[i] = "CORE";
-		}
-		if (Winter[i] == "CI1" || Winter[i] == "CI2"){
-			Winter[i] = "CORE";
-		}
-		if (Spring[i] == "CI1" || Spring[i] == "CI2"){
-			Spring[i] = "CORE";
+		for(j=0; j<11; j++){
+			if (Fall[i] == coreS[j]){
+				Fall[i] = "CORE";
+			}
+			if (Winter[i] == coreS[j]){
+				Winter[i] = "CORE";
+			}
+			if (Spring[i] == coreS[j]){
+				Spring[i] = "CORE";
+			}
 		}
 	}
 	document.getElementById("a1").innerHTML = Fall[0];
@@ -142,18 +145,18 @@ function CalcFull(){
   	}
   	
   	//get the APEnvSci value
-	if (document.getElementById('radio30').checked) {
-		APEnvSci = document.getElementById('radio60').value;
-  	} else if (document.getElementById('radio61').checked) {
-	  	APEnvSci = document.getElementById('radio61').value;
-  	} else if (document.getElementById('radio62').checked) {
-	  	APEnvSci = document.getElementById('radio62').value;
-  	} else if (document.getElementById('radio63').checked) {
-	  	APEnvSci = document.getElementById('radio63').value;
-  	} else if (document.getElementById('radio64').checked) {
-	  	APEnvSci = document.getElementById('radio64').value;
-  	} else if (document.getElementById('radio65').checked) {
-	  	APEnvSci = document.getElementById('radio65').value;
+	if (document.getElementById('radio80').checked) {
+		APEnvSci = document.getElementById('radio80').value;
+  	} else if (document.getElementById('radio81').checked) {
+	  	APEnvSci = document.getElementById('radio81').value;
+  	} else if (document.getElementById('radio82').checked) {
+	  	APEnvSci = document.getElementById('radio82').value;
+  	} else if (document.getElementById('radio83').checked) {
+	  	APEnvSci = document.getElementById('radio83').value;
+  	} else if (document.getElementById('radio84').checked) {
+	  	APEnvSci = document.getElementById('radio84').value;
+  	} else if (document.getElementById('radio85').checked) {
+	  	APEnvSci = document.getElementById('radio85').value;
   	} else {
 	  	APEnvSci = 0;
   	}
@@ -221,6 +224,7 @@ function CalcFull(){
 	document.getElementById("a3").innerHTML = Spring0;
 	
 	addCI();
+	suggest();
 }
 
 function AddPhys(){
@@ -359,6 +363,7 @@ function SciCred(){
 	
 	AddPhys();//adds Phys 33 if appropriate
 	addCI();
+	suggest();
 }
 
 function MoveCoen(){
@@ -515,6 +520,7 @@ function COEN(){
 	}
 	
 	addCI();
+	suggest();
 }
 
 function CTW(){
@@ -540,6 +546,7 @@ function CTW(){
 	document.getElementById("d3").innerHTML = Spring3;
 	
 	addCI();
+	suggest();
 }
 
 function addCI(){
@@ -651,4 +658,105 @@ function engr1()
 		document.getElementById("e2").innerHTML = "";
 	}
 
+}
+
+function suggest(){
+
+	removeCI();
+	addCI();
+
+	var coreCred = [];
+	var coreCount = 0;
+	var i;
+	
+	var GovAP = 0;
+	var MacroAP = 0;
+	var MicroAP = 0;
+	var PsychAP = 0;
+	var EconIB = 0;
+	
+	var Fall = [];
+	var Winter = [];
+	var Spring = [];
+	Fall[0] = document.getElementById("a1").innerHTML;
+	Fall[1] = document.getElementById("b1").innerHTML;
+	Fall[2] = document.getElementById("c1").innerHTML;
+	Fall[3] = document.getElementById("d1").innerHTML;
+	Winter[0] = document.getElementById("a2").innerHTML;
+	Winter[1] = document.getElementById("b2").innerHTML;
+	Winter[2] = document.getElementById("c2").innerHTML;
+	Winter[3] = document.getElementById("d2").innerHTML;
+	Spring[0] = document.getElementById("a3").innerHTML;
+	Spring[1] = document.getElementById("b3").innerHTML;
+	Spring[2] = document.getElementById("c3").innerHTML;
+	Spring[3] = document.getElementById("d3").innerHTML;
+	
+	//get the APEnvSci value
+	if (document.getElementById('radio90').checked) {
+		GovAP = document.getElementById('radio90').value;
+  	} else if (document.getElementById('radio91').checked) {
+	  	GovAP = document.getElementById('radio91').value;
+  	} else if (document.getElementById('radio92').checked) {
+	  	GovAP = document.getElementById('radio92').value;
+  	} else if (document.getElementById('radio93').checked) {
+	  	GovAP = document.getElementById('radio93').value;
+  	} else if (document.getElementById('radio94').checked) {
+	  	GovAP = document.getElementById('radio94').value;
+  	} else if (document.getElementById('radio95').checked) {
+	  	GovAP = document.getElementById('radio95').value;
+  	} else {
+	  	GovAP = 0;
+  	}
+
+	
+	for(i=0; i<11; i++){
+		coreCred[i] = 0;
+	}
+	
+	if(GovAP > 3 || MacroAP > 3 || MicroAP > 3 || PsychAP > 3 || EconIB > 5){
+		coreCred[1] = 1;
+	} else{
+		coreCred[1] = 0;
+	}
+	
+	for (i=0; i<4; i++){
+		if(coreCred[coreCount]){
+			coreCount++;
+		}
+		if (Fall[i] == "CORE"){
+			Fall[i] = coreS[coreCount];
+			coreCount++;
+		}
+	}
+	for (i=0; i<4; i++){
+		if(coreCred[coreCount]){
+			coreCount++;
+		}
+		if (Winter[i] == "CORE"){
+			Winter[i] = coreS[coreCount];
+			coreCount++;
+		}
+	}
+	for (i=0; i<4; i++){
+		if(coreCred[coreCount]){
+			coreCount++;
+		}
+		if (Spring[i] == "CORE"){
+			Spring[i] = coreS[coreCount];
+			coreCount++;
+		}
+	}
+
+	document.getElementById("a1").innerHTML = Fall[0];
+	document.getElementById("b1").innerHTML = Fall[1];
+	document.getElementById("c1").innerHTML = Fall[2];
+	document.getElementById("d1").innerHTML = Fall[3];
+	document.getElementById("a2").innerHTML = Winter[0];
+	document.getElementById("b2").innerHTML = Winter[1];
+	document.getElementById("c2").innerHTML = Winter[2];
+	document.getElementById("d2").innerHTML = Winter[3];
+	document.getElementById("a3").innerHTML = Spring[0];
+	document.getElementById("b3").innerHTML = Spring[1];
+	document.getElementById("c3").innerHTML = Spring[2];
+	document.getElementById("d3").innerHTML = Spring[3];	
 }
