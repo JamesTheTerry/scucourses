@@ -347,6 +347,7 @@ function SciCred(){
 		Winter2 = sci[1];
 	}
 	if(Transfer32 == 1){
+	//ask custumer about 32 also replaceing 31
 		Spring2 = replace;
 	} else{
 		Spring2 = sci[2];
