@@ -31,7 +31,7 @@ var coreS = ["RTC1", "SocSci", "RTC2", "Diversity", "RTC3", "CI3", "ELSJ", "Ethi
 var replace = "CORE";
 
 
-function removeCI(){
+function removeCore(){
 	var Fall = [];
 	var Winter = [];
 	var Spring = [];
@@ -229,7 +229,7 @@ function CalcFull(){
 
 function AddPhys(){
 
-	removeCI();
+	removeCore();
 	
 	var Transfer33 = 0;
 	var phys33 = document.getElementById("check14").checked;
@@ -368,7 +368,7 @@ function SciCred(){
 
 function MoveCoen(){
 
-	removeCI();
+	removeCore();
 	
 	//find what classes are currently in the schedule
 	var Fall = [];
@@ -551,7 +551,7 @@ function CTW(){
 
 function addCI(){
 	
-	removeCI();
+	removeCore();
 	
 	var Fall = [];
 	var Winter = [];
@@ -662,7 +662,7 @@ function engr1()
 
 function suggest(){
 
-	removeCI();
+	removeCore();
 	addCI();
 
 	var coreCred = [];
