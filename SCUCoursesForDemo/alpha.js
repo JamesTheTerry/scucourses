@@ -462,6 +462,12 @@ function transferLevel2(response){
 			document.getElementById("Q2science").style.color = "#999999";
 			document.getElementById("Q2science").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 			QScienceState = 0;
+			
+			$('#check1').attr('checked', false);
+			$('#check2').attr('checked', false);
+			$('#check3').attr('checked', false);
+			$('#check14').attr('checked', false);
+			MathSci();
 			return;
 		}
 	}
@@ -480,6 +486,13 @@ function transferLevel2(response){
 			document.getElementById("Q2coen").style.color = "#999999";
 			document.getElementById("Q2coen").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 			QCOENState = 0;
+			
+			$('#check5').attr('checked', false);
+			$('#check6').attr('checked', false);
+			$('#check7').attr('checked', false);
+			$('#check8').attr('checked', false);
+			COEN();
+			CTW(); //I am slightly concerned this may cause errors, but the concern is unfounded... I hope
 			return;
 		}
 	}
@@ -498,6 +511,13 @@ function transferLevel2(response){
 			document.getElementById("Q2math").style.color = "#999999";
 			document.getElementById("Q2math").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 			QMathState = 0;
+			
+			$('#check9').attr('checked', false);
+			$('#check10').attr('checked', false);
+			$('#check11').attr('checked', false);
+			$('#check12').attr('checked', false);
+			$('#check13').attr('checked', false);
+			CalcFull();
 			return;
 		}
 	}
@@ -523,6 +543,23 @@ function transferLevel2TotalReset(){
 	document.getElementById("Q2math").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	
 	//reset all checkboxes INCLUDING CALLING THE FUNCTIONS THE CORRESPOND TO
+	$('#check1').attr('checked', false);
+	$('#check2').attr('checked', false);
+	$('#check3').attr('checked', false);
+	$('#check14').attr('checked', false);
+	$('#check5').attr('checked', false);
+	$('#check6').attr('checked', false);
+	$('#check7').attr('checked', false);
+	$('#check8').attr('checked', false);
+	$('#check9').attr('checked', false);
+	$('#check10').attr('checked', false);
+	$('#check11').attr('checked', false);
+	$('#check12').attr('checked', false);
+	$('#check13').attr('checked', false);
+	MathSci();
+	COEN();
+	CTW(); //I am slightly concerned this may cause errors, but the concern is unfounded... I hope
+	CalcFull();
 }
 
 //
