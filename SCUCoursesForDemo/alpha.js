@@ -116,7 +116,7 @@ function apClick(){
 		aps = 0;
 		resetAllAP();
 	}
-	$("#apSelector").toggle();
+	$("#apSelector").fadeToggle(700);
 }
 
 function ibClick(){
@@ -128,7 +128,7 @@ function ibClick(){
 		ibs = 0;
 		resetAllIB();
 	}
-	$("#ibSelector").toggle();
+	$("#ibSelector").fadeToggle(700);
 }
 
 //I believe this should work once all the functions are in one place
@@ -136,57 +136,57 @@ function resetAllAP(){
 	document.getElementById("apCalcABGrey").style.opacity = "1.0";
 	apcalcabGB = 0;
 	apCalcAbScore(0);
-	$("#a0").hide();
+	$("#a0").fadeOut(700);
 
 	document.getElementById("apCalcBCGrey").style.opacity = "1.0";
 	apcalcbcGB = 0;
 	apCalcBcScore(0);
-	$("#b0").hide();
+	$("#b0").fadeOut(700);
 	
 	document.getElementById("apChemGrey").style.opacity = "1.0";
 	apchemGB = 0;
 	apChemScore(0);
-	$("#c0").hide();
+	$("#c0").fadeOut(700);
 	
 	document.getElementById("apCompSciAGrey").style.opacity = "1.0";
 	apcompsciGB = 0;
 	apCompSciAScore(0);
-	$("#d0").hide();
+	$("#d0").fadeOut(700);
 	
 	document.getElementById("apPhysCMechGrey").style.opacity = "1.0";
 	apphyscmechGB = 0;
 	apPhysCMechScore(0);
-	$("#e0").hide();
+	$("#e0").fadeOut(700);
 	
 	document.getElementById("apPhysCElecGrey").style.opacity = "1.0";
 	apphyscelecGB = 0;
 	apPhysCElecScore(0);
-	$("#eX0").hide();
+	$("#eX0").fadeOut(700);
 	
 	document.getElementById("apEnviGrey").style.opacity = "1.0";
 	apenviGB = 0;
 	apEnviroScore(0);
-	$("#f0").hide()
+	$("#f0").fadeOut(700)
 	
 	document.getElementById("apGovtGrey").style.opacity = "1.0";
 	apgovtGB = 0;
 	apGovtScore(0);
-	$("#fW0").hide();
+	$("#fW0").fadeOut(700);
 	
 	document.getElementById("apMacroEconGrey").style.opacity = "1.0";
 	apmacroeconGB = 0;
 	apMacroEconScore(0);
-	$("#fX0").hide();
+	$("#fX0").fadeOut(700);
 	
 	document.getElementById("apMicroEconGrey").style.opacity = "1.0";
 	apmicroeconGB = 0;
 	apMicroEconScore(0);
-	$("#fY0").hide();
+	$("#fY0").fadeOut(700);
 	
 	document.getElementById("apPsychologyGrey").style.opacity = "1.0";
 	apPsychologyGB = 0;
 	apPsychologyScore(0);
-	$("#fZ0").hide();
+	$("#fZ0").fadeOut(700);
 }
 
 //This works, which is why resetAllAP should work once all the functions are in one place
@@ -194,22 +194,22 @@ function resetAllIB(){
 	document.getElementById("ibChemGrey").style.opacity = "1.0";
 	ibchemGB = 0;
 	ibChemScore(0);
-	$("#g0").hide();
+	$("#g0").fadeOut(700);
 	
 	document.getElementById("ibCompSciGrey").style.opacity = "1.0";
 	ibcompsciGB = 0;
 	ibCompSciScore(0);
-	$("#h0").hide();
+	$("#h0").fadeOut(700);
 	
 	document.getElementById("ibPhysGrey").style.opacity = "1.0";
 	ibphysGB = 0;
 	ibPhysScore(0);
-	$("#i0").hide();
+	$("#i0").fadeOut(700);
 	
 	document.getElementById("ibEconGrey").style.opacity = "1.0";
 	ibeconGB = 0;
 	ibEconScore(0);
-	$("#j0").hide();
+	$("#j0").fadeOut(700);
 }
 
 
@@ -224,7 +224,7 @@ function apCalcABClick(){
 		apcalcabGB = 0;
 		apCalcAbScore(0);
 	}
-	$("#a0").toggle();
+	$("#a0").fadeToggle(700);
 }
 
 function apCalcBCClick(){
@@ -236,7 +236,7 @@ function apCalcBCClick(){
 		apcalcbcGB = 0;
 		apCalcBcScore(0);
 	}
-	$("#b0").toggle();
+	$("#b0").fadeToggle(700);
 }
 
 function apChemClick(){
@@ -248,7 +248,7 @@ function apChemClick(){
 		apchemGB = 0;
 		apChemScore(0);
 	}
-	$("#c0").toggle();
+	$("#c0").fadeToggle(700);
 }
 
 function apCompSciAClick(){
@@ -260,7 +260,7 @@ function apCompSciAClick(){
 		apcompsciGB = 0;
 		apCompSciAScore(0);
 	}
-	$("#d0").toggle();
+	$("#d0").fadeToggle(700);
 }
 
 function apPhysCMechClick(){
@@ -272,7 +272,7 @@ function apPhysCMechClick(){
 		apphyscmechGB = 0;
 		apPhysCMechScore(0);
 	}
-	$("#e0").toggle();
+	$("#e0").fadeToggle(700);
 }
 
 function apPhysCElecClick(){
@@ -284,7 +284,7 @@ function apPhysCElecClick(){
 		apphyscelecGB = 0;
 		apPhysCElecScore(0);
 	}
-	$("#eX0").toggle();
+	$("#eX0").fadeToggle(700);
 }
 
 function apEnviClick(){
@@ -296,7 +296,7 @@ function apEnviClick(){
 		apenviGB = 0;
 		apEnviroScore(0);
 	}
-	$("#f0").toggle();
+	$("#f0").fadeToggle(700);
 }
 
 function apGovtClick(){
@@ -308,7 +308,7 @@ function apGovtClick(){
 		apgovtGB = 0;
 		apGovtScore(0);
 	}
-	$("#fW0").toggle();
+	$("#fW0").fadeToggle(700);
 }
 
 function apMacroEconClick(){
@@ -320,7 +320,7 @@ function apMacroEconClick(){
 		apmacroeconGB = 0;
 		apMacroEconScore(0);
 	}
-	$("#fX0").toggle();
+	$("#fX0").fadeToggle(700);
 }
 
 function apMicroEconClick(){
@@ -332,7 +332,7 @@ function apMicroEconClick(){
 		apmicroeconGB = 0;
 		apMicroEconScore(0);
 	}
-	$("#fY0").toggle();
+	$("#fY0").fadeToggle(700);
 }
 
 function apPsychologyClick(){
@@ -344,7 +344,7 @@ function apPsychologyClick(){
 		apPsychologyGB = 0;
 		apPsychologyScore(0);
 	}
-	$("#fZ0").toggle();
+	$("#fZ0").fadeToggle(700);
 }
 
 function ibChemClick(){
@@ -356,7 +356,7 @@ function ibChemClick(){
 		ibchemGB = 0;
 		ibChemScore(0);
 	}
-	$("#g0").toggle();
+	$("#g0").fadeToggle(700);
 }
 
 function ibCompClick(){
@@ -368,7 +368,7 @@ function ibCompClick(){
 		ibcompsciGB = 0;
 		ibCompSciScore(0);
 	}
-	$("#h0").toggle();
+	$("#h0").fadeToggle(700);
 }
 
 function ibPhysClick(){
@@ -380,7 +380,7 @@ function ibPhysClick(){
 		ibphysGB = 0;
 		ibPhysScore(0);
 	}
-	$("#i0").toggle();
+	$("#i0").fadeToggle(700);
 }
 
 function ibEconClick(){
@@ -392,7 +392,7 @@ function ibEconClick(){
 		ibeconGB = 0;
 		ibEconScore(0);
 	}
-	$("#j0").toggle();
+	$("#j0").fadeToggle(700);
 }
 
 //I've moved the creClick funciton above the score selction section.
