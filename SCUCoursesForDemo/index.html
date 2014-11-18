@@ -352,6 +352,36 @@
 	<div id="creSuper2">
 		You placed out of the calculus readiness exam.  Nerd.
 	</div>
+	<hr>
+	<div id="transferMaster">
+		<div id="transferQ1" class="transferQclass">
+			Do you have any transfer credit? <a href="javascript:transferLevel1(1)" id="Q1yes">But of course</a> / <a href="javascript:transferLevel1(0)" id="Q1no">Sadly, I don't</a>
+		</div>
+		<div id="transferQ2" class="transferQclass">
+			Credit in: <a href="javascript:transferLevel2(0)" id="Q2science">Science</a> / <a href="javascript:transferLevel2(1)" id="Q2coen">COEN</a> / <a href="javascript:transferLevel2(2)" id="Q2math">Math</a>
+		</div>
+		<div id="transferSectionSuper">
+			<div id="scienceTransfers" class="transferSectionClass">
+				<div id="ch1" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check1" onclick="MathSci()"><label for="check1" class="lCz"><span></span>CHEM 11</label></div>
+				<div id="ch2" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check2" onclick="MathSci()"><label for="check2" class="lCz"><span></span>PHYS 31</label></div>
+				<div id="ch3" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check3" onclick="MathSci()"><label for="check3" class="lCz"><span></span>PHYS 32</label></div>
+				<div id="ch14" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check14" onclick="MathSci()"><label for="check14" class="lCz"><span></span>PHYS 33</label></div>
+			</div>
+			<div id="coenTransfers" class="transferSectionClass">
+				<div id="ch5" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check5" onclick="COEN()"><label for="check5" class="lCz"><span></span>COEN 10</label></div>
+				<div id="ch6" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check6" onclick="COEN()"><label for="check6" class="lCz"><span></span>COEN 11</label></div>
+				<div id="ch7" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check7" onclick="COEN()"><label for="check7" class="lCz"><span></span>COEN 12</label></div>
+				<div id="ch8" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check8" onclick="CTW()"><label for="check8" class="lCz"><span></span>COEN 19</label></div>
+			</div>
+			<div id="mathTransfers" class="transferSectionClass">
+				<div id="ch9" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check9" onclick="CalcFull()"><label for="check9" class="lCz"><span></span>MATH 11</label></div>
+				<div id="ch10" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check10" onclick="CalcFull()"><label for="check10" class="lCz"><span></span>MATH 12</label></div>
+				<div id="ch11" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check11" onclick="CalcFull()"><label for="check11" class="lCz"><span></span>MATH 13</label></div>
+				<div id="ch12" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check12" onclick="CalcFull()"><label for="check12" class="lCz"><span></span>MATH 14</label></div>
+				<div id="ch13" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check13" onclick="CalcFull()"><label for="check13" class="lCz"><span></span>AMTH 106</label></div>
+			</div>
+		</div>
+	</div>
 	
 		
 </div>
@@ -393,22 +423,6 @@
 			<div class="cellType" id="rowE3"></div>
 		</div>
 	</div>
-</div>
-
-<div id="transfer">
-<div id="ch1"><input type="checkbox" name="courselist" id="check1" onclick="MathSci()"><span></span>CHEM 11</div>
-<div id="ch2"><input type="checkbox" name="courselist" id="check2" onclick="MathSci()">PHYS 31</div>
-<div id="ch3"><input type="checkbox" name="courselist" id="check3" onclick="MathSci()">PHYS 32</div>
-<div id="ch5"><input type="checkbox" name="courselist" id="check5" onclick="COEN()">COEN 10</div>
-<div id="ch6"><input type="checkbox" name="courselist" id="check6" onclick="COEN()">COEN 11</div>
-<div id="ch7"><input type="checkbox" name="courselist" id="check7" onclick="COEN()">COEN 12</div>
-<div id="ch8"><input type="checkbox" name="courselist" id="check8" onclick="CTW()">COEN 19</div>
-<div id="ch9"><input type="checkbox" name="courselist" id="check9" onclick="CalcFull()">MATH 11</div>
-<div id="ch10"><input type="checkbox" name="courselist" id="check10" onclick="CalcFull()">MATH 12</div>
-<div id="ch11"><input type="checkbox" name="courselist" id="check11" onclick="CalcFull()">MATH 13</div>
-<div id="ch12"><input type="checkbox" name="courselist" id="check12" onclick="CalcFull()">MATH 14</div>
-<div id="ch13"><input type="checkbox" name="courselist" id="check13" onclick="CalcFull()">AMTH 106</div>
-<div id="ch14"><input type="checkbox" name="courselist" id="check14" onclick="MathSci()">PHYS 33</div>
 </div>
 
 </body>

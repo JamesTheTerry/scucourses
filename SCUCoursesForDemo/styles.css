@@ -50,6 +50,10 @@ html, body
 	font-size: 16pt;
 }
 
+#takenSome{
+	padding-right: 8px;
+}
+
 .wrapper1{
 	float: left;
 
@@ -144,14 +148,42 @@ html, body
 #creSuper1{
 	text-align: center;
 	font-size: 16pt;
-	padding-bottom: 10px;
 }
 
 #creSuper2{
 	text-align: center;
 	font-size: 16pt;
-	padding-bottom: 10px;
 	display: none;
+}
+
+/*transfer section*/
+#transferMaster{
+	padding-bottom: 10px;
+}
+
+.transferQclass{
+	text-align: center;
+	font-size: 16pt;
+}
+
+#transferQ2{
+	display: none;
+}
+
+#transferSectionSuper{
+	width: 725px;
+	margin-left: 225px;
+}
+
+.transferSectionClass{
+	display: none;
+	padding-bottom: 25px;
+}
+
+.checkboxChildClass{
+	float: left;
+	width: 130px;
+	padding-right: 15px;
 }
 
 /*end of divs in container1 */

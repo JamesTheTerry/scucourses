@@ -425,6 +425,106 @@ function creReset(){
 	CalcFull();
 }
 
+function transferLevel1(response){
+	if (response == 0){
+		$("#transferQ2").fadeOut(700);
+		transferLevel2TotalReset();
+		document.getElementById("Q1no").style.color = "#1580ea";
+		document.getElementById("Q1no").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("Q1yes").style.color = "#999999";
+		document.getElementById("Q1yes").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	}
+	if (response == 1){
+		$("#transferQ2").fadeIn(700);
+		document.getElementById("Q1yes").style.color = "#1580ea";
+		document.getElementById("Q1yes").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("Q1no").style.color = "#999999";
+		document.getElementById("Q1no").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	}
+}
+
+var QScienceState = 0;
+var QCOENState = 0;
+var QMathState = 0;
+
+function transferLevel2(response){
+	//science
+	if (response == 0){
+		$("#scienceTransfers").fadeToggle(700);
+		
+		if (QScienceState == 0){
+			document.getElementById("Q2science").style.color = "#1580ea";
+			document.getElementById("Q2science").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+			QScienceState = 1;
+			return;
+		}
+		if (QScienceState == 1){
+			document.getElementById("Q2science").style.color = "#999999";
+			document.getElementById("Q2science").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+			QScienceState = 0;
+			return;
+		}
+	}
+	
+	//coen
+	if (response == 1){
+		$("#coenTransfers").fadeToggle(700);
+		
+		if (QCOENState == 0){
+			document.getElementById("Q2coen").style.color = "#1580ea";
+			document.getElementById("Q2coen").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+			QCOENState = 1;
+			return;
+		}
+		if (QCOENState == 1){
+			document.getElementById("Q2coen").style.color = "#999999";
+			document.getElementById("Q2coen").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+			QCOENState = 0;
+			return;
+		}
+	}
+	
+	//math
+	if (response == 2){
+		$("#mathTransfers").fadeToggle(700);
+		
+		if (QMathState == 0){
+			document.getElementById("Q2math").style.color = "#1580ea";
+			document.getElementById("Q2math").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+			QMathState = 1;
+			return;
+		}
+		if (QMathState == 1){
+			document.getElementById("Q2math").style.color = "#999999";
+			document.getElementById("Q2math").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+			QMathState = 0;
+			return;
+		}
+	}
+}
+
+function transferLevel2TotalReset(){
+	//reset state variables
+	QScienceState = 0;
+	QCOENState = 0;
+	QMathState = 0;
+	
+	//fadeOut transferSections
+	$("#scienceTransfers").fadeOut(700);
+	$("#coenTransfers").fadeOut(700);
+	$("#mathTransfers").fadeOut(700);
+	
+	//reset Level2 colors and fonts
+	document.getElementById("Q2science").style.color = "#999999";
+	document.getElementById("Q2science").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	document.getElementById("Q2coen").style.color = "#999999";
+	document.getElementById("Q2coen").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	document.getElementById("Q2math").style.color = "#999999";
+	document.getElementById("Q2math").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	
+	//reset all checkboxes INCLUDING CALLING THE FUNCTIONS THE CORRESPOND TO
+}
+
 //
 //
 //
@@ -1610,7 +1710,6 @@ function ibChemScore(score){
 }
 
 //call set
-//confirmed variable connection
 function ibCompSciScore(score){
 	q_ibCompSciScore = score;
 	
@@ -2106,7 +2205,7 @@ function MathSci(){
 	COEN();	
 }
 
-//calcFull needs transfer system optimization
+//platinum
 function CalcFull(){
 	//set the scores
 	var APCalcScoreAB = q_apCalcAbScore;
@@ -2185,8 +2284,7 @@ function CalcFull(){
 	build();
 }
 
-//SciCred needs transfer system optimization
-//transfer commented out for now
+//platinum
 function SciCred(){
 	//set test scores
 	var APChem = q_apChemScore;
@@ -2243,7 +2341,7 @@ function SciCred(){
 	build();
 }
 
-//needs transfer system update
+//platinum
 function AddPhys(){
 
 	removeCore();
@@ -2327,7 +2425,7 @@ function MoveCoen(){
 	}	
 }
 
-//COEN needs transfer system optimization
+//platinum
 function COEN(){
 	//set test scores
 	var APCompSci = q_apCompSciAScore;
@@ -2398,7 +2496,7 @@ function COEN(){
 	build();
 }
 
-//needs transfer system update
+//platinum
 function CTW(){
 	var transfer19 = 0; // have they trnasfered out of COEN19
 	
