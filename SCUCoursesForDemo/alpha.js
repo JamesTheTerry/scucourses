@@ -2623,6 +2623,7 @@ function buildToImage(passer){
 	var math53PNG = "url('images/classes/math53.png')";
 	var phys31PNG = "url('images/classes/phys31.png')";
 	var phys32PNG = "url('images/classes/phys32.png')";
+	var phys33PNG = "url('images/classes/phys33.png')";
 	var ci1PNG = "url('images/classes/core/ci1.png')";
 	var ci2PNG = "url('images/classes/core/ci2.png')";
 	var ci3PNG = "url('images/classes/core/ci3.png')";
@@ -2697,7 +2698,7 @@ function buildToImage(passer){
 		return phys32PNG;
 	}
 	if (passer == "PHYS 33"){
-		//return phys33PNG;
+		return phys33PNG;
 	}
 	if (passer == "CI1"){
 		return ci1PNG;
