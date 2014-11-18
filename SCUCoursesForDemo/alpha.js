@@ -576,7 +576,6 @@ function print(){
 */
 
 function printIt(){
-	alert("print");
 	window.print();
 	return;
 }
