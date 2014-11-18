@@ -2227,7 +2227,7 @@ var coen1 = ["COEN 10", "COEN 11", "CORE", "CORE"];
 var coen2 = "COEN 12";
 var sci = [ "CHEM 11", "PHYS 31", "PHYS 32"];
 var core = ["CTW1", "CTW2", "COEN 19"];
-var coreS = ["RTC1", "SocSci", "RTC2", "Diversity", "RTC3", "CI3", "ELSJ", "Ethics","SeeAdvisor", "CI1", "CI2"];
+var coreS = ["RTC1", "SocSci", "Diversity", "ELSJ","RTC2", "Ethics","SeeAdvisor", "SeeAdvisor", "SeeAdvisor", "CI1", "CI2"];
 var replace = "CORE";
 
 //whats curently in the aray
@@ -2266,6 +2266,7 @@ function CalcFull(){
 	var APCalcScoreAB = q_apCalcAbScore;
 	var APCalcScoreBC = q_apCalcBcScore;
 	var APEnvSci = q_apEnviroScore;
+	var APChem = q_apChemScore;
 	
 	//other variables
 	var start;
@@ -2316,7 +2317,7 @@ function CalcFull(){
 		start = 0;
 	}
 	
-	if(APEnvSci > 3){
+	if(APEnvSci > 3 || APChem > 3){
 		natSci = 1;
 	}
 	
