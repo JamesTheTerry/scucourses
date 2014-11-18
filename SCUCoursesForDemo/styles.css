@@ -113,9 +113,13 @@ html, body
 	font-size: 30pt;
 }
 
+.scoreSelectionClass{
+	margin-left: 160px;
+}
+
 .apSuperSuper{
-	width:900px;
-	margin: 0 auto;
+	width: 900px;
+	/*margin: 0 auto;*/
 	padding-bottom: 50px;
 	display: none;
 }
