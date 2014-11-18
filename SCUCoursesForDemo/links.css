@@ -1,0 +1,41 @@
+/* Master Mouseover styles */
+
+
+a {
+	color: #999999;
+	text-decoration: none;
+	
+	/* Wonderful fade */
+	-webkit-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+	-o-transition: color 0.3s ease-in-out;
+	-ms-transition: color 0.3s ease-in-out;
+	transition: color 0.3s ease-in-out;
+}
+
+a:hover{
+	color: #1580ea;
+	font-family: HelveticaNeue-Bold, Arial, sans-serif;
+
+}
+
+.cf {
+  position:relative;
+  height:67px;
+  width:139px;
+  margin:0 auto;
+}
+
+.cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.cf img.top:hover {
+  opacity:0;
+}

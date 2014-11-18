@@ -1,0 +1,198 @@
+/* CSS3 bitches! */
+@import url('links.css'); /* contains mouseover master css */
+
+html, body
+{
+    width: 100%;
+    margin: 0px;
+}
+
+#gradBar {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 45px;
+	width: 100%;
+	background: -webkit-linear-gradient(left, #005b97, #1e9cd7);
+	background: -o-linear-gradient(right, #005b97, #1e9cd7);
+	background: -moz-linear-gradient(right, #005b97, #1e9cd7);
+	background: linear-gradient(to right, #005b97, #1e9cd7);
+}
+
+#logoImage {
+	position: absolute;
+	top: 2px;
+	left: 10px;
+}
+
+#container1 {
+	width: 1000px;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+}
+
+#askForMajor{
+	text-align: center;
+	font-size: 30pt;
+}
+
+#askForConfidence{
+	padding-top: 10px;
+	text-align: center;
+	font-size: 16pt;
+}
+
+#askAboutC{
+	padding-top: 10px;
+	text-align: center;
+	font-size: 16pt;
+}
+
+.wrapper1{
+	float: left;
+
+}
+
+#askForTestType{
+	width:710px;
+	margin: 0 auto;
+	font-size: 30pt;
+}
+
+#apSelector{
+	padding-top: 70px;
+	padding-bottom: 70px;
+	text-align: center;
+	font-size: 30px;
+	margin: 0 auto;
+	display: none;
+}
+
+#superWrapper2a{
+	width: 973px;
+	margin: 0 auto;
+}
+
+#superWrapper2b{
+	width: 556px;
+	margin: 0 auto;
+}
+
+.wrapper2{
+	padding-top: 10px;
+	float: left;
+}
+
+.wrapper2b{
+	float: left;
+}
+
+#ibSelector{
+	padding-top: 60px;
+	text-align: center;
+	font-size: 30px;
+	width: 700px;
+	margin: 0 auto;
+	display: none;
+}
+
+#superWrapper3{
+	width: 556px;
+	margin: 0 auto;
+}
+
+.wrapper3{
+	padding-top: 10px;
+	float: left;
+}
+
+#scoreInputer{
+	padding-top: 80px;
+	font-size: 30pt;
+}
+
+.apSuperSuper{
+	width:900px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	display: none;
+}
+
+.scoreTitle{
+	float: left;
+	text-align: right;
+	width: 350px;
+}
+
+.apScoreSuper{
+	width: 350px;
+	margin: 0 auto;
+	padding-left: 200px;
+}
+
+.scoreVal{
+	float: left;
+	width:50px;
+}
+
+#creSuper1{
+	text-align: center;
+	font-size: 16pt;
+	padding-bottom: 10px;
+}
+
+#creSuper2{
+	text-align: center;
+	font-size: 16pt;
+	padding-bottom: 10px;
+	display: none;
+}
+
+/*end of divs in container1 */
+
+#scheduleZone {
+	height: 500px;
+	width: 100%;
+	margin: 0 auto;
+	background: -webkit-linear-gradient(left, #005b97, #1e9cd7);
+	background: -o-linear-gradient(right, #005b97, #1e9cd7);
+	background: -moz-linear-gradient(right, #005b97, #1e9cd7);
+	background: linear-gradient(to right, #005b97, #1e9cd7);
+}
+
+#tableSuper{
+	width: 549px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+.rowType{
+	padding-bottom: 70px;
+}
+
+.cellType{
+	width: 133px;
+	height: 62px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#season1{
+	background-image: url(images/seasons/fall.png);
+}
+
+#season2{
+	background-image: url(images/seasons/winter.png);
+}
+
+#season3{
+	background-image: url(images/seasons/spring.png);
+}
+
+#rowE3{
+	background-image: url(images/classes/BLANK.png);
+}
