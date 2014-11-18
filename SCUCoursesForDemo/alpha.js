@@ -2111,7 +2111,6 @@ function CalcFull(){
 	//set the scores
 	var APCalcScoreAB = q_apCalcAbScore;
 	var APCalcScoreBC = q_apCalcBcScore;
-	var APChem = q_apChemScore;
 	var APEnvSci = q_apEnviroScore;
 	
 	//other variables
@@ -2163,7 +2162,7 @@ function CalcFull(){
 		start = 0;
 	}
 	
-	if(APChem > 3 || APEnvSci > 3){
+	if(APEnvSci > 3){
 		natSci = 1;
 	}
 	
