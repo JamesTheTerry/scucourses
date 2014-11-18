@@ -232,3 +232,9 @@ html, body
 #rowE3{
 	background-image: url(images/classes/BLANK.png);
 }
+
+#printButton{
+	padding-top: 10px;
+	margin: 0 auto;
+	width: 50px;
+}

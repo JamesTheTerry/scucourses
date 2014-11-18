@@ -562,6 +562,25 @@ function transferLevel2TotalReset(){
 	CalcFull();
 }
 
+/*
+function print(){
+	var divContents = $("#askForTestType").html();
+	var printWindow = window.open('', '', 'height=452,width=600');
+	printWindow.document.write('<html><head><title>Your wonderful schedule</title><link href="styles.css" rel="stylesheet" type="text/css">');
+	printWindow.document.write('</head><body >');
+	printWindow.document.write(divContents);
+	printWindow.document.write('</body></html>');
+	//printWindow.document.close();
+	//printWindow.print();
+}
+*/
+
+function printIt(){
+	alert("print");
+	window.print();
+	return;
+}
+
 //
 //
 //
