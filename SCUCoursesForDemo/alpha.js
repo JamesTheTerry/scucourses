@@ -2578,7 +2578,7 @@ function suggest(){
 		}
 	}
 
-	
+	build();	
 }
 
 
@@ -2695,6 +2695,9 @@ function buildToImage(passer){
 	}
 	if (passer == "PHYS 32"){
 		return phys32PNG;
+	}
+	if (passer == "PHYS 33"){
+		//return phys33PNG;
 	}
 	if (passer == "CI1"){
 		return ci1PNG;
