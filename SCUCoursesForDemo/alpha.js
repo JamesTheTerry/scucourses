@@ -56,6 +56,8 @@ function webDesignClick(){
 	//reset the styles of COEN
 	document.getElementById("coen").style.color = "#999999";
 	document.getElementById("coen").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	
+	majorInitClick();
 }
 
 function coenClick(){
@@ -66,6 +68,12 @@ function coenClick(){
 	//reset the styles of COEN
 	document.getElementById("webDesign").style.color = "#999999";
 	document.getElementById("webDesign").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	
+	majorInitClick();
+}
+
+function majorInitClick(){
+	$("#askForConfidence").fadeIn(700);
 }
 
 //call set
@@ -85,6 +93,7 @@ function conf(level){
 		document.getElementById("fConf").style.color = "#999999";
 		document.getElementById("fConf").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
+	$("#askAboutC").fadeIn(700);
 	engr1();
 }
 
@@ -104,6 +113,11 @@ function cProg(level){
 		document.getElementById("fcProg").style.color = "#999999";
 		document.getElementById("fcProg").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
+	$("#askForTestType").fadeIn(700);
+	$("#creSupremeSeperator").fadeIn(700);
+	$("#creSuper1").fadeIn(700);
+	$("#transferSupremeSeperator").fadeIn(700);
+	$("#transferMaster").fadeIn(700);
 	COEN();
 }
 

@@ -14,20 +14,23 @@
 </div>
 
 <div id="container1">
+	<!-- Display this initially-->
 	<div id="askForMajor">
 		So do you want to major in <a href="javascript:webDesignClick()" id="webDesign">Web Design</a> or <a href="javascript:coenClick()" id="coen" class="textHover">COEN</a>?
 	</div>
 	
+	<!-- Display after askForMajor click -->
 	<div id="askForConfidence">
 		How certain are you about this major? <a href="javascript:conf(1)" id="fConf">Fairly Confident</a> / <a href="javascript:conf(0)" id="uConf" class="textHover">Double Plus Unconfident</a>
 	</div>
 	
+	<!-- Display after askForConfidence click -->
 	<div id="askAboutC">
 		Listen, do you know anything about C programming? <a href="javascript:cProg(1)" id="fcProg">Oh, yeah</a> / <a href="javascript:cProg(0)" id="ucProg">I know that I know nothing</a>
+		<hr>
 	</div>
 	
-	<hr>
-	<!-- Figure out how to center this -->
+	<!-- Display after askAboutC -->
 	<div id="askForTestType">
 		<div class="wrapper1" id="takenSome">
 			And you've taken some
@@ -345,6 +348,9 @@
 		</div>
 	</div>
 	
+	<hr id="creSupremeSeperator">
+	
+	<!-- Display after askAboutC -->
 	<div id="creSuper1">
 		Did you pass the calculus readiness exam? <a href="javascript:creClick(1)" id="crePass">Yes, with flying colors</a> / <a href="javascript:creClick(0)" id="creFail">Just put me in pre-calc</a>
 	</div>
@@ -352,7 +358,10 @@
 	<div id="creSuper2">
 		You placed out of the calculus readiness exam.  Nerd.
 	</div>
-	<hr>
+	
+	<hr id="transferSupremeSeperator">
+	
+	<!-- Display after askAboutC -->
 	<div id="transferMaster">
 		<div id="transferQ1" class="transferQclass">
 			Do you have any transfer credit? <a href="javascript:transferLevel1(1)" id="Q1yes">But of course</a> / <a href="javascript:transferLevel1(0)" id="Q1no">Sadly, I don't</a>
