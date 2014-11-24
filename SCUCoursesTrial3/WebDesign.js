@@ -14,10 +14,10 @@ $(document).ready(function(){
 	
 	//I must create the default schedule by running the algorithms on load
 	CTW();
-	COEN();
 	CalcFull();
 	SciCred();
 	engr1();
+	COEN();
 	build();
 });
 
