@@ -8,6 +8,7 @@
 //BEGIN frontScript.js SECTION
 //
 
+//these may need to be moved to webDesignClick() and coenClick()
 
 $(document).ready(function(){
 	CTW();
@@ -23,6 +24,8 @@ $(document).ready(function(){
 //unless otherwise specified:
 // 0 means inactive
 // 1 means active
+
+var activeMajor; //0 for coen; 1 for web design; this is probably the most important variable of all
 
 var majorConfidence = 0; //if 1 then ENGR1 to winter, if 0 then ENGR1 to fall
 var cProgConfidence = 0;
@@ -57,6 +60,8 @@ function webDesignClick(){
 	document.getElementById("coen").style.color = "#999999";
 	document.getElementById("coen").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	
+	activeMajor = 0;  //sets functions to coen mode
+	
 	majorInitClick();
 }
 
@@ -68,6 +73,8 @@ function coenClick(){
 	//reset the styles of COEN
 	document.getElementById("webDesign").style.color = "#999999";
 	document.getElementById("webDesign").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	
+	activeMajor = 1; //sets functions to web design mode
 	
 	majorInitClick();
 }
@@ -2249,7 +2256,30 @@ var Fall = [];
 var Winter = [];
 var Spring = [];
 
+/*
+Nomenclature:
+for coen...
+gold - completed coen function, NO direct inputs
+platinum - completed coen funciton, direct inputs
+
+
+for both...
+diamond - completed identical funciton for both web design and coen
+
+
+for web design...
+red - incomplete web design function, NO direct inputs
+ruby - completed web design function, NO direct inputs
+
+blue - incomplete web design function, direct inputs
+sapphire - completed web design function, direct inputs
+
+stoneless - not used for web design
+*/
+
 //gold
+//ruby
+//diamond
 function removeCore(){
 	
 	for (i=0; i<4; i++){
@@ -2268,6 +2298,8 @@ function removeCore(){
 }
 
 //gold
+//ruby
+//diamond
 function MathSci(){
 	CalcFull();
 	SciCred();
@@ -2275,6 +2307,7 @@ function MathSci(){
 }
 
 //platinum
+//blue
 function CalcFull(){
 	//set the scores
 	var APCalcScoreAB = q_apCalcAbScore;
@@ -2355,6 +2388,7 @@ function CalcFull(){
 }
 
 //platinum
+//blue
 function SciCred(){
 	//set test scores
 	var APChem = q_apChemScore;
@@ -2412,6 +2446,7 @@ function SciCred(){
 }
 
 //platinum
+//stoneless
 function AddPhys(){
 
 	removeCore();
@@ -2455,6 +2490,7 @@ function AddPhys(){
 }
 
 //gold
+//red
 function MoveCoen(){
 
 	removeCore();
@@ -2496,6 +2532,7 @@ function MoveCoen(){
 }
 
 //platinum
+//blue
 function COEN(){
 	//set test scores
 	var APCompSci = q_apCompSciAScore;

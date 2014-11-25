@@ -35,7 +35,25 @@ var Fall = [];
 var Winter = [];
 var Spring = [];
 
+//transfered
+function removeCORE(){
+		
+	for (i=0; i<4; i++){
+		for(j=0; j<11; j++){
+			if (Fall[i] == coreS[j]){
+				Fall[i] = "CORE";
+			}
+			if (Winter[i] == coreS[j]){
+				Winter[i] = "CORE";
+			}
+			if (Spring[i] == coreS[j]){
+				Spring[i] = "CORE";
+			}
+		}
+	}
+}
 
+//transfered
 function MathSci(){
 	CalcFull();
 	SciCred();
@@ -254,6 +272,7 @@ function SciCred(){
 	build();
 }
 
+//there is no AddPhys()
 
 function MoveCoen(){
 
@@ -301,7 +320,6 @@ function MoveCoen(){
 
 	build();
 }
-
 
 function COEN(){
 	//these will be the input variables
@@ -410,10 +428,9 @@ function CTW(){
 	
 }
 
+//there is no addCI()
 
-
-function engr1()
-{
+function engr1(){
 	//make sure it is checked
 	var x = document.getElementById("check4").checked;
 	
@@ -426,24 +443,6 @@ function engr1()
 	}
 	build();
 }
-
-function removeCORE(){
-		
-	for (i=0; i<4; i++){
-		for(j=0; j<11; j++){
-			if (Fall[i] == coreS[j]){
-				Fall[i] = "CORE";
-			}
-			if (Winter[i] == coreS[j]){
-				Winter[i] = "CORE";
-			}
-			if (Spring[i] == coreS[j]){
-				Spring[i] = "CORE";
-			}
-		}
-	}
-}
-
 
 function suggest(){
 
