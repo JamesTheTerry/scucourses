@@ -156,6 +156,8 @@ function SciCred(){
 	var APphysics;
 	var IBChem;
 	var APEnvSci;
+	var APphysicEM = 1;
+	var IBphysics = 1;
 	var Transfer32 = 0;
 	var start = 0;
 	
@@ -257,6 +259,8 @@ function SciCred(){
 	}else if(Transfer32 == 1){
 		start = 1;
 	} else if(APEnvSci > 3){
+		start = 1;
+	} else if(APphysicEM > 3 || IBphysics > 5){
 		start = 1;
 	}
 	
