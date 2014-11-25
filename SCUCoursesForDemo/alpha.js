@@ -392,6 +392,8 @@ function ibCompClick(){
 	$("#h0").fadeToggle(700);
 }
 
+//only for web design
+//needs to be hooked up
 function ibPhysClick(){
 	if (ibphysGB == 0){
 		document.getElementById("ibPhysGrey").style.opacity = "0.0";
