@@ -61,6 +61,7 @@ function MathSci(){
 	
 }
 
+//transfered i think
 function CalcFull(){
 	//define the variables
 	var APCalcScoreAB;
@@ -151,6 +152,7 @@ function CalcFull(){
 	
 }
 
+//transfered i think
 function SciCred(){
 	var APChem;
 	var APphysics;
@@ -278,6 +280,7 @@ function SciCred(){
 
 //there is no AddPhys()
 
+//transfered i think
 function MoveCoen(){
 
 	removeCORE();
@@ -325,6 +328,8 @@ function MoveCoen(){
 	build();
 }
 
+//transfred i think
+//only one thing needed to be changed actually
 function COEN(){
 	//these will be the input variables
 	//set these it be the test scores
@@ -425,6 +430,7 @@ function COEN(){
 	build();
 }
 
+//transfered i strongly think
 function CTW(){
 	Fall[3] = core[0];
 	Winter[3] = core[1];
@@ -434,6 +440,7 @@ function CTW(){
 
 //there is no addCI()
 
+//transfered
 function engr1(){
 	//make sure it is checked
 	var x = document.getElementById("check4").checked;
@@ -448,6 +455,7 @@ function engr1(){
 	build();
 }
 
+//transfered
 function suggest(){
 
 	removeCORE();
@@ -521,6 +529,7 @@ function suggest(){
 	build();
 }
 
+//should not need to be transfered, I hope
 function build(){
 	document.getElementById("a1").innerHTML = Fall[0];
 	document.getElementById("b1").innerHTML = Fall[1];
