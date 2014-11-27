@@ -673,7 +673,7 @@ var q_ibCompSciScore = 0;
 var q_ibPhysScore = 0;
 var q_ibEconScore = 0;
 
-//call set
+//call set same
 function apCalcAbScore(score){
 	q_apCalcAbScore = score;
 	
@@ -773,7 +773,7 @@ function apCalcAbScore(score){
 	}
 }
 
-//call set
+//call set same
 function apCalcBcScore(score){
 	q_apCalcBcScore = score;
 		
@@ -873,7 +873,7 @@ function apCalcBcScore(score){
 	}
 }
 
-//call set
+//call set same
 function apChemScore(score){
 	q_apChemScore = score;
 	
@@ -963,7 +963,7 @@ function apChemScore(score){
 	}
 }
 
-//call set
+//call set same
 function apCompSciAScore(score){
 	q_apCompSciAScore = score;
 	
@@ -1053,7 +1053,7 @@ function apCompSciAScore(score){
 	}
 }
 
-//call set
+//call set same
 function apPhysCMechScore(score){
 	q_apPhysCMechScore = score;
 	
@@ -1142,11 +1142,17 @@ function apPhysCMechScore(score){
 	}
 }
 
-//call set
+//call set different
 function apPhysCElecScore(score){
 	q_apPhysCElecScore = score;
 	
-	AddPhys();
+	if (activeMajor == 0){
+		AddPhys();
+	}
+	
+	if (activeMajor == 1){
+		SciCred();
+	}
 	
 	if (score == 0){
 		document.getElementById("eX1").style.color = "#999999";
@@ -1232,11 +1238,17 @@ function apPhysCElecScore(score){
 	}
 }
 
-//call set
+//call set different
 function apEnviroScore(score){
 	q_apEnviroScore = score;
 	
-	CalcFull();
+	if (activeMajor == 0){
+		CalcFull();
+	}
+	
+	if (activeMajor == 1){
+		MathSci();
+	}
 	
 	if (score == 0){
 		document.getElementById("f1").style.color = "#999999";
@@ -1322,7 +1334,7 @@ function apEnviroScore(score){
 	}
 }
 
-//call set
+//call set same
 function apGovtScore(score){
 	q_apGovtScore = score;
 	
@@ -1412,7 +1424,7 @@ function apGovtScore(score){
 	}
 }
 
-//call set
+//call set same
 function apMacroEconScore(score){
 	q_apMacroEconScore = score;
 	
@@ -1502,7 +1514,7 @@ function apMacroEconScore(score){
 	}
 }
 
-//call set
+//call set same
 function apMicroEconScore(score){
 	q_apMicroEconScore = score;
 	
@@ -1592,7 +1604,7 @@ function apMicroEconScore(score){
 	}
 }
 
-//call set
+//call set same
 function apPsychologyScore(score){
 	q_apPsychologyScore = score;
 	
@@ -1682,8 +1694,7 @@ function apPsychologyScore(score){
 	}
 }
 
-//call set
-//confirmed variable connection
+//call set same
 function ibChemScore(score){
 	q_ibChemScore = score;
 	
@@ -1833,7 +1844,7 @@ function ibChemScore(score){
 	}
 }
 
-//call set
+//call set same
 function ibCompSciScore(score){
 	q_ibCompSciScore = score;
 	
@@ -1983,11 +1994,13 @@ function ibCompSciScore(score){
 	}
 }
 
-//for web design only
-//has no logic connections currently
-//so it's good
+//call set WebDesign Only
 function ibPhysScore(score){
 	q_ibPhysScore = score;
+	
+	if (activeMajor == 1){
+		SciCred();
+	}
 	
 	if (score == 0){
 		document.getElementById("i1").style.color = "#999999";
@@ -2133,7 +2146,7 @@ function ibPhysScore(score){
 	}
 }
 
-//call set
+//call set same
 function ibEconScore(score){
 	q_ibEconScore = score;
 	
@@ -2782,6 +2795,9 @@ function COEN(){
 		var coen11 = document.getElementById("check6").checked;
 		var coen12 = document.getElementById("check7").checked;
 		
+		if (cProgConfidence == 1){
+			APCompSci = 3;
+		}
 		if (coen10 == true  && APCompSci < 3){
 			APCompSci = 3;
 		}

@@ -228,6 +228,7 @@ html, body
 	float: left;
 	margin-left: 25px;
 	margin-right: 25px;
+	background-image: url(images/classes/BLANK.png);
 }
 
 #season1{
@@ -240,10 +241,6 @@ html, body
 
 #season3{
 	background-image: url(images/seasons/spring.png);
-}
-
-#rowE3{
-	background-image: url(images/classes/BLANK.png);
 }
 
 #printButton{
