@@ -246,6 +246,6 @@ html, body
 #printButton{
 	padding-top: 10px;
 	padding-bottom: 10px;
-	margin: 0 auto;
-	width: 50px;
+	float: right;
+	width: 500px;
 }

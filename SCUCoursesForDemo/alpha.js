@@ -1,8 +1,5 @@
 //alpha.js
-//This is the combined script of frontScript.js and sectionalized.js
-//If this works, the other files will be redundant (and unused)
-//I sure hope this works
-
+//A wonderful file for wonderful people
 
 //
 //BEGIN frontScript.js SECTION
@@ -10,15 +7,7 @@
 
 $(document).ready(function(){
 	//we do nothing!
-	
-	/*
-	CTW();
-	COEN();
-	CalcFull();
-	SciCred()
-	addCI();
-	engr1();
-	*/
+	//and we love it!
 });
 
 
@@ -28,6 +17,7 @@ $(document).ready(function(){
 // 1 means active
 
 var activeMajor; //0 for coen; 1 for web design; this is probably the most important variable of all
+var activeMajorFirstClick = 0;
 
 var majorConfidence = 0; //if 1 then ENGR1 to winter, if 0 then ENGR1 to fall
 var cProgConfidence = 0;
@@ -66,6 +56,11 @@ var math;
 //END Variable declaration
 
 function coenClick(){
+	if (activeMajorFirstClick == 1){
+		totalRecall();
+	}
+	activeMajorFirstClick = 1;
+	
 	//set the styles of the coen Text
 	document.getElementById("coen").style.color = "#1580ea";
 	document.getElementById("coen").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
@@ -96,6 +91,11 @@ function coenClick(){
 }
 
 function webDesignClick(){
+	if (activeMajorFirstClick == 1){
+		totalRecall();
+	}
+	activeMajorFirstClick = 1;
+	
 	//set the styles of the Web Design Text
 	document.getElementById("webDesign").style.color = "#1580ea";
 	document.getElementById("webDesign").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
@@ -150,7 +150,6 @@ function conf(level){
 	engr1();
 }
 
-//NOTHING IS SET!
 function cProg(level){
 	if (level == 1){
 		cProgConfidence = 1;
@@ -198,7 +197,60 @@ function ibClick(){
 	$("#ibSelector").fadeToggle(700);
 }
 
-//I believe this should work once all the functions are in one place
+//this resets everything without refreshing... because SCUCourses.fish love you
+function totalRecall(){
+	//reset confidence section
+	majorConfidence = 0; //resets to default value
+	//set the colors
+	document.getElementById("fConf").style.color = "#999999";
+	document.getElementById("fConf").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	document.getElementById("uConf").style.color = "#999999";
+	document.getElementById("uConf").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	$("#askForConfidence").fadeOut(700) //hide the question
+	
+	//reset c programming section
+	cProgConfidence = 0; //resets to default value
+	//set the colors
+	document.getElementById("fcProg").style.color = "#999999";
+	document.getElementById("fcProg").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	document.getElementById("ucProg").style.color = "#999999";
+	document.getElementById("ucProg").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	$("#askAboutC").fadeOut(700); //hide the question
+	
+	//hide the named seperators
+	$("#creSupremeSeperator").fadeOut(700);
+	$("#transferSupremeSeperator").fadeOut(700);
+	
+	
+	//AP/IB section
+	$("#askForTestType").fadeOut(700); //hide the AP/IB buttons
+	document.getElementById("apGrey").style.opacity = "1.0"; //makes button grey
+	aps = 0; //sets AP state variable
+	resetAllAP(); //resets AP test values
+	$("#apSelector").fadeOut(700); //hides list of AP tests
+	
+	document.getElementById("ibGrey").style.opacity = "1.0"; //makes button grey
+	ibs = 0; //sets IB state variable
+	resetAllIB(); //resets IB test values
+	$("#ibSelector").fadeOut(700); //hides list of IB tests
+	
+	//Calculus Readiness Exam reset
+	
+	crePF = 0; //reset to default
+	$("#creSuper1").fadeOut(700); //hide it
+	$("#creSuper2").fadeOut(700); //hide it
+	//reset the colors
+	document.getElementById("crePass").style.color = "#999999";
+	document.getElementById("crePass").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	document.getElementById("creFail").style.color = "#999999";
+	document.getElementById("creFail").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	
+	//hide transfer checkboxes
+	$("#transferMaster").fadeOut(700);
+	//reset transfer checkboxes
+	transferLevel2TotalReset();
+}
+
 function resetAllAP(){
 	document.getElementById("apCalcABGrey").style.opacity = "1.0";
 	apcalcabGB = 0;
@@ -256,7 +308,6 @@ function resetAllAP(){
 	$("#fZ0").fadeOut(700);
 }
 
-//This works, which is why resetAllAP should work once all the functions are in one place
 function resetAllIB(){
 	document.getElementById("ibChemGrey").style.opacity = "1.0";
 	ibchemGB = 0;
@@ -485,7 +536,6 @@ function creClick(level){
 }
 
 function creReset(){
-	//code this baby up son!
 	crePF = 0;
 	document.getElementById("crePass").style.color = "#999999";
 	document.getElementById("crePass").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -679,12 +729,12 @@ function apCalcAbScore(score){
 	
 	//cre stuff
 	if ((score == 4) || (score == 5)){
-		$("#creSuper1").hide();
-		$("#creSuper2").show();
+		$("#creSuper1").fadeOut(700);
+		$("#creSuper2").fadeIn(700);
 		creReset();
 	} else {
-		$("#creSuper1").show();
-		$("#creSuper2").hide();
+		$("#creSuper1").fadeIn(700);
+		$("#creSuper2").fadeOut(700);
 	}
 	
 	CalcFull();
