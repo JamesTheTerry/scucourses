@@ -55,11 +55,19 @@ var math;
 
 //END Variable declaration
 
-function coenClick(){
+//this calls a totalRecall on major change
+//I don't think we should use it
+/*
+function activeMajorCheck(){
 	if (activeMajorFirstClick == 1){
 		totalRecall();
 	}
 	activeMajorFirstClick = 1;
+}
+*/
+
+function coenClick(){
+	//activeMajorCheck();
 	
 	//set the styles of the coen Text
 	document.getElementById("coen").style.color = "#1580ea";
@@ -91,10 +99,7 @@ function coenClick(){
 }
 
 function webDesignClick(){
-	if (activeMajorFirstClick == 1){
-		totalRecall();
-	}
-	activeMajorFirstClick = 1;
+	//activeMajorCheck();
 	
 	//set the styles of the Web Design Text
 	document.getElementById("webDesign").style.color = "#1580ea";
@@ -234,21 +239,24 @@ function totalRecall(){
 	resetAllIB(); //resets IB test values
 	$("#ibSelector").fadeOut(700); //hides list of IB tests
 	
-	//Calculus Readiness Exam reset
+	//hide transfer checkboxes
+	$("#transferMaster").fadeOut(700);
+	document.getElementById("Q1yes").style.color = "#999999";
+	document.getElementById("Q1yes").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	document.getElementById("Q1no").style.color = "#999999";
+	document.getElementById("Q1no").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	//reset transfer checkboxes
+	transferLevel2TotalReset();
 	
+	//Calculus Readiness Exam reset
 	crePF = 0; //reset to default
-	$("#creSuper1").fadeOut(700); //hide it
-	$("#creSuper2").fadeOut(700); //hide it
 	//reset the colors
 	document.getElementById("crePass").style.color = "#999999";
 	document.getElementById("crePass").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	document.getElementById("creFail").style.color = "#999999";
 	document.getElementById("creFail").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
-	
-	//hide transfer checkboxes
-	$("#transferMaster").fadeOut(700);
-	//reset transfer checkboxes
-	transferLevel2TotalReset();
+	$("#creSuper1").fadeOut(700); //hide it
+	$("#creSuper2").fadeOut(700); //hide it
 }
 
 function resetAllAP(){
