@@ -13,9 +13,13 @@ a {
 	transition: color 0.3s ease-in-out;
 }
 
+a:link {
+	text-decoration: underline !important;
+}
+
 a:hover{
 	color: #1580ea;
-	font-family: HelveticaNeue-Bold, Arial-Bold, sans-serif;
+	/*font-family: HelveticaNeue-Bold, Arial-Bold, sans-serif;*/
 }
 
 .cf {
