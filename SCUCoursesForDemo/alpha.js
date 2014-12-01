@@ -93,7 +93,7 @@ function coenClick(){
 	SciCred()
 	addCI();
 	engr1();
-	
+		
 	majorInitClick();
 }
 
@@ -130,6 +130,7 @@ function webDesignClick(){
 }
 
 function majorInitClick(){
+	print_title(activeMajor);
 	$("#askForConfidence").fadeIn(700);
 }
 
@@ -294,6 +295,8 @@ function totalRecall(){
 	document.getElementById("webDesign").style.color = "#999999";
 	document.getElementById("webDesign").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	
+	//reset the print_title
+	print_title(2);
 }
 
 function resetAllAP(){
@@ -726,8 +729,23 @@ function transferLevel2TotalReset(){
 	CalcFull();
 }
 
+function print_title(passer){
+	if (passer == 0){
+		$("#print_webTitle").hide();
+		$("#print_coenTitle").show();
+	}
+	if (passer == 1){
+		$("#print_webTitle").show();
+		$("#print_coenTitle").hide();
+	}
+	//for totalRecall() use
+	if (passer == 2){
+		$("#print_webTitle").hide();
+		$("#print_coenTitle").hide();
+	}
+}
 
-function print(){
+function printIt(){
 	var divContents = $("#print_scheduleZone").html();
 	var printWindow = window.open('', '', 'height=452,width=600');
 	printWindow.document.write('<html><head><title>Your wonderful schedule</title><link href="styles.css" rel="stylesheet" type="text/css">');
@@ -735,14 +753,9 @@ function print(){
 	printWindow.document.write(divContents);
 	printWindow.document.write('</body></html>');
 	//printWindow.document.close();
-	//printWindow.print();
+	printWindow.print();
 }
 
-
-function printIt(){
-	window.print();
-	return;
-}
 
 //
 //

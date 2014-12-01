@@ -2,7 +2,7 @@
 	height: 452px;
 	width: 100%;
 	margin: 0 auto;
-	display: none;
+	/*display: none;*/
 }
 
 #print_tableSuper{
@@ -18,4 +18,21 @@
 	float: left;
 	margin-left: 25px;
 	margin-right: 25px;
+}
+
+.print_title{
+	margin: 0 auto;
+	color:#000000;
+	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+    font-size:40pt;
+}
+
+#print_webTitle{
+	width: 271px;
+	display: none;
+}
+
+#print_coenTitle{
+	width: 140px;
+	display: none;
 }
