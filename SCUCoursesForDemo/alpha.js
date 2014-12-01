@@ -37,7 +37,7 @@ var ibchemGB = 0;
 var ibcompsciGB = 0;
 var ibphysGB = 0;
 var ibeconGB = 0;
-var crePF = 0; //1 is a pass of cre, 0 is a fail of cre.  That's what it is called crePF cre Pass/Fail.  Get it?
+var crePF = 1; //1 is a pass of cre, 0 is a fail of cre.  That's what it is called crePF cre Pass/Fail.  Get it?
 
 //now for the actual course variables
 var math1;
@@ -80,8 +80,8 @@ function coenClick(){
 	
 	math1 = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 106", "AMTH 108", "MATH 53", "CORE"];
 	math2 = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 108", "MATH 53", "CORE"];
-	coen1 = ["COEN 10", "COEN 11", "CORE", "CORE"];
-	coen2 = "COEN 12";
+	coen1 = ["COEN 10", "CORE", "CORE"];
+	coen2 = ["COEN 11", "COEN 12"];
 	sci = [ "CHEM 11", "PHYS 31", "PHYS 32"];
 	core = ["CTW1", "CTW2", "COEN 19"];
 	coreS = ["RTC1", "SocSci", "Diversity", "ELSJ","RTC2", "Ethics","SeeAdvisor", "SeeAdvisor", "SeeAdvisor", "CI1", "CI2"];
@@ -111,9 +111,9 @@ function webDesignClick(){
 	activeMajor = 1;  //sets functions to coen mode
 	
 	math = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 108", "CORE", "CORE"];
-	coen1 = ["COEN 10", "COEN 11", "CORE", "CORE"];
-	coen2 = "COEN 12";
-	sci = [ "CHEM 11", "COMM 2"];
+	coen1 = ["COEN 10", "CORE", "CORE"];
+	coen2 = ["COEN 11", "COEN 12"];
+	sci = [ "CHEM 11", "CORE"];
 	CI = [ "CI1", "CI2"];
 	core = ["CTW1", "CTW2", "CORE"];
 	coreS = ["RTC1", "SocSci", "Diversity", "ELSJ","RTC2", "Ethics","SeeAdvisor", "SeeAdvisor", "SeeAdvisor"];
@@ -1350,7 +1350,7 @@ function apEnviroScore(score){
 	q_apEnviroScore = score;
 	
 	if (activeMajor == 0){
-		CalcFull();
+		MathSci();
 	}
 	
 	if (activeMajor == 1){
@@ -2462,7 +2462,7 @@ function removeCore(){
 function MathSci(){
 	CalcFull();
 	SciCred();
-	//COEN();	
+	COEN();	
 }
 
 //platinum
@@ -2505,7 +2505,9 @@ function CalcFull(){
 		//END SECTION
 		
 		//BC score of 3+ overides any AB score.  CRE is below all them
-		if(APCalcScoreBC == 8){
+		if (crePF != 1) {
+			start = 0;
+		} else if(APCalcScoreBC == 8){
 			start = 6;
 		} else if(APCalcScoreBC == 7){
 			start = 5;
@@ -2518,13 +2520,13 @@ function CalcFull(){
 			}
 		} else if (APCalcScoreAB >= 4) {
 			start = 2
-		} else if (crePF == 1) {
-			start = 1;
 		} else {
-			start = 0;
+			start = 1;
 		}
 		
-		if(APEnvSci > 3 || APChem > 3){
+		if(APEnvSci > 3 && APChem > 2){
+			natSci = 1;
+		} else if(APChem > 3){
 			natSci = 1;
 		}
 		
@@ -2562,7 +2564,9 @@ function CalcFull(){
 		}
 		
 		//BC score of 3+ overides any AB score.  CRE is below all them
-		if(APCalcScoreBC == 7){
+		if (crePF != 1) {
+			start = 0;
+		} else if(APCalcScoreBC == 7){
 			start = 5;
 		} else if(APCalcScoreBC == 6){
 			start = 4;
@@ -2573,10 +2577,8 @@ function CalcFull(){
 			}
 		} else if (APCalcScoreAB >= 4) {
 			start = 2
-		} else if (crePF == 1) {
-			start = 1;
 		} else {
-			start = 0;
+			start = 1;
 		}
 		
 		var Fall0 = math[start];
@@ -2630,7 +2632,7 @@ function SciCred(){
 	
 	if (activeMajor == 0){
 		//logic
-		if(APChem > 2 || IBChem > 5){
+		if(APChem > 2 || IBChem > 5 || APEnvSci > 3){
 			Fall2 = replace;
 		} else{
 			Fall2 = sci[0];
@@ -2679,6 +2681,7 @@ function SciCred(){
 		Fall[2] = Fall2;
 		Winter[2] = Winter2;
 		Spring[2] = Spring2;
+		suggest();
 		build();
 	}
 }
@@ -2739,25 +2742,9 @@ function MoveCoen(){
 		removeCore();
 		
 		var i;
-		var flagW = 0;
 		var flagF = 0;
 		
-		for (i=0;i<4;i++){
-			if (Winter[i] == "CORE"){
-				flagW++;
-			} else if(Winter[i] == "CTW1" || Winter[i] == "CTW2" ){
-				flagW++;
-			}
-	
-		}
-		
-		if( flagW > 2){
-			//move COEN 12 the winter if more than 2 CORE is Winter
-			Winter[1] = coen2;
-			Spring[1] = replace;
-			return;
-		}
-		
+				
 		for (i=0;i<4;i++){
 			if (Fall[i] == "CORE"){
 				flagF++;
@@ -2768,8 +2755,9 @@ function MoveCoen(){
 		}
 		
 		if( flagF > 2){
-			//move COEN 12 the winter if more than 2 CORE is Winter
-			Fall[1] = coen2;
+			//move COEN 11 the winter if more than 2 CORE is Fall
+			Fall[1] = coen2[0];
+			Winter[1] = coen2[1];
 			Spring[1] = replace;
 		}
 	}
@@ -2780,27 +2768,8 @@ function MoveCoen(){
 		//find what classes are currently in the schedule
 		
 		var i;
-		var flagW = 0;
 		var flagF = 0;
-		
-		for (i=0;i<4;i++){
-			if (Winter[i] == "CORE"){
-				flagW++;
-			} else if(Winter[i] == "CTW1" || Winter[i] == "CTW2" ){
-				flagW++;
-			} else if(Winter[i] == "CI1" || Winter[i] == "CI2" ){
-				flagW++;
-			}
-	
-		}
-		
-		if( flagW > 2){
-			//move COEN 12 the winter if more than 2 CORE is Winter
-			Winter[1] = coen2;
-			Spring[1] = replace;
-			return;
-		}
-		
+				
 		for (i=0;i<4;i++){
 			if (Fall[i] == "CORE"){
 				flagF++;
@@ -2811,8 +2780,9 @@ function MoveCoen(){
 		}
 		
 		if( flagF > 2){
-			//move COEN 12 the winter if more than 2 CORE is Winter
-			Fall[1] = coen2;
+			//move COEN 12 the winter if more than 2 CORE is Fall
+			Fall[1] = coen2[0];
+			Winter[1] = coen2[1];
 			Spring[1] = replace;
 		}
 	
@@ -2861,24 +2831,24 @@ function COEN(){
 		
 		if(APCompSci == 6){
 			//no COEN 12
-			Fall1 = coen1[2];
-			Winter1 = coen1[3];
+			Fall1 = coen1[1];
+			Winter1 = coen1[2];
 			Spring1 = replace;
 		} else if (APCompSci < 3 && IBCompSci < 6){
 			//no credit follow the suggested plan
 			Fall1 = coen1[0];
-			Winter1 = coen1[1];
-			Spring1 = coen2;
+			Winter1 = coen2[0];
+			Spring1 = coen2[1];
 		} else if (APCompSci >= 4 || IBCompSci >= 6){
 			//no COEN 11
-			Fall1 = coen1[2];
-			Winter1 = coen1[3];
-			Spring1 = coen2;
+			Fall1 = coen1[1];
+			Winter1 = coen1[2];
+			Spring1 = coen2[1];
 		} else if (APCompSci == 3){
 			//no COEN 10
 			Fall1 = coen1[1];
-			Winter1 = coen1[2];
-			Spring1 = coen2;
+			Winter1 = coen2[0];
+			Spring1 = coen2[1];
 		}
 		
 		Fall[1] = Fall1;
@@ -2925,24 +2895,24 @@ function COEN(){
 		var Spring1;
 		if(APCompSci == 6){
 			//no COEN 12
-			Fall1 = coen1[2];
-			Winter1 = coen1[3];
+			Fall1 = coen1[1];
+			Winter1 = coen1[2];
 			Spring1 = replace;
 		} else if (APCompSci < 3 && IBCompSci < 6){
 			//no credit follow the suggested plan
 			Fall1 = coen1[0];
-			Winter1 = coen1[1];
-			Spring1 = coen2;
+			Winter1 = coen2[0];
+			Spring1 = coen2[1];
 		} else if (APCompSci >= 4 || IBCompSci >= 6){
 			//no COEN 11
-			Fall1 = coen1[2];
-			Winter1 = coen1[3];
-			Spring1 = coen2;
+			Fall1 = coen1[1];
+			Winter1 = coen1[2];
+			Spring1 = coen2[1];
 		} else if (APCompSci == 3){
 			//no COEN 10
 			Fall1 = coen1[1];
-			Winter1 = coen1[2];
-			Spring1 = coen2;
+			Winter1 = coen2[0];
+			Spring1 = coen2[1];
 		}
 		Fall[1] = Fall1;
 		Winter[1] = Winter1;
