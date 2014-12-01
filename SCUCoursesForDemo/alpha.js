@@ -2641,7 +2641,6 @@ function SciCred(){
 		
 		
 		Fall2 = sci[start];
-		alert(Fall2);
 		Winter2 = CI[0];
 		Spring2 = CI[1];
 		
@@ -3343,7 +3342,7 @@ function buildToImageBlack(passer){
 	var rtc3PNG = "images/black/classes/core/rtc3.png";
 	var seeAdvisorPNG = "images/black/classes/core/seeAdvisor.png";
 	var socSciPNG = "images/black/classes/core/socSci.png";
-	var comm2PNG = "images/black/classes/core/socSci.png";
+	var comm2PNG = "images/black/classes/comm2.png";
 	
 	//set logic array notation to variables with urls
 	if (passer == "AMTH 106"){
