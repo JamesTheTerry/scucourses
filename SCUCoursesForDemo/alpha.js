@@ -273,6 +273,20 @@ function totalRecall(){
 	document.getElementById("rowE1").style.backgroundImage = "url('images/classes/BLANK.png')";
 	document.getElementById("rowE2").style.backgroundImage = "url('images/classes/BLANK.png')";
 	document.getElementById("rowE3").style.backgroundImage = "url('images/classes/BLANK.png')";
+	$("#print_rowA1").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowB1").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowC1").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowD1").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowE1").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowA2").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowB2").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowC2").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowD2").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowE2").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowA3").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowB3").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowC3").attr("src", "images/black/classes/BLANK.png");
+	$("#print_rowD3").attr("src", "images/black/classes/BLANK.png");
 	
 	//reset the major selector
 	document.getElementById("coen").style.color = "#999999";
