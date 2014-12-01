@@ -116,7 +116,7 @@ function webDesignClick(){
 	sci = [ "CHEM 11", "COMM 2"];
 	CI = [ "CI1", "CI2"];
 	core = ["CTW1", "CTW2", "CORE"];
-	coreS = ["RTC1", "SocSci", "RTC2", "Diversity", "RTC3", "ELSJ", "Ethics", "CI3","SeeAdvisor"];
+	coreS = ["RTC1", "SocSci", "Diversity", "ELSJ","RTC2", "Ethics","SeeAdvisor", "SeeAdvisor", "SeeAdvisor"];
 	replace = "CORE";
 	
 	CTW();
@@ -2574,6 +2574,7 @@ function CalcFull(){
 		Winter[0] = Winter0;
 		Spring[0] = Spring0;
 		
+		suggest();
 		build();
 	}
 }
@@ -2598,6 +2599,7 @@ function SciCred(){
   	var chem11 = document.getElementById("check1").checked;
 	var phys31 = document.getElementById("check2").checked;
 	var phys32 = document.getElementById("check3").checked;
+	var phys33 = document.getElementById("check14").checked;
 	
 	if (chem11 == true){
 		APChem = 5;
@@ -2607,6 +2609,9 @@ function SciCred(){
 	}
 	if (phys32 == true){
 		Transfer32 = 1;
+	}
+	if (phys33 == true){
+		APphysicEM = 5;
 	}
 	//END SECTION
 	
