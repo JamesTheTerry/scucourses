@@ -41,7 +41,7 @@ html, body
 
 #resetEverything a:hover{
 	color: #ffffff !important;
-	font-family: HelveticaNeue-Bold, Arial, sans-serif !important;
+	font-family: HelveticaNeue-Bold, Arial-Bold, sans-serif !important;
 }
 
 #container1 {

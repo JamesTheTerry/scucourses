@@ -70,7 +70,7 @@ function coenClick(){
 	
 	//set the styles of the coen Text
 	document.getElementById("coen").style.color = "#1580ea";
-	document.getElementById("coen").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+	document.getElementById("coen").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 	
 	//reset the styles of web design text
 	document.getElementById("webDesign").style.color = "#999999";
@@ -102,7 +102,7 @@ function webDesignClick(){
 	
 	//set the styles of the Web Design Text
 	document.getElementById("webDesign").style.color = "#1580ea";
-	document.getElementById("webDesign").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+	document.getElementById("webDesign").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 	
 	//reset the styles of COEN
 	document.getElementById("coen").style.color = "#999999";
@@ -139,14 +139,14 @@ function conf(level){
 	if (level == 1){
 		majorConfidence = 1;
 		document.getElementById("fConf").style.color = "#1580ea";
-		document.getElementById("fConf").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fConf").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("uConf").style.color = "#999999";
 		document.getElementById("uConf").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
 	if (level == 0){
 		majorConfidence = 0;
 		document.getElementById("uConf").style.color = "#1580ea";
-		document.getElementById("uConf").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("uConf").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("fConf").style.color = "#999999";
 		document.getElementById("fConf").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
@@ -158,14 +158,14 @@ function cProg(level){
 	if (level == 1){
 		cProgConfidence = 1;
 		document.getElementById("fcProg").style.color = "#1580ea";
-		document.getElementById("fcProg").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fcProg").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("ucProg").style.color = "#999999";
 		document.getElementById("ucProg").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
 	if (level == 0){
 		cProgConfidence = 0;
 		document.getElementById("ucProg").style.color = "#1580ea";
-		document.getElementById("ucProg").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("ucProg").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("fcProg").style.color = "#999999";
 		document.getElementById("fcProg").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
@@ -566,14 +566,14 @@ function creClick(level){
 	if (level == 1){
 		crePF = 1;
 		document.getElementById("crePass").style.color = "#1580ea";
-		document.getElementById("crePass").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("crePass").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("creFail").style.color = "#999999";
 		document.getElementById("creFail").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
 	if (level == 0){
 		crePF = 0;
 		document.getElementById("creFail").style.color = "#1580ea";
-		document.getElementById("creFail").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("creFail").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("crePass").style.color = "#999999";
 		document.getElementById("crePass").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
@@ -594,14 +594,14 @@ function transferLevel1(response){
 		$("#transferQ2").fadeOut(700);
 		transferLevel2TotalReset();
 		document.getElementById("Q1no").style.color = "#1580ea";
-		document.getElementById("Q1no").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("Q1no").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("Q1yes").style.color = "#999999";
 		document.getElementById("Q1yes").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
 	if (response == 1){
 		$("#transferQ2").fadeIn(700);
 		document.getElementById("Q1yes").style.color = "#1580ea";
-		document.getElementById("Q1yes").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("Q1yes").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("Q1no").style.color = "#999999";
 		document.getElementById("Q1no").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	}
@@ -618,7 +618,7 @@ function transferLevel2(response){
 		
 		if (QScienceState == 0){
 			document.getElementById("Q2science").style.color = "#1580ea";
-			document.getElementById("Q2science").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+			document.getElementById("Q2science").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 			QScienceState = 1;
 			return;
 		}
@@ -642,7 +642,7 @@ function transferLevel2(response){
 		
 		if (QCOENState == 0){
 			document.getElementById("Q2coen").style.color = "#1580ea";
-			document.getElementById("Q2coen").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+			document.getElementById("Q2coen").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 			QCOENState = 1;
 			return;
 		}
@@ -667,7 +667,7 @@ function transferLevel2(response){
 		
 		if (QMathState == 0){
 			document.getElementById("Q2math").style.color = "#1580ea";
-			document.getElementById("Q2math").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+			document.getElementById("Q2math").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 			QMathState = 1;
 			return;
 		}
@@ -799,7 +799,7 @@ function apCalcAbScore(score){
 	
 	if (score == 1){
 		document.getElementById("a1").style.color = "#1580ea";
-		document.getElementById("a1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("a1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("a2").style.color = "#999999";
 		document.getElementById("a2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -813,7 +813,7 @@ function apCalcAbScore(score){
 	
 	if (score == 2){
 		document.getElementById("a2").style.color = "#1580ea";
-		document.getElementById("a2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("a2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("a1").style.color = "#999999";
 		document.getElementById("a1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -827,7 +827,7 @@ function apCalcAbScore(score){
 	
 	if (score == 3){
 		document.getElementById("a3").style.color = "#1580ea";
-		document.getElementById("a3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("a3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("a1").style.color = "#999999";
 		document.getElementById("a1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -841,7 +841,7 @@ function apCalcAbScore(score){
 	
 	if (score == 4){
 		document.getElementById("a4").style.color = "#1580ea";
-		document.getElementById("a4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("a4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("a1").style.color = "#999999";
 		document.getElementById("a1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -855,7 +855,7 @@ function apCalcAbScore(score){
 	
 	if (score == 5){
 		document.getElementById("a5").style.color = "#1580ea";
-		document.getElementById("a5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("a5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("a1").style.color = "#999999";
 		document.getElementById("a1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -899,7 +899,7 @@ function apCalcBcScore(score){
 	
 	if (score == 1){
 		document.getElementById("b1").style.color = "#1580ea";
-		document.getElementById("b1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("b1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("b2").style.color = "#999999";
 		document.getElementById("b2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -913,7 +913,7 @@ function apCalcBcScore(score){
 	
 	if (score == 2){
 		document.getElementById("b2").style.color = "#1580ea";
-		document.getElementById("b2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("b2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("b1").style.color = "#999999";
 		document.getElementById("b1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -927,7 +927,7 @@ function apCalcBcScore(score){
 	
 	if (score == 3){
 		document.getElementById("b3").style.color = "#1580ea";
-		document.getElementById("b3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("b3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("b1").style.color = "#999999";
 		document.getElementById("b1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -941,7 +941,7 @@ function apCalcBcScore(score){
 	
 	if (score == 4){
 		document.getElementById("b4").style.color = "#1580ea";
-		document.getElementById("b4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("b4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("b1").style.color = "#999999";
 		document.getElementById("b1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -955,7 +955,7 @@ function apCalcBcScore(score){
 	
 	if (score == 5){
 		document.getElementById("b5").style.color = "#1580ea";
-		document.getElementById("b5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("b5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("b1").style.color = "#999999";
 		document.getElementById("b1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -988,7 +988,7 @@ function apChemScore(score){
 	
 	if (score == 1){
 		document.getElementById("c1").style.color = "#1580ea";
-		document.getElementById("c1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("c1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("c2").style.color = "#999999";
 		document.getElementById("c2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1002,7 +1002,7 @@ function apChemScore(score){
 	
 	if (score == 2){
 		document.getElementById("c2").style.color = "#1580ea";
-		document.getElementById("c2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("c2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("c1").style.color = "#999999";
 		document.getElementById("c1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1016,7 +1016,7 @@ function apChemScore(score){
 	
 	if (score == 3){
 		document.getElementById("c3").style.color = "#1580ea";
-		document.getElementById("c3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("c3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("c1").style.color = "#999999";
 		document.getElementById("c1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1030,7 +1030,7 @@ function apChemScore(score){
 	
 	if (score == 4){
 		document.getElementById("c4").style.color = "#1580ea";
-		document.getElementById("c4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("c4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("c1").style.color = "#999999";
 		document.getElementById("c1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1044,7 +1044,7 @@ function apChemScore(score){
 	
 	if (score == 5){
 		document.getElementById("c5").style.color = "#1580ea";
-		document.getElementById("c5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("c5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("c1").style.color = "#999999";
 		document.getElementById("c1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1078,7 +1078,7 @@ function apCompSciAScore(score){
 	
 	if (score == 1){
 		document.getElementById("d1").style.color = "#1580ea";
-		document.getElementById("d1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("d1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("d2").style.color = "#999999";
 		document.getElementById("d2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1092,7 +1092,7 @@ function apCompSciAScore(score){
 	
 	if (score == 2){
 		document.getElementById("d2").style.color = "#1580ea";
-		document.getElementById("d2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("d2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("d1").style.color = "#999999";
 		document.getElementById("d1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1106,7 +1106,7 @@ function apCompSciAScore(score){
 	
 	if (score == 3){
 		document.getElementById("d3").style.color = "#1580ea";
-		document.getElementById("d3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("d3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("d1").style.color = "#999999";
 		document.getElementById("d1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1120,7 +1120,7 @@ function apCompSciAScore(score){
 	
 	if (score == 4){
 		document.getElementById("d4").style.color = "#1580ea";
-		document.getElementById("d4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("d4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("d1").style.color = "#999999";
 		document.getElementById("d1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1134,7 +1134,7 @@ function apCompSciAScore(score){
 	
 	if (score == 5){
 		document.getElementById("d5").style.color = "#1580ea";
-		document.getElementById("d5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("d5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("d1").style.color = "#999999";
 		document.getElementById("d1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1168,7 +1168,7 @@ function apPhysCMechScore(score){
 	
 	if (score == 1){
 		document.getElementById("e1").style.color = "#1580ea";
-		document.getElementById("e1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("e1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("e2").style.color = "#999999";
 		document.getElementById("e2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1182,7 +1182,7 @@ function apPhysCMechScore(score){
 	
 	if (score == 2){
 		document.getElementById("e2").style.color = "#1580ea";
-		document.getElementById("e2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("e2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("e1").style.color = "#999999";
 		document.getElementById("e1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1196,7 +1196,7 @@ function apPhysCMechScore(score){
 	
 	if (score == 3){
 		document.getElementById("e3").style.color = "#1580ea";
-		document.getElementById("e3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("e3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("e1").style.color = "#999999";
 		document.getElementById("e1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1210,7 +1210,7 @@ function apPhysCMechScore(score){
 	
 	if (score == 4){
 		document.getElementById("e4").style.color = "#1580ea";
-		document.getElementById("e4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("e4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("e1").style.color = "#999999";
 		document.getElementById("e1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1224,7 +1224,7 @@ function apPhysCMechScore(score){
 	
 	if (score == 5){
 		document.getElementById("e5").style.color = "#1580ea";
-		document.getElementById("e5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("e5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("e1").style.color = "#999999";
 		document.getElementById("e1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 		document.getElementById("e2").style.color = "#999999";
@@ -1263,7 +1263,7 @@ function apPhysCElecScore(score){
 	
 	if (score == 1){
 		document.getElementById("eX1").style.color = "#1580ea";
-		document.getElementById("eX1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("eX1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("eX2").style.color = "#999999";
 		document.getElementById("eX2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1277,7 +1277,7 @@ function apPhysCElecScore(score){
 	
 	if (score == 2){
 		document.getElementById("eX2").style.color = "#1580ea";
-		document.getElementById("eX2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("eX2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("eX1").style.color = "#999999";
 		document.getElementById("eX1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1291,7 +1291,7 @@ function apPhysCElecScore(score){
 	
 	if (score == 3){
 		document.getElementById("eX3").style.color = "#1580ea";
-		document.getElementById("eX3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("eX3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("eX1").style.color = "#999999";
 		document.getElementById("eX1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1305,7 +1305,7 @@ function apPhysCElecScore(score){
 	
 	if (score == 4){
 		document.getElementById("eX4").style.color = "#1580ea";
-		document.getElementById("eX4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("eX4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("eX1").style.color = "#999999";
 		document.getElementById("eX1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1319,7 +1319,7 @@ function apPhysCElecScore(score){
 	
 	if (score == 5){
 		document.getElementById("eX5").style.color = "#1580ea";
-		document.getElementById("eX5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("eX5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("eX1").style.color = "#999999";
 		document.getElementById("eX1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1359,7 +1359,7 @@ function apEnviroScore(score){
 	
 	if (score == 1){
 		document.getElementById("f1").style.color = "#1580ea";
-		document.getElementById("f1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("f1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("f2").style.color = "#999999";
 		document.getElementById("f2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1373,7 +1373,7 @@ function apEnviroScore(score){
 	
 	if (score == 2){
 		document.getElementById("f2").style.color = "#1580ea";
-		document.getElementById("f2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("f2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("f1").style.color = "#999999";
 		document.getElementById("f1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1387,7 +1387,7 @@ function apEnviroScore(score){
 	
 	if (score == 3){
 		document.getElementById("f3").style.color = "#1580ea";
-		document.getElementById("f3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("f3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("f1").style.color = "#999999";
 		document.getElementById("f1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1401,7 +1401,7 @@ function apEnviroScore(score){
 	
 	if (score == 4){
 		document.getElementById("f4").style.color = "#1580ea";
-		document.getElementById("f4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("f4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("f1").style.color = "#999999";
 		document.getElementById("f1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1415,7 +1415,7 @@ function apEnviroScore(score){
 	
 	if (score == 5){
 		document.getElementById("f5").style.color = "#1580ea";
-		document.getElementById("f5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("f5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("f1").style.color = "#999999";
 		document.getElementById("f1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1449,7 +1449,7 @@ function apGovtScore(score){
 
 	if (score == 1){
 		document.getElementById("fW1").style.color = "#1580ea";
-		document.getElementById("fW1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fW1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fW2").style.color = "#999999";
 		document.getElementById("fW2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1463,7 +1463,7 @@ function apGovtScore(score){
 	
 	if (score == 2){
 		document.getElementById("fW2").style.color = "#1580ea";
-		document.getElementById("fW2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fW2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fW1").style.color = "#999999";
 		document.getElementById("fW1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1477,7 +1477,7 @@ function apGovtScore(score){
 	
 	if (score == 3){
 		document.getElementById("fW3").style.color = "#1580ea";
-		document.getElementById("fW3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fW3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fW1").style.color = "#999999";
 		document.getElementById("fW1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1491,7 +1491,7 @@ function apGovtScore(score){
 	
 	if (score == 4){
 		document.getElementById("fW4").style.color = "#1580ea";
-		document.getElementById("fW4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fW4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fW1").style.color = "#999999";
 		document.getElementById("fW1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1505,7 +1505,7 @@ function apGovtScore(score){
 	
 	if (score == 5){
 		document.getElementById("fW5").style.color = "#1580ea";
-		document.getElementById("fW5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fW5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fW1").style.color = "#999999";
 		document.getElementById("fW1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1539,7 +1539,7 @@ function apMacroEconScore(score){
 
 	if (score == 1){
 		document.getElementById("fX1").style.color = "#1580ea";
-		document.getElementById("fX1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fX1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fX2").style.color = "#999999";
 		document.getElementById("fX2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1553,7 +1553,7 @@ function apMacroEconScore(score){
 	
 	if (score == 2){
 		document.getElementById("fX2").style.color = "#1580ea";
-		document.getElementById("fX2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fX2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fX1").style.color = "#999999";
 		document.getElementById("fX1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1567,7 +1567,7 @@ function apMacroEconScore(score){
 	
 	if (score == 3){
 		document.getElementById("fX3").style.color = "#1580ea";
-		document.getElementById("fX3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fX3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fX1").style.color = "#999999";
 		document.getElementById("fX1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1581,7 +1581,7 @@ function apMacroEconScore(score){
 	
 	if (score == 4){
 		document.getElementById("fX4").style.color = "#1580ea";
-		document.getElementById("fX4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fX4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fX1").style.color = "#999999";
 		document.getElementById("fX1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1595,7 +1595,7 @@ function apMacroEconScore(score){
 	
 	if (score == 5){
 		document.getElementById("fX5").style.color = "#1580ea";
-		document.getElementById("fX5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fX5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fX1").style.color = "#999999";
 		document.getElementById("fX1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1629,7 +1629,7 @@ function apMicroEconScore(score){
 	
 	if (score == 1){
 		document.getElementById("fY1").style.color = "#1580ea";
-		document.getElementById("fY1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fY1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fY2").style.color = "#999999";
 		document.getElementById("fY2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1643,7 +1643,7 @@ function apMicroEconScore(score){
 	
 	if (score == 2){
 		document.getElementById("fY2").style.color = "#1580ea";
-		document.getElementById("fY2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fY2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fY1").style.color = "#999999";
 		document.getElementById("fY1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1657,7 +1657,7 @@ function apMicroEconScore(score){
 	
 	if (score == 3){
 		document.getElementById("fY3").style.color = "#1580ea";
-		document.getElementById("fY3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fY3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fY1").style.color = "#999999";
 		document.getElementById("fY1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1671,7 +1671,7 @@ function apMicroEconScore(score){
 	
 	if (score == 4){
 		document.getElementById("fY4").style.color = "#1580ea";
-		document.getElementById("fY4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fY4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fY1").style.color = "#999999";
 		document.getElementById("fY1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1685,7 +1685,7 @@ function apMicroEconScore(score){
 	
 	if (score == 5){
 		document.getElementById("fY5").style.color = "#1580ea";
-		document.getElementById("fY5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fY5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fY1").style.color = "#999999";
 		document.getElementById("fY1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1719,7 +1719,7 @@ function apPsychologyScore(score){
 	
 	if (score == 1){
 		document.getElementById("fZ1").style.color = "#1580ea";
-		document.getElementById("fZ1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fZ1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fZ2").style.color = "#999999";
 		document.getElementById("fZ2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1733,7 +1733,7 @@ function apPsychologyScore(score){
 	
 	if (score == 2){
 		document.getElementById("fZ2").style.color = "#1580ea";
-		document.getElementById("fZ2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fZ2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fZ1").style.color = "#999999";
 		document.getElementById("fZ1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1747,7 +1747,7 @@ function apPsychologyScore(score){
 	
 	if (score == 3){
 		document.getElementById("fZ3").style.color = "#1580ea";
-		document.getElementById("fZ3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fZ3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fZ1").style.color = "#999999";
 		document.getElementById("fZ1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1761,7 +1761,7 @@ function apPsychologyScore(score){
 	
 	if (score == 4){
 		document.getElementById("fZ4").style.color = "#1580ea";
-		document.getElementById("fZ4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fZ4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fZ1").style.color = "#999999";
 		document.getElementById("fZ1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1775,7 +1775,7 @@ function apPsychologyScore(score){
 	
 	if (score == 5){
 		document.getElementById("fZ5").style.color = "#1580ea";
-		document.getElementById("fZ5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("fZ5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("fZ1").style.color = "#999999";
 		document.getElementById("fZ1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1813,7 +1813,7 @@ function ibChemScore(score){
 
 	if (score == 1){
 		document.getElementById("g1").style.color = "#1580ea";
-		document.getElementById("g1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("g1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("g2").style.color = "#999999";
 		document.getElementById("g2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1831,7 +1831,7 @@ function ibChemScore(score){
 	
 	if (score == 2){
 		document.getElementById("g2").style.color = "#1580ea";
-		document.getElementById("g2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("g2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("g1").style.color = "#999999";
 		document.getElementById("g1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1849,7 +1849,7 @@ function ibChemScore(score){
 	
 	if (score == 3){
 		document.getElementById("g3").style.color = "#1580ea";
-		document.getElementById("g3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("g3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("g1").style.color = "#999999";
 		document.getElementById("g1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1867,7 +1867,7 @@ function ibChemScore(score){
 	
 	if (score == 4){
 		document.getElementById("g4").style.color = "#1580ea";
-		document.getElementById("g4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("g4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("g1").style.color = "#999999";
 		document.getElementById("g1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1885,7 +1885,7 @@ function ibChemScore(score){
 	
 	if (score == 5){
 		document.getElementById("g5").style.color = "#1580ea";
-		document.getElementById("g5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("g5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("g1").style.color = "#999999";
 		document.getElementById("g1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1903,7 +1903,7 @@ function ibChemScore(score){
 	
 	if (score == 6){
 		document.getElementById("g6").style.color = "#1580ea";
-		document.getElementById("g6").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("g6").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("g1").style.color = "#999999";
 		document.getElementById("g1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1921,7 +1921,7 @@ function ibChemScore(score){
 	
 	if (score == 7){
 		document.getElementById("g7").style.color = "#1580ea";
-		document.getElementById("g7").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("g7").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("g1").style.color = "#999999";
 		document.getElementById("g1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1963,7 +1963,7 @@ function ibCompSciScore(score){
 
 	if (score == 1){
 		document.getElementById("h1").style.color = "#1580ea";
-		document.getElementById("h1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("h1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("h2").style.color = "#999999";
 		document.getElementById("h2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1981,7 +1981,7 @@ function ibCompSciScore(score){
 	
 	if (score == 2){
 		document.getElementById("h2").style.color = "#1580ea";
-		document.getElementById("h2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("h2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("h1").style.color = "#999999";
 		document.getElementById("h1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -1999,7 +1999,7 @@ function ibCompSciScore(score){
 	
 	if (score == 3){
 		document.getElementById("h3").style.color = "#1580ea";
-		document.getElementById("h3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("h3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("h1").style.color = "#999999";
 		document.getElementById("h1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2017,7 +2017,7 @@ function ibCompSciScore(score){
 	
 	if (score == 4){
 		document.getElementById("h4").style.color = "#1580ea";
-		document.getElementById("h4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("h4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("h1").style.color = "#999999";
 		document.getElementById("h1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2035,7 +2035,7 @@ function ibCompSciScore(score){
 	
 	if (score == 5){
 		document.getElementById("h5").style.color = "#1580ea";
-		document.getElementById("h5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("h5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("h1").style.color = "#999999";
 		document.getElementById("h1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2053,7 +2053,7 @@ function ibCompSciScore(score){
 	
 	if (score == 6){
 		document.getElementById("h6").style.color = "#1580ea";
-		document.getElementById("h6").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("h6").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("h1").style.color = "#999999";
 		document.getElementById("h1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2071,7 +2071,7 @@ function ibCompSciScore(score){
 	
 	if (score == 7){
 		document.getElementById("h7").style.color = "#1580ea";
-		document.getElementById("h7").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("h7").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("h1").style.color = "#999999";
 		document.getElementById("h1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2115,7 +2115,7 @@ function ibPhysScore(score){
 
 	if (score == 1){
 		document.getElementById("i1").style.color = "#1580ea";
-		document.getElementById("i1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("i1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("i2").style.color = "#999999";
 		document.getElementById("i2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2133,7 +2133,7 @@ function ibPhysScore(score){
 	
 	if (score == 2){
 		document.getElementById("i2").style.color = "#1580ea";
-		document.getElementById("i2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("i2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("i1").style.color = "#999999";
 		document.getElementById("i1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2151,7 +2151,7 @@ function ibPhysScore(score){
 	
 	if (score == 3){
 		document.getElementById("i3").style.color = "#1580ea";
-		document.getElementById("i3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("i3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("i1").style.color = "#999999";
 		document.getElementById("i1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2169,7 +2169,7 @@ function ibPhysScore(score){
 	
 	if (score == 4){
 		document.getElementById("i4").style.color = "#1580ea";
-		document.getElementById("i4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("i4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("i1").style.color = "#999999";
 		document.getElementById("i1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2187,7 +2187,7 @@ function ibPhysScore(score){
 	
 	if (score == 5){
 		document.getElementById("i5").style.color = "#1580ea";
-		document.getElementById("i5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("i5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("i1").style.color = "#999999";
 		document.getElementById("i1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2205,7 +2205,7 @@ function ibPhysScore(score){
 	
 	if (score == 6){
 		document.getElementById("i6").style.color = "#1580ea";
-		document.getElementById("i6").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("i6").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("i1").style.color = "#999999";
 		document.getElementById("i1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2223,7 +2223,7 @@ function ibPhysScore(score){
 	
 	if (score == 7){
 		document.getElementById("i7").style.color = "#1580ea";
-		document.getElementById("i7").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("i7").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("i1").style.color = "#999999";
 		document.getElementById("i1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2265,7 +2265,7 @@ function ibEconScore(score){
 
 	if (score == 1){
 		document.getElementById("j1").style.color = "#1580ea";
-		document.getElementById("j1").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("j1").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("j2").style.color = "#999999";
 		document.getElementById("j2").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2283,7 +2283,7 @@ function ibEconScore(score){
 	
 	if (score == 2){
 		document.getElementById("j2").style.color = "#1580ea";
-		document.getElementById("j2").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("j2").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("j1").style.color = "#999999";
 		document.getElementById("j1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2301,7 +2301,7 @@ function ibEconScore(score){
 	
 	if (score == 3){
 		document.getElementById("j3").style.color = "#1580ea";
-		document.getElementById("j3").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("j3").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("j1").style.color = "#999999";
 		document.getElementById("j1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2319,7 +2319,7 @@ function ibEconScore(score){
 	
 	if (score == 4){
 		document.getElementById("j4").style.color = "#1580ea";
-		document.getElementById("j4").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("j4").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("j1").style.color = "#999999";
 		document.getElementById("j1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2337,7 +2337,7 @@ function ibEconScore(score){
 	
 	if (score == 5){
 		document.getElementById("j5").style.color = "#1580ea";
-		document.getElementById("j5").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("j5").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("j1").style.color = "#999999";
 		document.getElementById("j1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2355,7 +2355,7 @@ function ibEconScore(score){
 	
 	if (score == 6){
 		document.getElementById("j6").style.color = "#1580ea";
-		document.getElementById("j6").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("j6").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("j1").style.color = "#999999";
 		document.getElementById("j1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2373,7 +2373,7 @@ function ibEconScore(score){
 	
 	if (score == 7){
 		document.getElementById("j7").style.color = "#1580ea";
-		document.getElementById("j7").style.fontFamily = "HelveticaNeue-Bold, Arial, sans-serif";
+		document.getElementById("j7").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		
 		document.getElementById("j1").style.color = "#999999";
 		document.getElementById("j1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
