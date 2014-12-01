@@ -959,7 +959,6 @@ function apChemScore(score){
 	q_apChemScore = score;
 	
 	MathSci();
-	
 	if (score == 0){
 		document.getElementById("c1").style.color = "#999999";
 		document.getElementById("c1").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
@@ -2436,7 +2435,7 @@ function removeCore(){
 function MathSci(){
 	CalcFull();
 	SciCred();
-	COEN();	
+	//COEN();	
 }
 
 //platinum
@@ -2642,13 +2641,13 @@ function SciCred(){
 		
 		
 		Fall2 = sci[start];
+		alert(Fall2);
 		Winter2 = CI[0];
 		Spring2 = CI[1];
 		
 		Fall[2] = Fall2;
 		Winter[2] = Winter2;
 		Spring[2] = Spring2;
-		
 		build();
 	}
 }
@@ -3185,6 +3184,7 @@ function buildToImage(passer){
 	var rtc3PNG = "url('images/classes/core/rtc3.png')";
 	var seeAdvisorPNG = "url('images/classes/core/seeAdvisor.png')";
 	var socSciPNG = "url('images/classes/core/socSci.png')";
+	var comm2PNG = "url('images/classes/comm2.png')";
 	
 	//set logic array notation to variables with urls
 	if (passer == "AMTH 106"){
@@ -3282,6 +3282,9 @@ function buildToImage(passer){
 	}
 	if (passer == "SocSci"){
 		return socSciPNG;
+	}
+	if (passer == "COMM 2"){
+		return comm2PNG;
 	}
 }
 
@@ -3340,6 +3343,7 @@ function buildToImageBlack(passer){
 	var rtc3PNG = "images/black/classes/core/rtc3.png";
 	var seeAdvisorPNG = "images/black/classes/core/seeAdvisor.png";
 	var socSciPNG = "images/black/classes/core/socSci.png";
+	var comm2PNG = "images/black/classes/core/socSci.png";
 	
 	//set logic array notation to variables with urls
 	if (passer == "AMTH 106"){
@@ -3437,5 +3441,8 @@ function buildToImageBlack(passer){
 	}
 	if (passer == "SocSci"){
 		return socSciPNG;
+	}
+	if (passer == "COMM 2"){
+		return comm2PNG;
 	}
 }
