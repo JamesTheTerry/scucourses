@@ -773,7 +773,7 @@ function apCalcAbScore(score){
 	q_apCalcAbScore = score;
 	
 	//cre stuff
-	if ((score == 4) || (score == 5)){
+	if ((q_apCalcAbScore == 4) || (q_apCalcAbScore == 5) || (q_apCalcBcScore == 3) || (q_apCalcBcScore == 4) || (q_apCalcBcScore == 5)){
 		$("#creSuper1").fadeOut(700);
 		$("#creSuper2").fadeIn(700);
 		creReset();
@@ -871,9 +871,9 @@ function apCalcAbScore(score){
 //call set same
 function apCalcBcScore(score){
 	q_apCalcBcScore = score;
-		
+	
 	//cre stuff
-	if ((score == 3) || (score == 4) || (score == 5)){
+	if ((score == 3) || (score == 4) || (score == 5) || (q_apCalcAbScore == 4) || (q_apCalcAbScore == 5)){
 		$("#creSuper1").hide();
 		$("#creSuper2").show();
 		creReset();
