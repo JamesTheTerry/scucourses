@@ -1241,7 +1241,7 @@ function apPhysCElecScore(score){
 	q_apPhysCElecScore = score;
 	
 	if (activeMajor == 0){
-		AddPhys();
+		SciCred();
 	}
 	
 	if (activeMajor == 1){
