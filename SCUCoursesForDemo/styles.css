@@ -1,5 +1,6 @@
 /* CSS3 bitches! */
 @import url('links.css'); /* contains mouseover master css */
+@import url('printStyles.css');
 
 html, body
 {

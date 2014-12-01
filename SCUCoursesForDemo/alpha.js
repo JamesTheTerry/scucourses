@@ -10,7 +10,6 @@ $(document).ready(function(){
 	//and we love it!
 });
 
-
 //global selection variables used to determine what has been activated and what has not
 //unless otherwise specified:
 // 0 means inactive
@@ -257,6 +256,30 @@ function totalRecall(){
 	document.getElementById("creFail").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	$("#creSuper1").fadeOut(700); //hide it
 	$("#creSuper2").fadeOut(700); //hide it
+	
+	//reset the table
+	document.getElementById("rowA1").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowA2").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowA3").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowB1").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowB2").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowB3").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowC1").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowC2").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowC3").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowD1").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowD2").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowD3").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowE1").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowE2").style.backgroundImage = "url('images/classes/BLANK.png')";
+	document.getElementById("rowE3").style.backgroundImage = "url('images/classes/BLANK.png')";
+	
+	//reset the major selector
+	document.getElementById("coen").style.color = "#999999";
+	document.getElementById("coen").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	document.getElementById("webDesign").style.color = "#999999";
+	document.getElementById("webDesign").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+	
 }
 
 function resetAllAP(){
@@ -689,9 +712,9 @@ function transferLevel2TotalReset(){
 	CalcFull();
 }
 
-/*
+
 function print(){
-	var divContents = $("#askForTestType").html();
+	var divContents = $("#print_scheduleZone").html();
 	var printWindow = window.open('', '', 'height=452,width=600');
 	printWindow.document.write('<html><head><title>Your wonderful schedule</title><link href="styles.css" rel="stylesheet" type="text/css">');
 	printWindow.document.write('</head><body >');
@@ -700,7 +723,7 @@ function print(){
 	//printWindow.document.close();
 	//printWindow.print();
 }
-*/
+
 
 function printIt(){
 	window.print();
@@ -3123,6 +3146,8 @@ function build(){
 	document.getElementById("rowB3").style.backgroundImage = buildToImage(Spring[1]);
 	document.getElementById("rowC3").style.backgroundImage = buildToImage(Spring[2]);
 	document.getElementById("rowD3").style.backgroundImage = buildToImage(Spring[3]);
+	
+	buildBlack();
 }
 
 //this function translates logic array notation into variables containing the image urls
@@ -3160,6 +3185,161 @@ function buildToImage(passer){
 	var rtc3PNG = "url('images/classes/core/rtc3.png')";
 	var seeAdvisorPNG = "url('images/classes/core/seeAdvisor.png')";
 	var socSciPNG = "url('images/classes/core/socSci.png')";
+	
+	//set logic array notation to variables with urls
+	if (passer == "AMTH 106"){
+		return amth106PNG;
+	}
+	if (passer == "AMTH 108"){
+		return amth108PNG;
+	}
+	if (passer == ""){
+		return BLANKPNG;
+	}
+	if (passer == "CHEM 11"){
+		return chem11PNG;
+	}
+	if (passer == "COEN 10"){
+		return coen10PNG;
+	}
+	if (passer == "COEN 11"){
+		return coen11PNG;
+	}
+	if (passer == "COEN 12"){
+		return coen12PNG;
+	}
+	if (passer == "COEN 19"){
+		return coen19PNG;
+	}
+	if (passer == "CORE"){
+		return core;
+	}
+	if (passer == "CTW1"){
+		return ctw1PNG;
+	}
+	if (passer == "CTW2"){
+		return ctw2PNG;
+	}
+	if (passer == "ENGR 1"){
+		return engr1PNG;
+	}
+	if (passer == "MATH 9"){
+		return math9PNG;
+	}
+	if (passer == "MATH 11"){
+		return math11PNG;
+	}
+	if (passer == "MATH 12"){
+		return math12PNG;
+	}
+	if (passer == "MATH 13"){
+		return math13PNG;
+	}
+	if (passer == "MATH 14"){
+		return math14PNG;
+	}
+	if (passer == "MATH 53"){
+		return math53PNG;
+	}
+	if (passer == "PHYS 31"){
+		return phys31PNG;
+	}
+	if (passer == "PHYS 32"){
+		return phys32PNG;
+	}
+	if (passer == "PHYS 33"){
+		return phys33PNG;
+	}
+	if (passer == "CI1"){
+		return ci1PNG;
+	}
+	if (passer == "CI2"){
+		return ci2PNG;
+	}
+	if (passer == "CI3"){
+		return ci3PNG;
+	}
+	if (passer == "Diversity"){
+		return diversityPNG;
+	}
+	if (passer == "ELSJ"){
+		return elsjPNG;
+	}
+	if (passer == "Ethics"){
+		return ethicsPNG;
+	}
+	if (passer == "RTC1"){
+		return rtc1PNG;
+	}
+	if (passer == "RTC2"){
+		return rtc2PNG;
+	}
+	if (passer == "RTC3"){
+		return rtc3PNG;
+	}
+	if (passer == "SeeAdvisor"){
+		return seeAdvisorPNG;
+	}
+	if (passer == "SocSci"){
+		return socSciPNG;
+	}
+}
+
+
+
+//builds the table you see on screen
+function buildBlack(){
+	$("#print_rowA1").attr("src", buildToImageBlack(Fall[0]));
+	$("#print_rowB1").attr("src", buildToImageBlack(Fall[1]));
+	$("#print_rowC1").attr("src", buildToImageBlack(Fall[2]));
+	$("#print_rowD1").attr("src", buildToImageBlack(Fall[3]));
+	$("#print_rowE1").attr("src", buildToImageBlack(Fall[4]));
+	$("#print_rowA2").attr("src", buildToImageBlack(Winter[0]));
+	$("#print_rowB2").attr("src", buildToImageBlack(Winter[1]));
+	$("#print_rowC2").attr("src", buildToImageBlack(Winter[2]));
+	$("#print_rowD2").attr("src", buildToImageBlack(Winter[3]));
+	$("#print_rowE2").attr("src", buildToImageBlack(Winter[4]));
+	$("#print_rowA3").attr("src", buildToImageBlack(Spring[0]));
+	$("#print_rowB3").attr("src", buildToImageBlack(Spring[1]));
+	$("#print_rowC3").attr("src", buildToImageBlack(Spring[2]));
+	$("#print_rowD3").attr("src", buildToImageBlack(Spring[3]));
+}
+
+//this function translates logic array notation into variables containing the image urls
+function buildToImageBlack(passer){
+	//pairs image url with variables
+	var amth106PNG = "images/black/classes/amth106.png";
+	var amth108PNG = "images/black/classes/amth108.png";
+	var BLANKPNG = "images/black/classes/BLANK.png";
+	var chem11PNG = "images/black/classes/chem11.png";
+	var coen10PNG = "images/black/classes/coen10.png";
+	var coen11PNG = "images/black/classes/coen11.png";
+	var coen12PNG = "images/black/classes/coen12.png";
+	var coen19PNG = "images/black/classes/coen19.png";
+	var core = "images/black/classes/core.png";
+	var ctw1PNG = "images/black/classes/ctw1.png";
+	var ctw2PNG = "images/black/classes/ctw2.png";
+	var engr1PNG = "images/black/classes/engr1.png";
+	var math9PNG = "images/black/classes/math9.png";
+	var math11PNG = "images/black/classes/math11.png";
+	var math12PNG = "images/black/classes/math12.png";
+	var math13PNG = "images/black/classes/math13.png";
+	var math14PNG = "images/black/classes/math14.png";
+	var math53PNG = "images/black/classes/math53.png";
+	var phys31PNG = "images/black/classes/phys31.png";
+	var phys32PNG = "images/black/classes/phys32.png";
+	var phys33PNG = "images/black/classes/phys33.png";
+	var ci1PNG = "images/black/classes/core/ci1.png";
+	var ci2PNG = "images/black/classes/core/ci2.png";
+	var ci3PNG = "images/black/classes/core/ci3.png";
+	var diversityPNG = "images/black/classes/core/diversity.png";
+	var elsjPNG = "images/black/classes/core/elsj.png";
+	var ethicsPNG = "images/black/classes/core/ethics.png";
+	var rtc1PNG = "images/black/classes/core/rtc1.png";
+	var rtc2PNG = "images/black/classes/core/rtc2.png";
+	var rtc3PNG = "images/black/classes/core/rtc3.png";
+	var seeAdvisorPNG = "images/black/classes/core/seeAdvisor.png";
+	var socSciPNG = "images/black/classes/core/socSci.png";
 	
 	//set logic array notation to variables with urls
 	if (passer == "AMTH 106"){
