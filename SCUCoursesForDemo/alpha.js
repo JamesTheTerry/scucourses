@@ -2939,7 +2939,6 @@ function COEN(){
 			//Move COEN12 to a different quarter
 			MoveCoen();
 		}
-		addCI();
 		suggest();
 		build();
 	}
