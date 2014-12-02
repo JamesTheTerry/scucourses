@@ -249,13 +249,14 @@ We will also use JavaScript for the logic in our web application.  This includes
 
 We chose to ask students for their AP and IB scores as opposed to what class they are coming from because we do not know which courses will cause exemption.  We give the students the option to select courses from the generated courses that they believe they have credit for.
 
-We chose to use a minimalistic user interface so that users would not be distracted by any unnecessary design.  The “top to bottom” flow of the interface follows the natural reading progression.  The limited use of bolding and color draws the user’s attention to the most important sections. 
+We chose to use a minimalistic user interface so that users would not be distracted by any unnecessary design.  The ``top to bottom'' flow of the interface follows the natural reading progression.  The limited use of bolding and color draws the user’s attention to the most important sections. 
 
 \section{Risks Table}
 
-This project does come with risks.  To mitigate the damage, we have created a risk table detailing the severity, impact, probability and mitigation strategies. Probability is measured from $0 < p < 1$ with 1 being the most probable.  Severity is measured from 1 to 10, with 10 being the most severe.  The impact these risks have on the project is calculated by multiplying probability with risk.  \Cref{Risk} is what we consider the risks for the completion of our project.
+This project does come with risks.  To mitigate the damage, we created a risk table detailing the severity, impact, probability and mitigation strategies.    Probability is measured from $0 < p < 1$ with 1 being the most probable.  Severity is measured from 1 to 10, with 10 being the most severe.  The impact these risks have on the project is calculated by multiplying probability with risk.  The risk table is shown in \Cref{Risk}. Throughout the project we had to make adjustments to the risk table, including adding a new risk. One of the minor changes we made was we raised the probability of having bugs and errors from .7 to 1 because we realized it is impossible to write perfect code the first time and we had a few bugs and errors when we wrote our code. The second minor change is we raised the probability of our knowledge of web languages being a risk from .1 to .9 because we only have one Web Design major in our group and the rest of us had to do more research on how to do certain things in JavaScript. The major change we made was adding the risk of misunderstanding the requirements, because during our conversations with the customer and our demo we realized we had made assumptions. 
 
-\begin{table}[n!]
+
+\begin{table}[h!]
 \begin{center}
 \begin{tabular}{| L{2cm} | L{2.5cm} | L{1cm} | L{1.5cm} | {2cm} | L{3cm} | L{3cm} | }
 \hline
@@ -316,7 +317,8 @@ In order to determine the success of the project, we have devised a series of te
 	\end{compactitem}
 \end{compactitem}
 
-\newpage
+The results of our latest tests are that all the functionalities work and we get the desired output for all of our test cases. During our early stages of testing we discovered minor bugs in our code, once those were fixed we began testing the functionalities on our prototype that had end to end functionality. We found a couple of bugs with our Cultures \& Ideas placement, it would fill any two consecutive core sections with C\&I making it possible for it to appear multiple times in a schedule. The second bug is that after the C\&I is placed, if the course where the first C\&I was placed was added back in, it would remove the C\&I 1 but it would leave C\&I 2 in the schedule by itself.Our solution to these bugs was to delete the C\&I placement after every change and add it back in if there were still two consecutive core courses. What we noticed was that our solution not only fixed our bugs but also optimized the placement of the C\&I courses by making sure it is placed in the earliest possible slot. 
+
 
 \section{Development Timeline}
 
@@ -329,6 +331,26 @@ In order to make sure we stay on track and finish the application on time we hav
 \end{center}
 \label{Gantt}
 \end{figure}
+
+\section{Lessons Learned}
+
+While working on the project and presenting it, we learned a couple of lessons. The three most significant lessons we learned were presentation etiquette, not to use prezi, and to talk and demo to our customer frequently. When we presented our design review, we learned about presentation etiquette through mistakes that we made. We now know that we should wear appropriate dress shoes, we should not stand in front of the screen nor turn or back to the audience, and we should not make any motions with our phone in our hand. During that presentation, we presented using prezi. We now know that we should not use prezi for professional presentations because they can be distracting and there are very few opportunities to use it correctly. Lastly we learned to talk and demo to our customer frequently because when we had our first demo, our customer pointed out to us some of the assumptions we made and we were able to clear up any misunderstandings of the requirements. The lesson is that if you meet with the customer earlier and more frequently, you will make sure you understood the requirements and you have a greater chance of delivering what the customer wants. 
+
+
+\appendix
+
+
+\section{User Manual}
+
+The first step that you will take is to log onto a web browser in order to open our application. If you are using a Mac you will need to open Safari or Firefox, if you are using Windows you will need to open Internet Explorer or Firefox. Once the web browser is open, type in the url ``scucourses.fish'', this will open up our application.
+
+Now you are ready to create your schedule. You need to select between the Computer Engineering (COEN) major or the Web Design and Engineering major to begin generating a schedule. There is a standard schedule that has been created at the bottom of the page, from this point on you have the ability to view the schedule, and it will update and become customized with each question you answer. A question will appear, under the previous question, about how certain you are about your major, select ``Fairly Confident'' or ``Double Plus Unconfident''. Next another question appears, if you have any experience with C programming you can select ``Oh, yeah'', and if you have no experience select ``I know that I know nothing''. 
+
+Now you are presented with the option to enter AP or IB credit. If you took any AP exams select the ``AP'' button, it will now show you a list of exams. Select any of the exams you took, and upon selection click on what your score is. If you took any IB exams select the ``IB'' button, it will now show you a list of exams. Select any of the exams you took, and upon selection click on what your score is. If you tested out of any calculus class you will see a line below the test scores that reads ``You placed out of the calculus readiness exam. Nerd.'', move on to the next question. If you did not place out of calculus there will be a question asking you if you passed the calculus readiness exam so select your answer based on your score. The next question asks if you have any transfer credit. If you do not have any transfer credit then you are done with your schedule. If you do have transfer credit, select the areas in which you have credit, and then select the courses you have credit for. Now you are done customizing your schedule. 
+If at any time you make a mistake you are able either unselect a button by clicking on it again or you may simply click on the correct button. If you make several mistakes, or chose to start over, you make click on the word ``Reset'' on the top right corner and it will reset everything. When you are done customizing your schedule, you may print it out a printer friendly version of your schedule by clicking on the printer icon at the bottom left corner of the page. 
+
+
+
 
 
 

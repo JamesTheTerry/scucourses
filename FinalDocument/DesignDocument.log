@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  1 DEC 2014 20:45
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 DEC 2014 00:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -751,61 +751,59 @@ File: ArchDiag.png Graphic file (type png)
 <use ArchDiag.png>
 Package pdftex.def Info: ArchDiag.png used on input line 227.
 (pdftex.def)             Requested size: 385.50183pt x 93.85005pt.
-Missing character: There is no Ò in font cmr12!
-Missing character: There is no Ó in font cmr12!
 Missing character: There is no Õ in font cmr12!
  [5 <./ArchDiag.png>]
 
-./DesignDocument.tex:260: Package array Error:  Illegal pream-token (2cm): `c' 
+./DesignDocument.tex:261: Package array Error:  Illegal pream-token (2cm): `c' 
 used.
 
 See the array package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.260 ... | L{1.5cm} | {2cm} | L{3cm} | L{3cm} | }
+l.261 ... | L{1.5cm} | {2cm} | L{3cm} | L{3cm} | }
                                                   
 ? 
 Missing character: There is no Õ in font cmr12!
 Missing character: There is no Õ in font cmr12!
 
-Overfull \hbox (11.43489pt too wide) in paragraph at lines 260--278
+Overfull \hbox (11.43489pt too wide) in paragraph at lines 261--279
  [] 
  []
 
-[6] <Gant.png, id=289, 1514.65875pt x 603.25375pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6] [7] <Gant.png, id=292, 1514.65875pt x 603.25375pt>
 File: Gant.png Graphic file (type png)
  <use Gant.png>
-Package pdftex.def Info: Gant.png used on input line 327.
+Package pdftex.def Info: Gant.png used on input line 329.
 (pdftex.def)             Requested size: 722.81319pt x 287.88321pt.
 
 
-LaTeX Warning: Float too large for page by 29.99875pt on input line 331.
+LaTeX Warning: Float too large for page by 29.99875pt on input line 333.
 
-[7] [8] [9 <./Gant.png>] (./DesignDocument.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[8] [9] [10 <./Gant.png>] (./DesignDocument.aux) ) 
 Here is how much of TeX's memory you used:
  15420 strings out of 493633
  282140 string characters out of 3143378
- 390751 words of memory out of 3000000
+ 393745 words of memory out of 3000000
  18414 multiletter control sequences out of 15000+200000
  13357 words of font info for 51 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 56i,11n,55p,1175b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on DesignDocument.pdf (11 pages, 1492890 bytes).
+ 56i,11n,55p,1243b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2011/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on DesignDocument.pdf (12 pages, 1498287 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
+ 329 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

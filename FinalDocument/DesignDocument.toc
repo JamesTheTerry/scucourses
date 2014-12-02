@@ -10,4 +10,6 @@
 \contentsline {section}{\numberline {7}Design Rationale}{5}
 \contentsline {section}{\numberline {8}Risks Table}{6}
 \contentsline {section}{\numberline {9}Test Plan}{6}
-\contentsline {section}{\numberline {10}Development Timeline}{7}
+\contentsline {section}{\numberline {10}Development Timeline}{8}
+\contentsline {section}{\numberline {11}Lessons Learned}{8}
+\contentsline {section}{\numberline {A}User Manual}{8}
