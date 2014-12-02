@@ -2749,6 +2749,7 @@ function CalcFull(){
 	var start;
 	var natSci = 0;
 	
+	var chem11 = document.getElementById("check1").checked;
 	var math11 = document.getElementById("check9").checked;
 	var math12 = document.getElementById("check10").checked;
 	var math13 = document.getElementById("check11").checked;
@@ -2756,6 +2757,9 @@ function CalcFull(){
 	var amth106 = document.getElementById("check13").checked;
 	
 	if (activeMajor == 0){
+		if (chem11 == true){
+			APChem = 3;
+		}
 		if (math11 == true && APCalcScoreBC < 3){
 			APCalcScoreBC = 3;
 		}
