@@ -748,6 +748,7 @@ function transferStrike(passer){
 			document.getElementById("check9").checked = false;
 			justClicked = 0;
 		} else if (document.getElementById("check12").checked == true){
+			$("#ch12").css("text-decoration","none");
 			$("#ch11").css("text-decoration","line-through");
 			$("#ch10").css("text-decoration","line-through");
 			$("#ch9").css("text-decoration","line-through");
