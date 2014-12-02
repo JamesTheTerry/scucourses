@@ -22,6 +22,10 @@ a:hover{
 	/*font-family: HelveticaNeue-Bold, Arial-Bold, sans-serif;*/
 }
 
+.scoreVal a:link{
+	text-decoration: none !important;
+}
+
 .cf {
   position:relative;
   height:67px;

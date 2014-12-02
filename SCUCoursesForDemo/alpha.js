@@ -246,7 +246,9 @@ function totalRecall(){
 	document.getElementById("Q1no").style.color = "#999999";
 	document.getElementById("Q1no").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	//reset transfer checkboxes
-	transferLevel2TotalReset();
+	transferLevel1(0);
+	document.getElementById("Q1no").style.color = "#999999";
+	document.getElementById("Q1no").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	
 	//Calculus Readiness Exam reset
 	crePF = 0; //reset to default
@@ -689,6 +691,61 @@ function transferLevel2(response){
 	}
 }
 
+function transferStrike(passer){
+	if (passer == 1){
+		/*if ((document.getElementById("check7").checked == false) && (stater == 7)){
+			$("#ch6").css("text-decoration","none");
+			$("#ch5").css("text-decoration","none");
+			document.getElementById("check6").checked = false;
+			document.getElementById("check5").checked = false;
+		} else if ((document.getElementById("check6").checked == false) && (stater == 7)){
+			$("#ch5").css("text-decoration","none");
+			document.getElementById("check5").checked = false;
+		}*/
+	
+		if (document.getElementById("check7").checked == true){
+			$("#ch6").css("text-decoration","line-through");
+			$("#ch5").css("text-decoration","line-through");
+			document.getElementById("check6").checked = true;
+			document.getElementById("check5").checked = true;
+		} else if (document.getElementById("check6").checked == true) {
+			$("#ch6").css("text-decoration","none");
+			$("#ch5").css("text-decoration","line-through");
+			document.getElementById("check5").checked = true;
+		} else {
+			$("#ch6").css("text-decoration","none");
+			$("#ch5").css("text-decoration","none");
+		}
+		COEN();
+	} else if (passer == 3){
+		if (document.getElementById("check12").checked == true){
+			$("#ch11").css("text-decoration","line-through");
+			$("#ch10").css("text-decoration","line-through");
+			$("#ch9").css("text-decoration","line-through");
+			document.getElementById("check11").checked = true;
+			document.getElementById("check10").checked = true;
+			document.getElementById("check9").checked = true;
+		} else if (document.getElementById("check11").checked == true) {
+			$("#ch11").css("text-decoration","none");
+			$("#ch10").css("text-decoration","line-through");
+			$("#ch9").css("text-decoration","line-through");
+			document.getElementById("check10").checked = true;
+			document.getElementById("check9").checked = true;
+		} else if (document.getElementById("check10").checked == true) {
+			$("#ch11").css("text-decoration","none");
+			$("#ch10").css("text-decoration","none");
+			$("#ch9").css("text-decoration","line-through");
+			document.getElementById("check9").checked = true;
+		} else {
+			$("#ch12").css("text-decoration","none");
+			$("#ch11").css("text-decoration","none");
+			$("#ch10").css("text-decoration","none");
+			$("#ch9").css("text-decoration","none");
+		}
+		CalcFull();
+	}
+}
+
 function transferLevel2TotalReset(){
 	//reset state variables
 	QScienceState = 0;
@@ -784,6 +841,13 @@ var q_ibEconScore = 0;
 function apCalcAbScore(score){
 	q_apCalcAbScore = score;
 	
+	if (score != 0){
+		document.getElementById("print_test1").innerHTML = "AP Calculus AB: " + score;
+		$("#print_test1").show();
+	} else if (score == 0){
+		$("#print_test1").hide();
+	}
+	
 	CalcFull();
 	
 	if (score == 0){
@@ -873,6 +937,13 @@ function apCalcAbScore(score){
 //call set same
 function apCalcBcScore(score){
 	q_apCalcBcScore = score;
+	
+	if (score != 0){
+		document.getElementById("print_test2").innerHTML = "AP Calculus BC: " + score;
+		$("#print_test2").show();
+	} else if (score == 0){
+		$("#print_test2").hide();
+	}
 	
 	CalcFull();
 	
@@ -964,6 +1035,13 @@ function apCalcBcScore(score){
 function apChemScore(score){
 	q_apChemScore = score;
 	
+	if (score != 0){
+		document.getElementById("print_test3").innerHTML = "AP Chemistry: " + score;
+		$("#print_test3").show();
+	} else if (score == 0){
+		$("#print_test3").hide();
+	}
+	
 	MathSci();
 	if (score == 0){
 		document.getElementById("c1").style.color = "#999999";
@@ -1052,6 +1130,13 @@ function apChemScore(score){
 //call set same
 function apCompSciAScore(score){
 	q_apCompSciAScore = score;
+	
+	if (score != 0){
+		document.getElementById("print_test4").innerHTML = "AP Comp Sci A: " + score;
+		$("#print_test4").show();
+	} else if (score == 0){
+		$("#print_test4").hide();
+	}
 	
 	COEN();
 	
@@ -1143,6 +1228,13 @@ function apCompSciAScore(score){
 function apPhysCMechScore(score){
 	q_apPhysCMechScore = score;
 	
+	if (score != 0){
+		document.getElementById("print_test5").innerHTML = "AP Phys C Mech: " + score;
+		$("#print_test5").show();
+	} else if (score == 0){
+		$("#print_test5").hide();
+	}
+	
 	MathSci();
 	
 	if (score == 0){
@@ -1228,9 +1320,16 @@ function apPhysCMechScore(score){
 	}
 }
 
-//call set different
+//call set different, but same?
 function apPhysCElecScore(score){
 	q_apPhysCElecScore = score;
+	
+	if (score != 0){
+		document.getElementById("print_test6").innerHTML = "AP Phys C Elec/Mag: " + score;
+		$("#print_test6").show();
+	} else if (score == 0){
+		$("#print_test6").hide();
+	}
 	
 	if (activeMajor == 0){
 		SciCred();
@@ -1328,6 +1427,13 @@ function apPhysCElecScore(score){
 function apEnviroScore(score){
 	q_apEnviroScore = score;
 	
+	if (score != 0){
+		document.getElementById("print_test7").innerHTML = "AP Enviro Science: " + score;
+		$("#print_test7").show();
+	} else if (score == 0){
+		$("#print_test7").hide();
+	}
+	
 	if (activeMajor == 0){
 		MathSci();
 	}
@@ -1424,6 +1530,13 @@ function apEnviroScore(score){
 function apGovtScore(score){
 	q_apGovtScore = score;
 	
+	if (score != 0){
+		document.getElementById("print_test8").innerHTML = "AP Government: " + score;
+		$("#print_test8").show();
+	} else if (score == 0){
+		$("#print_test8").hide();
+	}
+	
 	suggest();
 	
 	if (score == 0){
@@ -1513,6 +1626,13 @@ function apGovtScore(score){
 //call set same
 function apMacroEconScore(score){
 	q_apMacroEconScore = score;
+	
+	if (score != 0){
+		document.getElementById("print_test9").innerHTML = "AP Macro Econ: " + score;
+		$("#print_test9").show();
+	} else if (score == 0){
+		$("#print_test9").hide();
+	}
 	
 	suggest();
 	
@@ -1604,6 +1724,13 @@ function apMacroEconScore(score){
 function apMicroEconScore(score){
 	q_apMicroEconScore = score;
 	
+	if (score != 0){
+		document.getElementById("print_test10").innerHTML = "AP Micro Econ: " + score;
+		$("#print_test10").show();
+	} else if (score == 0){
+		$("#print_test10").hide();
+	}
+	
 	suggest();
 	
 	if (score == 0){
@@ -1694,6 +1821,13 @@ function apMicroEconScore(score){
 function apPsychologyScore(score){
 	q_apPsychologyScore = score;
 	
+	if (score != 0){
+		document.getElementById("print_test11").innerHTML = "AP Psychology: " + score;
+		$("#print_test11").show();
+	} else if (score == 0){
+		$("#print_test11").hide();
+	}
+	
 	suggest();
 	
 	if (score == 0){
@@ -1783,6 +1917,13 @@ function apPsychologyScore(score){
 //call set same
 function ibChemScore(score){
 	q_ibChemScore = score;
+	
+	if (score != 0){
+		document.getElementById("print_test12").innerHTML = "IB Chemistry: " + score;
+		$("#print_test12").show();
+	} else if (score == 0){
+		$("#print_test12").hide();
+	}
 	
 	MathSci();
 	
@@ -1934,6 +2075,13 @@ function ibChemScore(score){
 function ibCompSciScore(score){
 	q_ibCompSciScore = score;
 	
+	if (score != 0){
+		document.getElementById("print_test13").innerHTML = "IB Comp Sci: " + score;
+		$("#print_test13").show();
+	} else if (score == 0){
+		$("#print_test13").hide();
+	}
+	
 	COEN();
 	
 	if (score == 0){
@@ -2083,6 +2231,13 @@ function ibCompSciScore(score){
 //call set WebDesign Only
 function ibPhysScore(score){
 	q_ibPhysScore = score;
+	
+	if (score != 0){
+		document.getElementById("print_test14").innerHTML = "IB Physics: " + score;
+		$("#print_test14").show();
+	} else if (score == 0){
+		$("#print_test14").hide();
+	}
 	
 	if (activeMajor == 1){
 		SciCred();
@@ -2235,6 +2390,13 @@ function ibPhysScore(score){
 //call set same
 function ibEconScore(score){
 	q_ibEconScore = score;
+	
+	if (score != 0){
+		document.getElementById("print_test15").innerHTML = "IB Economics: " + score;
+		$("#print_test15").show();
+	} else if (score == 0){
+		$("#print_test15").hide();
+	}
 	
 	suggest();
 	

@@ -163,6 +163,7 @@ html, body
 .scoreVal{
 	float: left;
 	width:50px;
+	text-decoration: none;
 }
 
 #creSupremeSeperator{
