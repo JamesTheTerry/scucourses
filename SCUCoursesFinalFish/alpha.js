@@ -2924,7 +2924,7 @@ function SciCred(){
 		Winter[2] = Winter2;
 		Spring[2] = Spring2;
 		
-		AddPhys();//adds Phys 33 if appropriate
+		//AddPhys();//adds Phys 33 if appropriate
 		addCI();
 		suggest();
 		build();
