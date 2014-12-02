@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 DEC 2014 14:53
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 DEC 2014 15:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -800,8 +800,6 @@ LaTeX Warning: Float too large for page by 29.99875pt on input line 349.
 
 [8]
 Missing character: There is no Õ in font cmr12!
-Missing character: There is no Õ in font cmr12!
-Missing character: There is no Õ in font cmr12!
  [9] [10 <./Gant.png>] (./DesignDocument.aux) ) 
 Here is how much of TeX's memory you used:
  15427 strings out of 493633
@@ -819,7 +817,7 @@ t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2011/texmf-dist
 onts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on DesignDocument.pdf (12 pages, 742545 bytes).
+Output written on DesignDocument.pdf (12 pages, 741864 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream
