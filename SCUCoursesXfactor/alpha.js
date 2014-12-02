@@ -938,7 +938,7 @@ function printIt(){
 	printWindow.document.write(divContents);
 	printWindow.document.write('</body></html>');
 	//printWindow.document.close();
-	printWindow.print();
+	//printWindow.print();
 }
 
 
