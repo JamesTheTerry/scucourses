@@ -300,6 +300,10 @@ function totalRecall(){
 	
 	//reset the print_title
 	print_title(2);
+	
+	//reset the print_CRE
+	$("#print_crePass").hide();
+	$("#print_creFail").hide();
 }
 
 function resetAllAP(){
@@ -575,6 +579,8 @@ function creClick(level){
 		document.getElementById("crePass").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("creFail").style.color = "#999999";
 		document.getElementById("creFail").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+		$("#print_crePass").show();
+		$("#print_creFail").hide();
 	}
 	if (level == 0){
 		crePF = 0;
@@ -582,6 +588,8 @@ function creClick(level){
 		document.getElementById("creFail").style.fontFamily = "HelveticaNeue-Bold, Arial-Bold, sans-serif";
 		document.getElementById("crePass").style.color = "#999999";
 		document.getElementById("crePass").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
+		$("#print_crePass").hide();
+		$("#print_creFail").show();
 	}
 	CalcFull();
 }

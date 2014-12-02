@@ -77,3 +77,18 @@
 	font-family: HelveticaNeue-Thin, Arial, sans-serif;
     font-size:15pt;
 }
+
+.print_CRE{
+	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+    font-size:15pt;
+    margin: 0 auto;
+    display: none;
+}
+
+#print_crePass{
+	width: 137px;
+}
+
+#print_creFail{
+	width: 123px;
+}
