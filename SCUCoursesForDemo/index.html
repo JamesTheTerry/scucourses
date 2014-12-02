@@ -357,9 +357,9 @@
 		Did you pass the calculus readiness exam? <a href="javascript:creClick(1)" id="crePass">Yes, with flying colors</a> / <a href="javascript:creClick(0)" id="creFail">Just put me in pre-calc</a>
 	</div>
 	
-	<div id="creSuper2">
+	<!-- <div id="creSuper2">
 		You placed out of the calculus readiness exam.  Nerd.
-	</div>
+	</div> -->
 	
 	<hr id="transferSupremeSeperator">
 	
@@ -373,23 +373,23 @@
 		</div>
 		<div id="transferSectionSuper">
 			<div id="scienceTransfers" class="transferSectionClass">
-				<div id="ch1" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check1" onclick="MathSci()"><label for="check1" class="lCz"><span></span>CHEM 11</label></div>
-				<div id="ch2" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check2" onclick="MathSci()"><label for="check2" class="lCz"><span></span>PHYS 31</label></div>
-				<div id="ch3" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check3" onclick="MathSci()"><label for="check3" class="lCz"><span></span>PHYS 32</label></div>
-				<div id="ch14" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check14" onclick="MathSci()"><label for="check14" class="lCz"><span></span>PHYS 33</label></div>
+				<div id="ch1" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check1" onclick="transferStrike(0)"><label for="check1" class="lCz"><span></span>CHEM 11</label></div>
+				<div id="ch2" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check2" onclick="transferStrike(0)"><label for="check2" class="lCz"><span></span>PHYS 31</label></div>
+				<div id="ch3" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check3" onclick="transferStrike(0)"><label for="check3" class="lCz"><span></span>PHYS 32</label></div>
+				<div id="ch14" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check14" onclick="transferStrike(0)"><label for="check14" class="lCz"><span></span>PHYS 33</label></div>
 			</div>
 			<div id="coenTransfers" class="transferSectionClass">
 				<div id="ch5" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check5" onclick="transferStrike(1)"><label for="check5" class="lCz"><span></span>COEN 10</label></div>
 				<div id="ch6" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check6" onclick="transferStrike(1)"><label for="check6" class="lCz"><span></span>COEN 11</label></div>
 				<div id="ch7" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check7" onclick="transferStrike(1)"><label for="check7" class="lCz"><span></span>COEN 12</label></div>
-				<div id="ch8" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check8" onclick="CTW()"><label for="check8" class="lCz"><span></span>COEN 19</label></div>
+				<div id="ch8" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check8" onclick="transferStrike(2)"><label for="check8" class="lCz"><span></span>COEN 19</label></div>
 			</div>
 			<div id="mathTransfers" class="transferSectionClass">
 				<div id="ch9" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check9" onclick="transferStrike(3)"><label for="check9" class="lCz"><span></span>MATH 11</label></div>
 				<div id="ch10" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check10" onclick="transferStrike(3)"><label for="check10" class="lCz"><span></span>MATH 12</label></div>
 				<div id="ch11" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check11" onclick="transferStrike(3)"><label for="check11" class="lCz"><span></span>MATH 13</label></div>
 				<div id="ch12" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check12" onclick="transferStrike(3)"><label for="check12" class="lCz"><span></span>MATH 14</label></div>
-				<div id="ch13" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check13" onclick="CalcFull()"><label for="check13" class="lCz"><span></span>AMTH 106</label></div>
+				<div id="ch13" class="checkboxChildClass"><input type="checkbox" name="courselist" id="check13" onclick="transferStrike(3)"><label for="check13" class="lCz"><span></span>AMTH 106</label></div>
 			</div>
 		</div>
 	</div>
@@ -482,22 +482,44 @@
 		</div>
 	</div>
 	
-	<div id="print_apibtests">
-		<div id="print_test1"></div>
-		<div id="print_test2"></div>
-		<div id="print_test3"></div>
-		<div id="print_test4"></div>
-		<div id="print_test5"></div>
-		<div id="print_test6"></div>
-		<div id="print_test7"></div>
-		<div id="print_test8"></div>
-		<div id="print_test9"></div>
-		<div id="print_test10"></div>
-		<div id="print_test11"></div>
-		<div id="print_test12"></div>
-		<div id="print_test13"></div>
-		<div id="print_test14"></div>
-		<div id="print_test15"></div>
+	<div id="print_placedOutSuper">
+		<div id="print_placedOut">
+			<div id="print_apibtests">
+			<div class="print_testX">Test Scores</div>
+			<div class="print_testClass" id="print_test1"></div>
+			<div class="print_testClass" id="print_test2"></div>
+			<div class="print_testClass" id="print_test3"></div>
+			<div class="print_testClass" id="print_test4"></div>
+			<div class="print_testClass" id="print_test5"></div>
+			<div class="print_testClass" id="print_test6"></div>
+			<div class="print_testClass" id="print_test7"></div>
+			<div class="print_testClass" id="print_test8"></div>
+			<div class="print_testClass" id="print_test9"></div>
+			<div class="print_testClass" id="print_test10"></div>
+			<div class="print_testClass" id="print_test11"></div>
+			<div class="print_testClass" id="print_test12"></div>
+			<div class="print_testClass" id="print_test13"></div>
+			<div class="print_testClass" id="print_test14"></div>
+			<div class="print_testClass" id="print_test15"></div>
+		</div>
+			
+			<div id="print_transferInfo">
+			<div class="print_testX">Transfer Credit</div>
+			<div class="print_transferClass" id="print_transfer1">CHEM 11</div>
+			<div class="print_transferClass" id="print_transfer2">PHYS 31</div>
+			<div class="print_transferClass" id="print_transfer3">PHYS 32</div>
+			<div class="print_transferClass" id="print_transfer14">PHYS 33</div>
+			<div class="print_transferClass" id="print_transfer5">COEN 10</div>
+			<div class="print_transferClass" id="print_transfer6">COEN 11</div>
+			<div class="print_transferClass" id="print_transfer7">COEN 12</div>
+			<div class="print_transferClass" id="print_transfer8">COEN 19</div>
+			<div class="print_transferClass" id="print_transfer9">MATH 11</div>
+			<div class="print_transferClass" id="print_transfer10">MATH 12</div>
+			<div class="print_transferClass" id="print_transfer11">MATH 13</div>
+			<div class="print_transferClass" id="print_transfer12">MATH 14</div>
+			<div class="print_transferClass" id="print_transfer13">AMTH 106</div>
+		</div>
+		</div>
 	</div>
 </div>
 
@@ -505,23 +527,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

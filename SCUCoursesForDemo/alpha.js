@@ -16,7 +16,7 @@ $(document).ready(function(){
 // 1 means active
 
 var activeMajor; //0 for coen; 1 for web design; this is probably the most important variable of all
-var activeMajorFirstClick = 0;
+//var activeMajorFirstClick = 0;
 
 var majorConfidence = 0; //if 1 then ENGR1 to winter, if 0 then ENGR1 to fall
 var cProgConfidence = 0;
@@ -130,6 +130,7 @@ function webDesignClick(){
 }
 
 function majorInitClick(){
+	transferStrike(3);
 	print_title(activeMajor);
 	$("#askForConfidence").fadeIn(700);
 }
@@ -661,6 +662,7 @@ function transferLevel2(response){
 			$('#check8').attr('checked', false);
 			COEN();
 			CTW(); //I am slightly concerned this may cause errors, but the concern is unfounded... I hope
+			transferStrike(1);
 			return;
 		}
 	}
@@ -686,23 +688,19 @@ function transferLevel2(response){
 			$('#check12').attr('checked', false);
 			$('#check13').attr('checked', false);
 			CalcFull();
+			transferStrike(3);
 			return;
 		}
 	}
 }
 
+var justClicked = 0; //I'm so sorry
+
 function transferStrike(passer){
-	if (passer == 1){
-		/*if ((document.getElementById("check7").checked == false) && (stater == 7)){
-			$("#ch6").css("text-decoration","none");
-			$("#ch5").css("text-decoration","none");
-			document.getElementById("check6").checked = false;
-			document.getElementById("check5").checked = false;
-		} else if ((document.getElementById("check6").checked == false) && (stater == 7)){
-			$("#ch5").css("text-decoration","none");
-			document.getElementById("check5").checked = false;
-		}*/
 	
+	if (passer == 0){
+		MathSci();
+	} else if (passer == 1){
 		if (document.getElementById("check7").checked == true){
 			$("#ch6").css("text-decoration","line-through");
 			$("#ch5").css("text-decoration","line-through");
@@ -717,8 +715,30 @@ function transferStrike(passer){
 			$("#ch5").css("text-decoration","none");
 		}
 		COEN();
+	} else if (passer == 2){
+		CTW();
 	} else if (passer == 3){
-		if (document.getElementById("check12").checked == true){
+		if ((document.getElementById("check13").checked == true) && (activeMajor == 0)){
+			$("#ch12").css("text-decoration","line-through");
+			$("#ch11").css("text-decoration","line-through");
+			$("#ch10").css("text-decoration","line-through");
+			$("#ch9").css("text-decoration","line-through");
+			document.getElementById("check12").checked = true;
+			document.getElementById("check11").checked = true;
+			document.getElementById("check10").checked = true;
+			document.getElementById("check9").checked = true;
+			justClicked = 1;
+		} else if ((document.getElementById("check13").checked == true) && (activeMajor == 1) && (justClicked == 1)){
+			$("#ch12").css("text-decoration","none");
+			$("#ch11").css("text-decoration","none");
+			$("#ch10").css("text-decoration","none");
+			$("#ch9").css("text-decoration","none");
+			document.getElementById("check12").checked = false;
+			document.getElementById("check11").checked = false;
+			document.getElementById("check10").checked = false;
+			document.getElementById("check9").checked = false;
+			justClicked = 0;
+		} else if (document.getElementById("check12").checked == true){
 			$("#ch11").css("text-decoration","line-through");
 			$("#ch10").css("text-decoration","line-through");
 			$("#ch9").css("text-decoration","line-through");
@@ -737,6 +757,7 @@ function transferStrike(passer){
 			$("#ch9").css("text-decoration","line-through");
 			document.getElementById("check9").checked = true;
 		} else {
+			$("#ch13").css("text-decoration","none");
 			$("#ch12").css("text-decoration","none");
 			$("#ch11").css("text-decoration","none");
 			$("#ch10").css("text-decoration","none");
@@ -744,6 +765,19 @@ function transferStrike(passer){
 		}
 		CalcFull();
 	}
+	
+	print_transferShower();
+	
+	//here's some extra code
+	/*if ((document.getElementById("check7").checked == false) && (stater == 7)){
+		$("#ch6").css("text-decoration","none");
+		$("#ch5").css("text-decoration","none");
+		document.getElementById("check6").checked = false;
+		document.getElementById("check5").checked = false;
+	} else if ((document.getElementById("check6").checked == false) && (stater == 7)){
+		$("#ch5").css("text-decoration","none");
+		document.getElementById("check5").checked = false;
+	}*/
 }
 
 function transferLevel2TotalReset(){
@@ -783,6 +817,8 @@ function transferLevel2TotalReset(){
 	COEN();
 	CTW(); //I am slightly concerned this may cause errors, but the concern is unfounded... I hope
 	CalcFull();
+	transferStrike(1);
+	transferStrike(3);
 }
 
 function print_title(passer){
@@ -798,6 +834,90 @@ function print_title(passer){
 	if (passer == 2){
 		$("#print_webTitle").hide();
 		$("#print_coenTitle").hide();
+	}
+}
+
+function print_transferShower(){
+	//if checked
+	if (document.getElementById("check1").checked == true){
+		$("#print_transfer1").show();
+	}
+	if (document.getElementById("check2").checked == true){
+		$("#print_transfer2").show();
+	}
+	if (document.getElementById("check3").checked == true){
+		$("#print_transfer3").show();
+	}
+	if (document.getElementById("check14").checked == true){
+		$("#print_transfer14").show();
+	}
+	if (document.getElementById("check5").checked == true){
+		$("#print_transfer5").show();
+	}
+	if (document.getElementById("check6").checked == true){
+		$("#print_transfer6").show();
+	}
+	if (document.getElementById("check7").checked == true){
+		$("#print_transfer7").show();
+	}
+	if (document.getElementById("check8").checked == true){
+		$("#print_transfer8").show();
+	}
+	if (document.getElementById("check9").checked == true){
+		$("#print_transfer9").show();
+	}
+	if (document.getElementById("check10").checked == true){
+		$("#print_transfer10").show();
+	}
+	if (document.getElementById("check11").checked == true){
+		$("#print_transfer11").show();
+	}
+	if (document.getElementById("check12").checked == true){
+		$("#print_transfer12").show();
+	}
+	if (document.getElementById("check13").checked == true){
+		$("#print_transfer13").show();
+	}
+	
+	// if not checked
+	if (document.getElementById("check1").checked == false){
+		$("#print_transfer1").hide();
+	}
+	if (document.getElementById("check2").checked == false){
+		$("#print_transfer2").hide();
+	}
+	if (document.getElementById("check3").checked == false){
+		$("#print_transfer3").hide();
+	}
+	if (document.getElementById("check14").checked == false){
+		$("#print_transfer14").hide();
+	}
+	if (document.getElementById("check5").checked == false){
+		$("#print_transfer5").hide();
+	}
+	if (document.getElementById("check6").checked == false){
+		$("#print_transfer6").hide();
+	}
+	if (document.getElementById("check7").checked == false){
+		$("#print_transfer7").hide();
+	}
+	if (document.getElementById("check8").checked == false){
+		$("#print_transfer8").hide();
+	}
+	if (document.getElementById("check9").checked == false){
+		$("#print_transfer9").hide();
+	}
+	if (document.getElementById("check10").checked == false){
+		$("#print_transfer10").hide();
+	}
+	if (document.getElementById("check11").checked == false){
+		$("#print_transfer11").hide();
+	}
+	if (document.getElementById("check12").checked == false){
+		$("#print_transfer12").hide();
+	}
+	if (document.getElementById("check13").checked == false){
+		$("#print_transfer13").hide();
 	}
 }
 

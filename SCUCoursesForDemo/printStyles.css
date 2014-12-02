@@ -1,8 +1,8 @@
 #print_scheduleZone {
 	height: 452px;
-	width: 100%;
+	width: 70%;
 	margin: 0 auto;
-	/*display: none;*/
+	display: none;
 }
 
 #print_tableSuper{
@@ -35,4 +35,40 @@
 #print_coenTitle{
 	width: 140px;
 	display: none;
+}
+
+#print_placedOutSuper{
+	width: 500px;
+	margin: 0 auto;
+}
+
+#print_placedOut{
+	margin: 0 auto;
+	width: 500px;
+}
+
+.print_testClass{
+	display: none;
+	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+    font-size:15pt;
+}
+
+#print_apibtests{
+	float: left;
+}
+
+.print_transferClass{
+	display: none;
+	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+    font-size:15pt;
+}
+
+#print_transferInfo{
+	float: right;
+}
+
+.print_testX{
+	text-decoration: underline;
+	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+    font-size:15pt;
 }
