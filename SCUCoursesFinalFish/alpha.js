@@ -645,6 +645,7 @@ function transferLevel2(response){
 			$('#check2').attr('checked', false);
 			$('#check3').attr('checked', false);
 			$('#check14').attr('checked', false);
+			$('#check15').attr('checked', false);
 			MathSci();
 			return;
 		}
@@ -814,6 +815,7 @@ function transferLevel2TotalReset(){
 	$('#check2').attr('checked', false);
 	$('#check3').attr('checked', false);
 	$('#check14').attr('checked', false);
+	$('#check15').attr('checked', false);
 	$('#check5').attr('checked', false);
 	$('#check6').attr('checked', false);
 	$('#check7').attr('checked', false);
@@ -861,6 +863,9 @@ function print_transferShower(){
 	if (document.getElementById("check14").checked == true){
 		$("#print_transfer14").show();
 	}
+	if (document.getElementById("check15").checked == true){
+		$("#print_transfer15").show();
+	}
 	if (document.getElementById("check5").checked == true){
 		$("#print_transfer5").show();
 	}
@@ -901,6 +906,9 @@ function print_transferShower(){
 	}
 	if (document.getElementById("check14").checked == false){
 		$("#print_transfer14").hide();
+	}
+	if (document.getElementById("check15").checked == false){
+		$("#print_transfer15").hide();
 	}
 	if (document.getElementById("check5").checked == false){
 		$("#print_transfer5").hide();
