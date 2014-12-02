@@ -5,11 +5,11 @@
 \contentsline {subsection}{\numberline {2.3}Constraints}{2}
 \contentsline {section}{\numberline {3}System Model}{2}
 \contentsline {section}{\numberline {4}Use Cases}{3}
-\contentsline {section}{\numberline {5}Architectural Diagram}{5}
-\contentsline {section}{\numberline {6}Technologies Used}{5}
-\contentsline {section}{\numberline {7}Design Rationale}{6}
+\contentsline {section}{\numberline {5}Architectural Diagram}{4}
+\contentsline {section}{\numberline {6}Technologies Used}{4}
+\contentsline {section}{\numberline {7}Design Rationale}{5}
 \contentsline {section}{\numberline {8}Risks Table}{6}
-\contentsline {section}{\numberline {9}Test Plan}{7}
+\contentsline {section}{\numberline {9}Test Plan}{6}
 \contentsline {section}{\numberline {10}Development Timeline}{8}
 \contentsline {section}{\numberline {11}Lessons Learned}{8}
-\contentsline {section}{\numberline {A}User Manual}{10}
+\contentsline {section}{\numberline {A}User Manual}{9}

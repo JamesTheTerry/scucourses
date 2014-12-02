@@ -112,14 +112,13 @@ Team Aces proposes a better solution to SCU's current advising process: SCUCours
 Using Team Aces' web application will alleviate stress and error caused by this initial advising process.  Students will have a clearer grasp of which courses need to be taken and when they should be taken.  They will also know what information advisors want before their advisement period since the web application will have already asked for it.  Advisors will be able to focus their time on the complex cases that our web application simply cannot handle.  Our application will by no means be perfect, but should be able to handle a majority of cases.  That being said, we believe that our web application will provide a noticeable improvement to the advising process.
 
 \section{Requirements}
-The following are the requirements to fit with the needs expressed to our team by the customer. They are split up between functional, non-functional, and constraints.
+Based on the needs expressed to our team by the customer we determined the following are the requirements. They are split up between functional, non-functional, and constraints.
 \subsection{Functional}
 The functional requirements are requirements that must be fulfilled in order to make the web application work. The web application will allow students to:
 \begin{compactitem}
-	\item Work for Computer Engineering and one other engineering major, Web design was choosen
-	\item Select any AP and IB tests taken and receive scores
-	\item Select courses believed to be covered by transfer credits
-	\item Generate a first-year course schedule
+	\item Work for Computer Engineering and one other engineering major, Web design was chosen
+	\item Select any AP and IB tests taken and receive scores, and transfer credits and generate first year schedule
+	\item If two quarters in a row have a CORE slot, and C\&I sequence in those slots
 	\item Print a proposed schedule
 
 \end{compactitem}
@@ -170,7 +169,7 @@ As \Cref{3} shows, the student will then be prompted to select which courses the
 \label{3}
 \end{figure}
 
-As seen in \Cref{4}, the user will then be shown his or her potential schedule as well as suggesting which CORE credits should be taken in free spots in the schedule. 
+As seen in \Cref{4}, the user will then be shown his or her potential schedule as well as suggesting which CORE credits should be taken in free spots in the schedule. The printer version has a printer friendly color scheme as well as providing an audit of the information the student inputted into the system.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=.8\textwidth]{4.png}
@@ -178,22 +177,12 @@ As seen in \Cref{4}, the user will then be shown his or her potential schedule a
 \end{center}
 \label{4}
 \end{figure}
-
-The printer version of the schedule can be seen in \Cref{print}. It has a printer friendly color scheme as well as providing an audit of the information the student inputted into the system.
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=.8\textwidth]{print.png}
-\caption{Mock up for printer friendly schedule}
-\end{center}
-\label{print}
-\end{figure}
+ 
 
 
 \section{Use Cases}
 
-The following use case scenario provides a brief but in-depth explanation of the web application functions and how a user would interact with them.  \Cref{Use} is the use case diagram, which illustrates how the web application work.  The student (user) has the ability to choose his or her major, select any previously taken tests and add the respective scores, select courses that are covered by any previous credit, and view and print the proposed schedule.
-
-Below is an in-depth description of the use case scenarios shown above.\\
+The following use case scenario provides a brief but in-depth explanation of the web application functions and how a user would interact with them.  \Cref{Use} is the use case diagram, which illustrates how the web application work.  The student (user) has the ability to choose his or her major, select any previously taken tests and add the respective scores, select courses that are covered by any previous credit, and view and print the proposed schedule. Below is an in-depth description of the use case scenarios shown in \Cref{Use}.\\
 Actor: Student\\
 Goal: Select major\\
 Pre-condition: Actor is a new student at Santa Clara University\\
@@ -241,7 +230,8 @@ Scenario:
 
 \section{Architectural Diagram}
 
-SCUCourses.fish will be an online application and users will be able to access our application through any of the major web browsers. The architectural diagram for the application is shown in \Cref{Arch}. The user will log onto the internet using a web browser and navigate to SCUCourses.fish, and it will then pull our information from the servers in order to provide the user with our service. 
+SCUCourses.fish will be an online application and users will be able to access our application through any of the supported web browers. The architectural diagram for the application is shown in \Cref{Arch}. The user will log onto the internet using a web browser and navigate to SCUCourses.fish, and it will then pull all our information from the servers once. The user will then be able to use our application by interacting with the browser.
+
 
 \begin{figure}[h!]
 \begin{center}
@@ -270,7 +260,10 @@ We will also use JavaScript for the logic in our web application.  This includes
 
 We chose to ask students for their AP and IB scores as opposed to what class they are coming from because we do not know which courses will cause exemption.  We give the students the option to select courses from the generated courses that they believe they have credit for.
 
-We chose to use a minimalistic user interface so that users would not be distracted by any unnecessary design.  The ``top to bottom'' flow of the interface follows the natural reading progression.  The limited use of bolding and color draws the user’s attention to the most important sections. 
+We chose to use a minimalistic user interface so that users would not be distracted by any unnecessary design.  The ``top to bottom'' flow of the interface follows the natural progression of eye movement.  The web application loads with only one question, with others appearing below as the top ones are answered, requiring the user to fill out everything so they don’t accept their schedule prematurely.  The limited use of bolding and color draws the user’s attention to the most important sections.  The goal was to create something that is not only extremely functional, but to create something that was extraordinarily cool while being functional.
+
+We chose the Web Design major as our second major because we were familiar with it.  One of our group members is in the web design program, and the major is remarkably similar to the Computer Engineering major.
+ 
 
 \section{Risks Table}
 
@@ -292,7 +285,7 @@ Time runs out & Not all desired functions of the project completed by the turn-i
 
 Bugs and Errors & We’ll have to go back into the code, find out what's causing the problems, and bugfix them & 1 & 2 & 2 & Do ample testing every step of the way to find bugs sooner & Run the program through debugging software\\\hline
 
-Knowledge of web languages & Progress on coding is greatly slowed & 0.9 & 2 & 1.8 & Model our code after some appropriate pre-existing examples of the language & Redistribute coding duties that may be difficult for one or more group members\\\hline
+Knowledge of web languages & Progress on coding is greatly slowed & 0.6 & 2 & 1.2 & Model our code after some appropriate pre-existing examples of the language & Redistribute coding duties that may be difficult for one or more group members\\\hline
 
 Version control & Entire pages of code must be rewritten & 0.05 & 5 & 0.25 & Use GitHub which has built in Version Control & Divide the code up into multiple documents, to minimize individual risk\\\hline
 
@@ -338,7 +331,9 @@ In order to determine the success of the project, we have devised a series of te
 	\end{compactitem}
 \end{compactitem}
 
-The results of our latest tests are that all the functionalities work and we get the desired output for all of our test cases. During our early stages of testing we discovered minor bugs in our code, once those were fixed we began testing the functionalities on our prototype that had end to end functionality. We found a couple of bugs with our Cultures \& Ideas placement, it would fill any two consecutive core sections with C\&I making it possible for it to appear multiple times in a schedule. The second bug is that after the C\&I is placed, if the course where the first C\&I was placed was added back in, it would remove the C\&I 1 but it would leave C\&I 2 in the schedule by itself.Our solution to these bugs was to delete the C\&I placement after every change and add it back in if there were still two consecutive core courses. What we noticed was that our solution not only fixed our bugs but also optimized the placement of the C\&I courses by making sure it is placed in the earliest possible slot. 
+Furthermore we did extensive alpha testing on every function that we created to ensure we found bugs as we were writing code. Then after the system was built the site was given to roommates, friends and family for beta testing, This ensured that all of the system's functions worked well with each other and the system as a whole functioned properly.
+
+The results of our latest tests are that all the functionalities work and we get the desired output for all of our test cases. During our early stages of testing we discovered minor bugs in our code, once those were fixed we began testing the functionalities on our prototype that had end to end functionality. We found a couple of bugs with our Cultures \& Ideas placement, it would fill any two consecutive core sections with C\&I making it possible for it to appear multiple times in a schedule. The second bug is that after the C\&I is placed, if the course where the first C\&I was placed was added back in, it would remove the C\&I 1 but it would leave C\&I 2 in the schedule by itself.Our solution to these bugs was to delete the C\&I placement after every change and add it back in if there were still two consecutive core courses. What we noticed was that our solution not only fixed our bugs but also optimized the placement of the C\&I courses by making sure it is placed in the earliest possible slot. Because of the extensive testing we did as we wrote the code this was the only major bug we found during the testing.
 
 
 \section{Development Timeline}
