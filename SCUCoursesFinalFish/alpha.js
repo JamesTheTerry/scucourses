@@ -2758,6 +2758,7 @@ function CalcFull(){
 	var start;
 	var natSci = 0;
 	
+	var envisci = document.getElementById("check15").checked;
 	var chem11 = document.getElementById("check1").checked;
 	var math11 = document.getElementById("check9").checked;
 	var math12 = document.getElementById("check10").checked;
@@ -2765,9 +2766,14 @@ function CalcFull(){
 	var math14 = document.getElementById("check12").checked;
 	var amth106 = document.getElementById("check13").checked;
 	
+	
+	
 	if (activeMajor == 0){
 		if (chem11 == true){
 			APChem = 3;
+		}
+		if (envisci == true){
+			APEnvSci = 5;
 		}
 		if (math11 == true && APCalcScoreBC < 3){
 			APCalcScoreBC = 3;
@@ -2894,11 +2900,16 @@ function SciCred(){
 	var Transfer32 = 0;
 	var start = 0;
 
+  	var envisci = document.getElementById("check15").checked;
   	var chem11 = document.getElementById("check1").checked;
 	var phys31 = document.getElementById("check2").checked;
 	var phys32 = document.getElementById("check3").checked;
 	var phys33 = document.getElementById("check14").checked;
 	
+	
+	if (envisci == true){
+		APEnvSci = 5;
+	}
 	if (chem11 == true){
 		APChem = 5;
 	}
