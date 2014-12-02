@@ -14,11 +14,11 @@ a {
 }
 
 a:link {
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:hover{
-	color: #1580ea;
+	color: #1580ea !important;
 	/*font-family: HelveticaNeue-Bold, Arial-Bold, sans-serif;*/
 }
 

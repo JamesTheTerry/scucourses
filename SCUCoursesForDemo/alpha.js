@@ -256,7 +256,6 @@ function totalRecall(){
 	document.getElementById("creFail").style.color = "#999999";
 	document.getElementById("creFail").style.fontFamily = "HelveticaNeue-Thin, Arial, sans-serif";
 	$("#creSuper1").fadeOut(700); //hide it
-	$("#creSuper2").fadeOut(700); //hide it
 	
 	//reset the table
 	document.getElementById("rowA1").style.backgroundImage = "url('images/classes/BLANK.png')";
@@ -785,16 +784,6 @@ var q_ibEconScore = 0;
 function apCalcAbScore(score){
 	q_apCalcAbScore = score;
 	
-	//cre stuff
-	if ((q_apCalcAbScore == 4) || (q_apCalcAbScore == 5) || (q_apCalcBcScore == 3) || (q_apCalcBcScore == 4) || (q_apCalcBcScore == 5)){
-		$("#creSuper1").fadeOut(700);
-		$("#creSuper2").fadeIn(700);
-		creReset();
-	} else {
-		$("#creSuper1").fadeIn(700);
-		$("#creSuper2").fadeOut(700);
-	}
-	
 	CalcFull();
 	
 	if (score == 0){
@@ -884,16 +873,6 @@ function apCalcAbScore(score){
 //call set same
 function apCalcBcScore(score){
 	q_apCalcBcScore = score;
-	
-	//cre stuff
-	if ((score == 3) || (score == 4) || (score == 5) || (q_apCalcAbScore == 4) || (q_apCalcAbScore == 5)){
-		$("#creSuper1").hide();
-		$("#creSuper2").show();
-		creReset();
-	} else {
-		$("#creSuper1").show();
-		$("#creSuper2").hide();
-	}
 	
 	CalcFull();
 	
