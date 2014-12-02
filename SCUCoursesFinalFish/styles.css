@@ -36,7 +36,7 @@ html, body
 
 #resetEverything a{
 	color: #ffffff !important;
-	font-family: HelveticaNeue-Thin, Arial, sans-serif !important;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif !important;
 }
 
 #resetEverything a:hover{
@@ -53,7 +53,7 @@ html, body
 	margin-top: 100px;
 	margin-left: 10px;
 	float: left;
-	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
 }
 
 #askForMajor{

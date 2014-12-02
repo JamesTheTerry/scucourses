@@ -28,7 +28,7 @@
 .print_title{
 	margin: 0 auto;
 	color:#000000;
-	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
     font-size:40pt;
 }
 
@@ -54,7 +54,7 @@
 
 .print_testClass{
 	display: none;
-	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
     font-size:15pt;
 }
 
@@ -64,7 +64,7 @@
 
 .print_transferClass{
 	display: none;
-	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
     font-size:15pt;
 }
 
@@ -74,12 +74,12 @@
 
 .print_testX{
 	text-decoration: underline;
-	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
     font-size:15pt;
 }
 
 .print_CRE{
-	font-family: HelveticaNeue-Thin, Arial, sans-serif;
+	font-family: HelveticaNeue-Thin, HelveticaNeue-Light, Arial, sans-serif;
     font-size:15pt;
     margin: 0 auto;
     display: none;
