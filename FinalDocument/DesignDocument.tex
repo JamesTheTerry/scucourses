@@ -140,46 +140,59 @@ The web application must be able to:
 	\item be a web based application
 \end{compactitem}
 
-\section{Conceptual Model}
+\section{System Model}
 
 Our web application was designed as follows so as to meet our requirements set by the customer. Initially, as seen in \Cref{1} the user will be prompted to selected his or her major and types of tests (AP and IB) he or she has taken.
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=\textwidth]{1.pdf}
+\includegraphics[width=.8\textwidth]{1.png}
 \caption{Mock up for major and test selection}
 \end{center}
 \label{1}
 \end{figure}
 
 The user will then be prompted to select the tests he or she has taken in the past. A list of the user's selected tests will populate below, where the user will be able to select the the scores of these selected tests. The user will also be prompted to input his or her Calculus Readiness Exam score if applicable. This can be seen in \Cref{2}.
-\newpage
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=.9\textwidth]{2.pdf}
+\includegraphics[width=.8\textwidth]{2.png}
 \caption{Mock up for entering test scores}
 \end{center}
 \label{2}
 \end{figure}
 
-As seen in \Cref{3}, the user will then be shown his or her potential schedule. The user can select courses that he or she believes to be covered by previously earned credit. Potentially covered courses will appear to the side and be replaced by a new course. This course will have an X button on it in case the user wishes to undo the selection. The user will be able to print the course schedule by clicking the print icon in the corner.
+As \Cref{3} shows, the student will then be prompted to select which courses they have transfer credits for. In the case where they have credit for multiple courses in a series the system will check and cross out the pervious courses in the sequence.
+
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=.9\textwidth]{3.pdf}
-\caption{Mock up for potential course schedule}
+\includegraphics[width=.8\textwidth]{3.png}
+\caption{Mock up for entering transfer credits}
 \end{center}
 \label{3}
 \end{figure}
 
+As seen in \Cref{4}, the user will then be shown his or her potential schedule as well as suggesting which CORE credits should be taken in free spots in the schedule. 
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=.8\textwidth]{4.png}
+\caption{Mock up for potential course schedule}
+\end{center}
+\label{4}
+\end{figure}
+
+The printer version of the schedule can be seen in \Cref{print}. It has a printer friendly color scheme as well as providing an audit of the information the student inputted into the system.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=.8\textwidth]{print.png}
+\caption{Mock up for printer friendly schedule}
+\end{center}
+\label{print}
+\end{figure}
+
+
+
 \section{Use Cases}
 
 The following use case scenario provides a brief but in-depth explanation of the web application functions and how a user would interact with them.  \Cref{Use} is the use case diagram, which illustrates how the web application work.  The student (user) has the ability to choose his or her major, select any previously taken tests and add the respective scores, select courses that are covered by any previous credit, and view and print the proposed schedule.
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=.85\textwidth]{UseCase.pdf}
-\caption{Use Case diagram for our system}
-\end{center}
-\label{Use}
-\end{figure}
 
 Below is an in-depth description of the use case scenarios shown above.\\
 Actor: Student\\
@@ -217,6 +230,15 @@ Scenario:
 \begin{compactitem}
 	\item Click print
 \end{compactitem}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=.85\textwidth]{UseCase.pdf}
+\caption{Use Case diagram for our system}
+\end{center}
+\label{Use}
+\end{figure}
+
 
 \section{Architectural Diagram}
 
@@ -324,7 +346,7 @@ The results of our latest tests are that all the functionalities work and we get
 
 In order to make sure we stay on track and finish the application on time we have a Gantt chart, shown in \Cref{Gantt}.  The Gantt chart shows the assignments that need to be completed, the person who is in charge of completing it and the deadline for that assignment. 
 
-\begin{figure}[n!]
+\begin{figure}[t!]
 \begin{center}
 \includegraphics[width=1.5\textwidth, angle =90]{Gant.png}
 \caption{GANTT chart for the development of our team project}
@@ -336,7 +358,7 @@ In order to make sure we stay on track and finish the application on time we hav
 
 While working on the project and presenting it, we learned a couple of lessons. The three most significant lessons we learned were presentation etiquette, not to use prezi, and to talk and demo to our customer frequently. When we presented our design review, we learned about presentation etiquette through mistakes that we made. We now know that we should wear appropriate dress shoes, we should not stand in front of the screen nor turn or back to the audience, and we should not make any motions with our phone in our hand. During that presentation, we presented using prezi. We now know that we should not use prezi for professional presentations because they can be distracting and there are very few opportunities to use it correctly. Lastly we learned to talk and demo to our customer frequently because when we had our first demo, our customer pointed out to us some of the assumptions we made and we were able to clear up any misunderstandings of the requirements. The lesson is that if you meet with the customer earlier and more frequently, you will make sure you understood the requirements and you have a greater chance of delivering what the customer wants. 
 
-
+\pagebreak
 \appendix
 
 

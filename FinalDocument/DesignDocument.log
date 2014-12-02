@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 DEC 2014 00:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 DEC 2014 00:32
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -721,89 +721,105 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
  [1]
-<1.pdf, id=19, 1284.8pt x 230.70993pt>
-File: 1.pdf Graphic file (type pdf)
- <use 1.pdf>
-Package pdftex.def Info: 1.pdf used on input line 148.
-(pdftex.def)             Requested size: 481.87546pt x 86.53009pt.
- [2 <./1.pdf>]
-<2.pdf, id=96, 1284.8pt x 764.03741pt>
-File: 2.pdf Graphic file (type pdf)
- <use 2.pdf>
-Package pdftex.def Info: 2.pdf used on input line 158.
-(pdftex.def)             Requested size: 433.68497pt x 257.90396pt.
+<1.png, id=19, 1020.81375pt x 230.8625pt>
+File: 1.png Graphic file (type png)
+ <use 1.png>
+Package pdftex.def Info: 1.png used on input line 148.
+(pdftex.def)             Requested size: 385.50183pt x 87.18263pt.
 
-<3.pdf, id=97, 1284.8pt x 567.11874pt>
-File: 3.pdf Graphic file (type pdf)
- <use 3.pdf>
-Package pdftex.def Info: 3.pdf used on input line 167.
-(pdftex.def)             Requested size: 433.68497pt x 191.43326pt.
+<2.png, id=21, 1020.81375pt x 375.4025pt>
+File: 2.png Graphic file (type png)
+ <use 2.png>
+Package pdftex.def Info: 2.png used on input line 157.
+(pdftex.def)             Requested size: 385.50183pt x 141.76656pt.
 
-<UseCase.pdf, id=98, 528.76146pt x 296.60812pt>
+<3.png, id=22, 1020.81375pt x 139.52126pt>
+File: 3.png Graphic file (type png)
+ <use 3.png>
+Package pdftex.def Info: 3.png used on input line 167.
+(pdftex.def)             Requested size: 385.50183pt x 52.68863pt.
+ [2 <./1.png> <./2.png>]
+<4.png, id=30, 1020.81375pt x 516.93124pt>
+File: 4.png Graphic file (type png)
+ <use 4.png>
+Package pdftex.def Info: 4.png used on input line 176.
+(pdftex.def)             Requested size: 385.50183pt x 195.21332pt.
+
+<print.png, id=31, 605.26125pt x 680.5425pt>
+File: print.png Graphic file (type png)
+ <use print.png>
+Package pdftex.def Info: print.png used on input line 185.
+(pdftex.def)             Requested size: 385.50183pt x 433.44809pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <./3.png> <./4.png>] [4 <./print.png>]
+<UseCase.pdf, id=41, 528.76146pt x 296.60812pt>
 File: UseCase.pdf Graphic file (type pdf)
  <use UseCase.pdf>
-Package pdftex.def Info: UseCase.pdf used on input line 178.
+Package pdftex.def Info: UseCase.pdf used on input line 236.
 (pdftex.def)             Requested size: 409.59708pt x 229.76482pt.
- [3 <./2.pdf> <./3.pdf>] [4 <./UseCase.pdf>] <ArchDiag.png, id=280, 919.435pt x
- 223.83624pt>
+
+<ArchDiag.png, id=42, 919.435pt x 223.83624pt>
 File: ArchDiag.png Graphic file (type png)
-
-<use ArchDiag.png>
-Package pdftex.def Info: ArchDiag.png used on input line 227.
+ <use ArchDiag.png>
+Package pdftex.def Info: ArchDiag.png used on input line 249.
 (pdftex.def)             Requested size: 385.50183pt x 93.85005pt.
+ [5 <./UseCase.pdf> <./ArchDiag.png>]
 Missing character: There is no Õ in font cmr12!
- [5 <./ArchDiag.png>]
 
-./DesignDocument.tex:261: Package array Error:  Illegal pream-token (2cm): `c' 
+
+./DesignDocument.tex:283: Package array Error:  Illegal pream-token (2cm): `c' 
 used.
 
 See the array package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.261 ... | L{1.5cm} | {2cm} | L{3cm} | L{3cm} | }
+l.283 ... | L{1.5cm} | {2cm} | L{3cm} | L{3cm} | }
                                                   
 ? 
 Missing character: There is no Õ in font cmr12!
 Missing character: There is no Õ in font cmr12!
 
-Overfull \hbox (11.43489pt too wide) in paragraph at lines 261--279
+Overfull \hbox (11.43489pt too wide) in paragraph at lines 283--301
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] [7] <Gant.png, id=292, 1514.65875pt x 603.25375pt>
+[6] [7] <Gant.png, id=84, 1514.65875pt x 603.25375pt>
 File: Gant.png Graphic file (type png)
  <use Gant.png>
-Package pdftex.def Info: Gant.png used on input line 329.
+Package pdftex.def Info: Gant.png used on input line 351.
 (pdftex.def)             Requested size: 722.81319pt x 287.88321pt.
 
 
-LaTeX Warning: Float too large for page by 29.99875pt on input line 333.
+LaTeX Warning: Float too large for page by 29.99875pt on input line 355.
 
-[8] [9] [10 <./Gant.png>] (./DesignDocument.aux) ) 
+[8] [9] [10] [11 <./Gant.png>] (./DesignDocument.aux) ) 
 Here is how much of TeX's memory you used:
- 15420 strings out of 493633
- 282140 string characters out of 3143378
- 393745 words of memory out of 3000000
- 18414 multiletter control sequences out of 15000+200000
+ 15434 strings out of 493633
+ 282278 string characters out of 3143378
+ 391749 words of memory out of 3000000
+ 18426 multiletter control sequences out of 15000+200000
  13357 words of font info for 51 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  56i,11n,55p,1243b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2011/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on DesignDocument.pdf (12 pages, 1498287 bytes).
+</usr/local/texlive/2011
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on DesignDocument.pdf (13 pages, 798961 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
+ 123 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
