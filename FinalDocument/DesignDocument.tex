@@ -104,23 +104,22 @@
 
 \setcounter{page}{1}
 
-\section{Intoduction}
-All freshmen goes through an advising period during their summer orientation.  The advising period is brief, stressful, and not as informative as many would like it to be.  Disparities between the number of faculty advisors and students arise frequently.  The first-year schedules themselves are frequently complicated by AP credits, transfer credits, and other exemptions.  Sorting through these exemptions is not a straightforward process, as the number of possible course exemptions is rather large.  Based on AP scores and the math readiness exam a new student could start in four different math courses.  New students, who are unfamiliar with the scheduling process, are told to attempt to determine which courses are covered by their credits and generate schedules before meeting with an advisor.  Their proposed schedules are often poorly constructed, which the advisor must then salvage.  Given that the advising process is relatively brief, advisors cannot always create optimal schedules for students.  The current process leaves many new students without adequate attention, the faculty feeling unhelpful, and the schedules unoptimized.
+\section{Introduction}
+All freshmen at SCU goes through an advising period during their summer orientation.  The advising period is brief, stressful, and not as informative as many would like it to be.  Disparities between the number of faculty advisors and students arise frequently.  The first-year schedules themselves are frequently complicated by AP credits, transfer credits, and other exemptions.  Sorting through these exemptions is not a straightforward process, as the number of possible course exemptions is rather large.  Based on AP scores and the math readiness exam a new student could start in four different math courses.  New students, who are unfamiliar with the scheduling process, are told to attempt to determine which courses are covered by their credits and generate schedules before meeting with an advisor.  Their proposed schedules are often poorly constructed, which the advisor must then salvage.  Given that the advising process is relatively brief, advisors cannot always create optimal schedules for students.  The current process leaves many new students without adequate attention, the faculty feeling unhelpful, and the schedules unoptimized.
 
-Team Aces proposes a better solution to SCU's current advising process: a web application.  On the surface we will have a clean and intuitive interface that will allow new students to input their previously earned credit along with their proposed major.  In turn they will receive optimized first-year schedules outlining which courses they should take.  Our goal is to have the application optimized for the Computer Science and Engineering major and the Web Design and Engineering major.  This web application will include core, C\&I, CTW, and major specific courses.  Students will be asked for their AP scores and possible transfer credits to determine which SCU courses are covered, and will be given possible alternative schedules.  For instance, if a student received an AP score of 5 in Calculus AB his or her schedule will be adjusted so that he or she starts in MATH 13 instead of MATH 11.  The outputted first-year schedules will be exportable in a form that can be easily saved, emailed, and printed.
+Team Aces proposes a better solution to SCU's current advising process: SCUCourses.fish, a web application.  On the surface we will have a clean and intuitive interface that will allow new students to input their previously earned credit along with their proposed major.  In turn they will receive optimized first-year schedules outlining which courses they should take.  Our goal is to have the application optimized for the Computer Science and Engineering major and the Web Design and Engineering major.  This web application will include core, C\&I, CTW, and major specific courses.  Students will be asked for their AP scores and possible transfer credits to determine which SCU courses are covered, and will be given possible alternative schedules.  For instance, if a student received an AP score of 5 in Calculus AB his or her schedule will be adjusted so that he or she starts in MATH 13 instead of MATH 11.  The outputted first-year schedules will be exportable in a form that can be easily saved, emailed, and printed.
 
 Using Team Aces' web application will alleviate stress and error caused by this initial advising process.  Students will have a clearer grasp of which courses need to be taken and when they should be taken.  They will also know what information advisors want before their advisement period since the web application will have already asked for it.  Advisors will be able to focus their time on the complex cases that our web application simply cannot handle.  Our application will by no means be perfect, but should be able to handle a majority of cases.  That being said, we believe that our web application will provide a noticeable improvement to the advising process.
 
 \section{Requirements}
-The following are the requirements to fit with the needs expressed to our team by the customer. They are split up between functional and non-functional, functional deals with the hard requirements of the system, while non-functional deals how the system runs.
+The following are the requirements to fit with the needs expressed to our team by the customer. They are split up between functional, non-functional, and constraints.
 \subsection{Functional}
 The functional requirements are requirements that must be fulfilled in order to make the web application work. The web application will allow students to:
 \begin{compactitem}
-	\item Select desired Major
-	\item Select any AP and IB tests taken and give scores
-	\item Give the score of their calculus readiness exam if applicable
-	\item Select courses believed to be covered by previously earned credits
-	\item View a proposed schedule
+	\item Work for Computer Engineering and one other engineering major, Web design was choosen
+	\item Select any AP and IB tests taken and receive scores
+	\item Select courses believed to be covered by transfer credits
+	\item Generate a first-year course schedule
 	\item Print a proposed schedule
 
 \end{compactitem}
@@ -138,7 +137,7 @@ The nonfunctional requirements are requirements describe how the system will beh
 The web application must be able to:
 \begin{compactitem}
 	\item run on design center computers
-	\item be easily shared with incoming freshmen
+	\item be a web based application
 \end{compactitem}
 
 \section{Conceptual Model}
@@ -184,63 +183,40 @@ The following use case scenario provides a brief but in-depth explanation of the
 
 Below is an in-depth description of the use case scenarios shown above.\\
 Actor: Student\\
-Goal: Select major and generate schedule\\
+Goal: Select major\\
 Pre-condition: Actor is a new student at Santa Clara University\\
-Post-condition: Actor has successfully chosen a major and viewed the default schedule\\
+Post-condition: Schedule adjusts\\
 Scenario:
 \begin{compactitem}
 	\item Click on major drop down list
 	\item Click on major
 \end{compactitem}
-Exceptions:
-\begin{compactitem}
-	\item Design Center server crashes
-	\item Actor becomes disconnected from the internet
-\end{compactitem}
 Actor: Student\\
-Goal: Input test scores and generate schedule\\
+Goal: Input test scores\\
 Pre-condition: Actor is a new student at Santa Clara University and chosen a major\\
 Post-condition: Actor has successfully inputed test scores and viewed an optimized schedule\\
-Scenario:
 Scenario:
 \begin{compactitem}
 	\item Click on types of test
 	\item Click on tests taken
 	\item Click on scores for tests taken
 \end{compactitem}
-Exceptions:
-\begin{compactitem}
-	\item Design Center server crashes
-	\item Actor becomes disconnected from the internet
-\end{compactitem}
 Actor: Student\\
 Goal: Select courses already covered by credit and view optimized schedule\\
 Pre-condition: Actor is a new student at Santa Clara University and chosen a major\\
-Post-condition: Actor has successfully removed covered classes and viewed an optimized schedule\\
+Post-condition: Schedule adjusts\\
 Scenario:
 \begin{compactitem}
 	\item Click on courses already covered
 \end{compactitem}
-Exceptions:
-\begin{compactitem}
-	\item Design Center server crashes
-	\item Actor becomes disconnected from the internet
-\end{compactitem}
 Actor: Student\\
 Goal: View and print schedule\\
-Pre-condition: Actor is a new student at Santa Clara University and chosen a major\\
-Post-condition: Actor has successfully viewed an optimized schedule and printed said schedule\\
+Pre-condition: Student inputs Credits\\
+Post-condition: Schedule Printed\\
 Scenario:
 \begin{compactitem}
 	\item Click print
 \end{compactitem}
-Exceptions:
-\begin{compactitem}
-	\item Design Center server crashes
-	\item Printer fails
-	\item Actor becomes disconnected from the internet
-\end{compactitem}
-
 
 \section{Architectural Diagram}
 
@@ -256,7 +232,7 @@ SCUCourses.fish will be an online application and users will be able to access o
 
 \section{Technologies Used}
 
-To best fulfill the requirements detailed in Section 2 and meet the design shown in Section 3, we will use the following technology:
+To best fulfill the requirements detailed in Section 2 and meet the design shown in Section 3, we will use the following technologies:
 \begin{compactitem}
 	\item We will be using HTML5 to create the framework for the web application.  HTML stands for HyperText Markup Language and is the most common language for web content.  It provides the structure upon which other code is built on.
 	\item We will use CSS3 to format and style the content on the page.  CSS stands for Cascading Style Sheets, and will allow for the stylization of the content so that the web application will look usable.
@@ -279,21 +255,24 @@ We chose to use a minimalistic user interface so that users would not be distrac
 
 This project does come with risks.  To mitigate the damage, we have created a risk table detailing the severity, impact, probability and mitigation strategies. Probability is measured from $0 < p < 1$ with 1 being the most probable.  Severity is measured from 1 to 10, with 10 being the most severe.  The impact these risks have on the project is calculated by multiplying probability with risk.  \Cref{Risk} is what we consider the risks for the completion of our project.
 
-\begin{table}[b!]
+\begin{table}[n!]
 \begin{center}
 \begin{tabular}{| L{2cm} | L{2.5cm} | L{1cm} | L{1.5cm} | {2cm} | L{3cm} | L{3cm} | }
 \hline
-Risk  & Consequences & Prob. & Severity & Impact & Mitigations & Mitigations 2 \\ \hline
 
-Time runs out & Not all desired functions of the project completed by the turn-in date & .3 & 9 & 2.7 & Cut some less-essential features & Perform extensive time management throughout the course of production\\\hline
+Risk & Consequences & Prob. & Severity & Impact & Mitigations & Mitigations 2\\\hline
 
-Bugs and Errors & We'll have to go back into the code, find out what's causing the problems, and bugfix them & .7 & 2 & 1.4 & Do ample testing every step of the way to find bugs sooner & Make use of debugging softwear\\\hline
+Misunderstanding Requirements & Have to redo previously completed work to fit requirements & 0.9 & 10 & 9 & Frequently ask the customer and manager questions clarifying requirements & Demo system to customer and manager before deadline to verify the requirements are met\\\hline
 
-Version control & Entire pages of code must be rewritten, causing tremendous setbacks towards the project's completion & .05 & 5 & .25 & Download permanent local copies of all documents periodically & Divide the code up into multiple documents, to minimize individual risk\\\hline
+Personnel & Work for that personÕs assigned section of the project falls behind & 0.5 & 8 & 4 & Get a significant amount of the work done ahead of time to compensate for possible losses in personnel & Keep a list of understudies so we can re-assign sections to currently active members\\\hline
 
-Knowledge of web languages & Progress on coding is greatly slowed & .1 & 2 & .2 & Model our code after some appropriate pre-existing examples of said language before hand & Redistribute coding duties that may be difficult for one or more group members\\\hline
+Time runs out & Not all desired functions of the project completed by the turn-in date & 0.3 & 9 & 2.7 & Prioritize  features in the system and do the most essential first & Perform extensive time management throughout the course of production\\\hline
 
-Personnel & Work for that person's assigned section of the project falls behind & .02 & 8 & .16 & Get a significant amount of the work done ahead of time to compensate for possible losses in personnel & Keep a list of understudies so we can re-assign sections to currently active members \\\hline
+Bugs and Errors & WeÕll have to go back into the code, find out what's causing the problems, and bugfix them & 1 & 2 & 2 & Do ample testing every step of the way to find bugs sooner & Run the program through debugging software\\\hline
+
+Knowledge of web languages & Progress on coding is greatly slowed & 0.9 & 2 & 1.8 & Model our code after some appropriate pre-existing examples of the language & Redistribute coding duties that may be difficult for one or more group members\\\hline
+
+Version control & Entire pages of code must be rewritten & 0.05 & 5 & 0.25 & Use GitHub which has built in Version Control & Divide the code up into multiple documents, to minimize individual risk\\\hline
 
 \end{tabular}
 \end{center}
