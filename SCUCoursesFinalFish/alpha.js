@@ -81,8 +81,8 @@ function coenClick(){
 	
 	math1 = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 106", "AMTH 108", "MATH 53", "CORE"];
 	math2 = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 108", "MATH 53", "CORE"];
-	coen1 = ["COEN 10", "CORE", "CORE"];
-	coen2 = ["COEN 11", "COEN 12"];
+	coen1 = ["COEN 10","COEN 11", "CORE", "CORE"];
+	coen2 = "COEN 12";
 	sci = [ "CHEM 11", "PHYS 31", "PHYS 32"];
 	core = ["CTW1", "CTW2", "COEN 19"];
 	coreS = ["RTC1", "SocSci", "Diversity", "ELSJ","RTC2", "Ethics","SeeAdvisor", "SeeAdvisor", "SeeAdvisor", "CI1", "CI2"];
@@ -112,8 +112,8 @@ function webDesignClick(){
 	activeMajor = 1;  //sets functions to coen mode
 	
 	math = ["MATH 9", "MATH 11", "MATH 12", "MATH 13", "MATH 14", "AMTH 108", "CORE", "CORE"];
-	coen1 = ["COEN 10", "CORE", "CORE"];
-	coen2 = ["COEN 11", "COEN 12"];
+	coen1 = ["COEN 10","COEN 11", "CORE", "CORE"];
+	coen2 = "COEN 12";
 	sci = [ "CHEM 11", "CORE"];
 	CI = [ "CI1", "CI2"];
 	core = ["CTW1", "CTW2", "CORE"];
@@ -3032,57 +3032,46 @@ function AddPhys(){
 //gold
 //ruby i believe
 function MoveCoen(){
-	if (activeMajor == 0){
-		removeCore();
-		
-		var i;
-		var flagF = 0;
-		
-				
-		for (i=0;i<4;i++){
-			if (Fall[i] == "CORE"){
-				flagF++;
-			} else if(Fall[i] == "CTW1" || Fall[i] == "CTW2" ){
-				flagF++;
-			}
+	var APCompSci = q_apCompSciAScore;
+	var IBCompSci = q_ibCompSciScore;
+	var coen11 = document.getElementById("check6").checked;
 	
+	removeCore();
+	
+	var i;
+	var flagW = 0;
+	var flagF = 0;
+	
+	for (i=0;i<4;i++){
+		if (Winter[i] == "CORE"){
+			flagW++;
+		} else if(Winter[i] == "CTW1" || Winter[i] == "CTW2" ){
+			flagW++;
 		}
-		
-		if( flagF > 2){
-			//move COEN 11 the winter if more than 2 CORE is Fall
-			Fall[1] = coen2[0];
-			Winter[1] = coen2[1];
-			Spring[1] = replace;
-		}
+
 	}
 	
-	if (activeMajor == 1){
-		//SOMETHING IS WRONG WITH removeCore()
-		removeCore();
-		//find what classes are currently in the schedule
-		
-		var i;
-		var flagF = 0;
-				
-		for (i=0;i<4;i++){
-			if (Fall[i] == "CORE"){
-				flagF++;
-			} else if(Fall[i] == "CTW1" || Fall[i] == "CTW2" ){
-				flagF++;
-			}
-	
-		}
-		
-		if( flagF > 2){
-			//move COEN 12 the winter if more than 2 CORE is Fall
-			Fall[1] = coen2[0];
-			Winter[1] = coen2[1];
-			Spring[1] = replace;
-		}
-	
-	
-		build();
+	if( flagW > 2){
+		//move COEN 12 the winter if more than 2 CORE is Winter
+		Winter[1] = coen2;
+		Spring[1] = replace;
+		return;
 	}
+	
+	for (i=0;i<4;i++){
+		if (Fall[i] == "CORE"){
+			flagF++;
+		} else if(Fall[i] == "CTW1" || Fall[i] == "CTW2" ){
+			flagF++;
+		}
+
+	}
+	
+	if( flagF > 2){
+		//move COEN 12 the winter if more than 2 CORE is Winter
+		Fall[1] = coen2;
+		Spring[1] = replace;
+	}	
 }
 
 //platinum
@@ -3125,24 +3114,24 @@ function COEN(){
 		
 		if(APCompSci == 6){
 			//no COEN 12
-			Fall1 = coen1[1];
-			Winter1 = coen1[2];
+			Fall1 = coen1[2];
+			Winter1 = coen1[3];
 			Spring1 = replace;
 		} else if (APCompSci < 3 && IBCompSci < 6){
 			//no credit follow the suggested plan
 			Fall1 = coen1[0];
-			Winter1 = coen2[0];
-			Spring1 = coen2[1];
+			Winter1 = coen1[1];
+			Spring1 = coen2;
 		} else if (APCompSci >= 4 || IBCompSci >= 6){
 			//no COEN 11
-			Fall1 = coen1[1];
-			Winter1 = coen1[2];
+			Fall1 = coen1[2];
+			Winter1 = coen1[3];
 			Spring1 = coen2[1];
 		} else if (APCompSci == 3){
 			//no COEN 10
 			Fall1 = coen1[1];
-			Winter1 = coen2[0];
-			Spring1 = coen2[1];
+			Winter1 = coen1[2];
+			Spring1 = coen2;
 		}
 		
 		Fall[1] = Fall1;
